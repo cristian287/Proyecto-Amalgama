@@ -1,0 +1,62 @@
+[
+    {
+        "name" : "uno",
+        "min_damage" : 1,
+        "max_damage" : 4,
+        "canBeDodged" : false,
+        "mpDrained" : 0,
+        "category" : "damage",
+        "description" : "puto el que lee",
+        "initial" : "true"
+    },
+    {
+        "name" : "dos",
+        "min_damage" : 4,
+        "max_damage" : 10,
+        "canBeDodged" : true,
+        "mpDrained" : 50,
+        "category" : "damage",
+        "description" : "puto el que lee",
+        "initial" : "true"
+    },
+    {
+        "name" : "tres",
+        "min_damage" : 11,
+        "max_damage" : 12,
+        "canBeDodged" : false,
+        "mpDrained" : 0,
+        "category" : "damage",
+        "description" : "puto el que lee",
+        "initial" : "true"
+    },
+    {
+        "name" : "cuatro",
+        "min_damage" : 11,
+        "max_damage" : 12,
+        "canBeDodged" : false,
+        "mpDrained" : 0,
+        "category" : "damage",
+        "description" : "puto el que lee",
+        "initial" : "true"
+    },
+    {
+        "name" : "cinco",
+        "min_damage" : 11,
+        "max_damage" : 12,
+        "canBeDodged" : false,
+        "mpDrained" : 0,
+        "category" : "damage",
+        "description" : "puto el que lee",
+        "initial" : "true"
+    },
+    {
+        "name" : "seis",
+        "min_damage" : 11,
+        "max_damage" : 12,
+        "canBeDodged" : false,
+        "mpDrained" : 0,
+        "category" : "damage",
+        "description" : "puto el que lee",
+        "initial" : "false"
+    }
+]

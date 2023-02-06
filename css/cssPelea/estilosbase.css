@@ -1,0 +1,88 @@
+#gamePeleaHud{
+    height: 100%;
+}
+#fondo{
+    background-image: url(/assets/Room1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60%;
+}
+#botonesHudPelea{
+    display: flex;
+    flex-direction: row;
+    top: 2%;
+    height:10vh;
+    justify-content:space-between;
+}
+#botonesHudPelea div{
+    display: block;
+    justify-content:space-around;
+
+
+}
+#botonesHudPelea button{
+    height: 60px;
+    width: 200px;
+    border: 2px solid black;
+}
+#texto{
+    display: flex;
+    position: relative;
+    justify-self: center;
+}
+#victima{
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    width: auto;
+    margin: auto;
+    height: 200px;
+    top: 20vh;
+
+}
+#vitimText{
+    background-color: rgba(255, 127, 80, 0.623);
+    max-width: 350px;
+    font-size: 16px;
+    position: fixed;
+    bottom: 50vh;
+}
+
+#nemesisHeal{
+    position: fixed;
+    z-index: 10;
+    top: 10vh;
+    left: 80vh;
+}
+#protaTextBattle{
+    border: black 2px solid;
+    background-color: antiquewhite;
+    height: 100px;
+    color: black;
+    height: 75px;
+    text-align: center;
+    padding-top: 15px;
+    background: rgb(65,232,216);
+    text-decoration: underline;
+    text-transform: uppercase;
+    text-decoration-style: wavy;
+    line-height: 30px;
+}
+#vitimObi{
+    border: black 2px solid;
+    background-color: antiquewhite;
+    color: black;
+    text-align: center;
+    text-decoration: underline;
+    text-transform: uppercase;
+    text-decoration-style: wavy;
+    line-height: 30px;
+    height: 35px;
+}
+#battleHE{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    line-height: 30px;
+}

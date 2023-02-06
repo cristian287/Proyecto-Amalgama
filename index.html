@@ -1,0 +1,149 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/cssStart/animacionesBase.css">
+    <link rel="stylesheet" type="text/css" href="/css/cssStart/estilosbase.css">
+    <link rel="stylesheet" href="/css/cssRoom/baño/estilosBaseBaño.css">
+    <link rel="stylesheet" href="/css/cssRoom/baño/animacionesBaseBaño.css">
+    <link rel="stylesheet" href="/css/cssRoom/cocina/animacionesBaseCosina.css">
+    <link rel="stylesheet" href="/css/cssRoom/cocina/estilosBaseCocina.css">
+    <link rel="stylesheet" href="/css/cssRoom/dormitorio/animacionesBase.css">
+    <link rel="stylesheet" href="/css/cssRoom/dormitorio/estilosBase.css">
+    <link rel="stylesheet" href="/css/cssPelea/estilosbase.css">
+    <link rel="stylesheet" href="/css/cssPelea/animacionesBase.css">
+
+
+
+    <link rel="stylesheet" type="text/css" href="/css/cssUniversal/AnimacionUniversal.css">
+    <link rel="stylesheet" type="text/css" href="/css/cssUniversal/EstiloUniversal.css">
+    <link rel="shortcut icon" href="/assets/favicon.png">
+    <title>tabú</title>
+</head>
+<body class="cursor">
+
+
+    <!--PANTALLA INICIO-->
+    
+    <div id="game" class = "1 none">
+        <div id="inicio">
+            <div id="title">
+                <img  src="/assets/99-Teaser.png" alt="">
+            </div>
+            <div>
+                <div class = "botonera">
+                    <button id = "iniciarJuegoBoton"><p class="botonStart">Iniciar Juego</p></button>
+                </div>
+                <div class = "botonera">
+                    <button id = "comoJugarBoton"><p class="botonStart">¿Cómo Jugar?</p></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id = "comoJugarDisplay" class = "none">
+        <button id = "volverInicio" class="buttonActive">
+            Volver a la pantalla inicio
+        </button>
+        <div>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum iste ipsum assumenda id culpa, tempore maxime ad modi enim quibusdam, hic quis, voluptatem magnam quod similique molestias quae. Hic, distinctio.
+        </div>
+    </div>
+    <!--FIN PANTALLA INICIO-->
+
+    <!-------------------------------------INICIO MODO TAMAGOCHI-------------------------->
+
+    <!--BACKGROUNDS Y HUDS-->
+
+
+    <div id="hudPrin" class="none">
+        <div id="hud"></div>
+    </div>
+    <div id = "hudCocina" class="none">
+        <div id="hud"></div>
+    </div>
+    <div id = "hudBaño" class="none">
+        <div id="hud"></div>
+    </div>
+    <div id = "botoneraTamagochi" class="none">
+        <div>
+            <button id = "buttonUnoTamagochiMode" class="tamamagochiButton buttonActive investigar">inspeccionar</button>
+        </div>
+        <div>
+            <button id = "buttonDosTamagochiMode" class="tamamagochiButton buttonActive">acccion de habitacion 1 </button>
+        </div>
+        <div>
+            <button id = "buttonTresTamagochiMode" class="tamamagochiButton buttonActive">acccion de habitacion 2 </button>
+        </div>
+        <div>
+            <button id = "buttonCuatroTamagochiMode" class="tamamagochiButton buttonActive">acccion de habitacion 3 </button>
+        </div>
+    </div>
+ 
+
+
+    <!--TAMAGOCHI Y FLECHAS-->
+    <div id="prota" class = "none"  >
+        <img src="/assets/nemesis.gif" alt="prota">
+    </div>
+    <div id="flechas" class = "none">
+        <button id="left"><img id = "arrowTwo" class="arrow arrowButton" src="/assets/arrowLeft.png" alt="izquierda"></button>
+        <button id="right" ><img id = "arrowOne" class="arrow arrowButton" src="/assets/arrowR.png" alt="derecha"></button>
+    </div>
+
+    <!--------------------------FIN MODO TAMAGOCHI---------------------------------------->
+
+    <!---------------------------MODO PELEA----------------------------------------------->
+    <div id="gamePeleaHud" class = "none">
+        <div id="nemesisHeal">
+            <p>
+                soy la salud del enemigo
+            </p>
+        </div>
+        <div id="fondo"><img id="victima" src="/assets/nemesisVictima.gif" alt="victima">
+            <div>
+                <p id="vitimText">
+                    soy el texto de la vitima
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi odit fugiat ea consequatur exercitationem distinctio et architecto, reiciendis, suscipit similique earum reprehenderit, praesentium ut at laudantium nostrum. Ex, sint sequi.
+                </p>
+            </div>
+        </div>
+        <div>
+          <div id="protaTextBattle">
+            <p>
+                soy el texto del protagonista
+            </p>
+          </div>
+          <div id="vitimObi">
+            <p>
+            soy un obituario
+            </p>
+        </div>
+        <div id="battleHE">
+            <div>
+                <p>soy la salud del protagonista</p>
+            </div>
+            <div>
+                <p>y yo soy su energia</p>
+            </div>
+        </div>
+        </div>
+        <div id="botonesHudPelea">
+            <div><button id = "botonPeleaUno" class="buttonActive">bomba acuatica</button></div>
+            <div><button id = "botonPeleaDos" class="buttonActive">mordida ferrea</button></div>
+            <div><button id = "botonPeleaTres" class="buttonActive">cantico mortal</button></div>
+            <div><button id = "botonPeleaCuatro" class="buttonActive">visualizacion divina</button></div>
+            <div><button id = "botonPeleaCinco" class="buttonActive">curacion de maxima velocidad </button></div>
+            <div><button id = "close" class="buttonActive">Volver al modo Tamagochi</button></div>
+        </div>
+    </div>
+
+    <!---------------FIN MODO PELEA------------------------------------------------------->
+</body>
+<script type="text/javascript" src="/js/jsStart/pantallaInicio.js"></script>
+<script type="text/javascript" src="/js/jsRoom/index.js"></script>
+<script type="text/javascript" src="/js/jsRoom/habitacionesDeslizable.js"></script>
+<script type="text/javascript" src="/js/jsRoom/modoTamagochi.js"></script>
+<script type="text/javascript" src="/js/jsPelea/modoPelea.js"></script>
+<script type="text/javascript" src="/js/jsPelea/iniciarPelea.js"></script>
+</html>

@@ -1,0 +1,32 @@
+#game{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    
+}
+#title{
+    height: 250px;
+    left: 35vh;
+   
+}
+#inicio{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    top: 5vh;
+
+    
+}
+.botonera{
+    float: inline-start;
+    position: relative;
+    font-size: x-small;
+    top: 3vh;
+}
+
+#inicio div button {
+    height: 150px;
+    left: 60vh;
+    font-size: xx-large;
+}
+

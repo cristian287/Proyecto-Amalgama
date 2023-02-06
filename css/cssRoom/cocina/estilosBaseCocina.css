@@ -1,0 +1,9 @@
+
+#hudCocina{
+    height: 100vh;
+    z-index: 1;
+    background: url(/assets/Room3.png) no-repeat center center fixed;
+    background-attachment: fixed;
+    background-size: 100%;
+    background-position: center;
+}

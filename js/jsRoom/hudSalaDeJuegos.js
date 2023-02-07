@@ -5,6 +5,7 @@ function inspeccionarSalaDeJuegos(){
 function jugar(){
     document.getElementById("textTamagochiLog").textContent = ""
     autoType("textTamagochiLog","Juegas con el tamagochi",50)
+    timePass()
 }
 function verSkills(){
     document.getElementById("textTamagochiLog").textContent = ""
@@ -13,4 +14,5 @@ function verSkills(){
 function cambiarSkills(){
     document.getElementById("textTamagochiLog").textContent = ""
     autoType("textTamagochiLog","*cambias los skills*",50)
+    timePass()
 }

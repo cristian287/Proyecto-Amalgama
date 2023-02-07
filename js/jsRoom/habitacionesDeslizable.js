@@ -3,17 +3,17 @@ let salaActual
 let primeraEntrada = true //Definir la sala a 0 si es la primera vez que se accede
 let maximasSalas = 4 //Cantidad máxima de switch a salas
 let obituarioTamagochi
+let momento = "mañana"
+let dia = 0 //Devolver estas dos variables a sus valores base al perder
 function habitacion(){
     salaActual = "hudPrin"
     botones(salaActual)
     mostrarDesaparecer("hudPrin","aparecer")
-    //interacciones de la habitacion
 }
 function cocina(){
     salaActual = "hudCocina"
     botones(salaActual)
     mostrarDesaparecer("hudCocina","aparecer")
-    //interacciones de la cocina
 }
 function baño(){
     salaActual = "hudBaño"

@@ -42,7 +42,6 @@ function irSala(ubicacion){
     }
 }
 function mostrarDesaparecer(nombre,swap){
-    console.log(nombre)
     if (swap === "aparecer"){document.getElementById(nombre).classList.remove("none")}
     else{document.getElementById(nombre).classList.add("none")}
 }

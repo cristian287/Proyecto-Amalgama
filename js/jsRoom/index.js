@@ -21,6 +21,27 @@ function autoType(element,text,delay) {
 		setTimeout(autoType,delay,element,text,delay);
 	}
 }
+function timePass(){
+	if (momento === "noche"){
+		dia++
+		momento = "mañana"
+		let statLoss = RNG(0,3)
+		switch (statLoss){
+			case 0: statLoss = "energia";break;
+			case 1: statLoss = "felicidad";break;
+			case 2: statLoss = "vejiga";break;
+			case 3: statLoss = "saciedad";break;
+		}
+		statsManager(statLoss,"resta",1)
+		document.getElementById("cartelEmergente").textContent = "perdi 1 punto de " + statLoss + " :("
+		document.getElementById("cartelEmergente").classList.add("cartelEmergenteDis")
+		setTimeout(() => {
+			document.getElementById("cartelEmergente").classList.remove("cartelEmergenteDis")
+		}, 6000);
+	}
+	else if (momento === "mañana"){momento = "noche"}
+	document.getElementById("timeNow").textContent = "Es el dia " + dia + " y es de " + momento
+}
 function statCheck(stat){
 	let s
 	if (stat>10){s = 10}
@@ -28,6 +49,26 @@ function statCheck(stat){
 	else{s = stat}
 	return s
 }
+
+
+
+function chatTamagochi(sala,value,valueDos){
+	let toUse
+	switch(sala){
+		case "habitacion": toUse = frasesTamagochiRoom;;break;
+		case "baño": toUse = frasesTamagochiBaño;break;
+	}
+	document.getElementById("cajaTextoSentimientosTamagochi").textContent = ""
+	let frase = toUse.filter(e => e.fraseSobre === value)
+    frase = frase[0].frases[RNG(0,frase[0].frases.length)]
+	autoType("textTamagochiLog",frase,50)
+	frase = toUse.filter(e => e.fraseSobre === valueDos)
+    frase = frase[0].frases[RNG(0,frase[0].frases.length)]
+	autoType("cajaTextoSentimientosTamagochi",frase,50)
+}
+
+
+
 function statsManager(punto,operacion,cantidad){
 	if (operacion === "suma"){
 		switch(punto){

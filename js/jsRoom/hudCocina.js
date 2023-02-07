@@ -4,11 +4,17 @@ function inspeccionarCocina(){
 }
 function comer(){
     document.getElementById("textTamagochiLog").textContent = ""
-    statsManager("saciedad","suma",RNG(1,2))
-    statsManager("comidaDisponible","resta",1)
-    statsManager("voracidad","suma",RNG(1,2))
-    statsManager("vejiga","resta",RNG(1,2))
-    autoType("textTamagochiLog","Te comes un tamagochi",50)
+    if (comidaDisponible>0){
+        statsManager("saciedad","suma",RNG(1,2))
+        statsManager("comidaDisponible","resta",1)
+        statsManager("voracidad","suma",RNG(1,2))
+        statsManager("vejiga","resta",RNG(1,2))
+        autoType("textTamagochiLog","Te comes un tamagochi",50)
+        timePass()
+    }
+    else{
+        autoType("textTamagochiLog","No tienes mas comida, busca mas",50)
+    }
 }
 function revisarDespensa(){
     document.getElementById("textTamagochiLog").textContent = ""
@@ -18,7 +24,6 @@ function revisarDespensa(){
     else{
         autoType("textTamagochiLog","No tenes mas carne",50)
     }
-    
 }
 function verStatsCocina(){
     document.getElementById("textTamagochiLog").textContent = ""

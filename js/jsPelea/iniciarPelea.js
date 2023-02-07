@@ -61,9 +61,9 @@ function firstSetSkills(skill){ //Setear los 5 skills iniciales
   
 setSkills(true)
 function turnoJugador(){
-    document.getElementById("botonPeleaUno").addEventListener("click",function e(){console.log("ejecutar skill");unbind()})
-    document.getElementById("botonPeleaDos").addEventListener("click",function e(){console.log("ejecutar skill");unbind()})
-    document.getElementById("botonPeleaTres").addEventListener("click",function e(){console.log("ejecutar skill");unbind()})
-    document.getElementById("botonPeleaCuatro").addEventListener("click",function e(){console.log("ejecutar skill");unbind()})
-    document.getElementById("botonPeleaCinco").addEventListener("click",function e(){console.log("ejecutar skill");unbind()})
+    document.getElementById("botonPeleaUno").addEventListener("click",function e(){unbind()})
+    document.getElementById("botonPeleaDos").addEventListener("click",function e(){unbind()})
+    document.getElementById("botonPeleaTres").addEventListener("click",function e(){unbind()})
+    document.getElementById("botonPeleaCuatro").addEventListener("click",function e(){unbind()})
+    document.getElementById("botonPeleaCinco").addEventListener("click",function e(){unbind()})
 }

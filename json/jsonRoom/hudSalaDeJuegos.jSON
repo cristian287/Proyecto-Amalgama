@@ -1,0 +1,18 @@
+[
+    {
+        "inspeccionar" : "inspeccionar sala de juegos",
+        "consumePuntos" : true
+    },
+    {
+        "accionUno" : "jugar",
+        "consumePuntos" : true
+    },
+    {
+        "accionDos" : "cambiar habilidades",
+        "consumePuntos" : true
+    },
+    {
+        "accionTres" : "ver las habilidades",
+        "consumePuntos" : false
+    }
+]

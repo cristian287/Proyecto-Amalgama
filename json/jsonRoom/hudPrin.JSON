@@ -1,0 +1,18 @@
+[
+    {
+        "inspeccionar" : "inspeccionar sala",
+        "consumePuntos" : true
+    },
+    {
+        "accionUno" : "dormir",
+        "consumePuntos" : true
+    },
+    {
+        "accionDos" : "hablar",
+        "consumePuntos" : true
+    },
+    {
+        "accionTres" : "ver las estadisticas",
+        "consumePuntos" : false
+    }
+]

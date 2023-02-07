@@ -13,6 +13,12 @@
     <link rel="stylesheet" href="/css/cssRoom/dormitorio/estilosBase.css">
     <link rel="stylesheet" href="/css/cssPelea/estilosbase.css">
     <link rel="stylesheet" href="/css/cssPelea/animacionesBase.css">
+    <link rel="stylesheet" href="/css/cssRoom/sotano/animacionesBaseSotano.css">
+    <link rel="stylesheet" href="/css/cssRoom/sotano/estilosBaseSotano.css">
+    <link rel="stylesheet" href="/css/cssRoom/salaDeJuegos/estilosBasePlayground.css">
+    <link rel="stylesheet" href="/css/cssRoom/salaDeJuegos/animacionesBasePlayground.css">
+    <link rel="stylesheet" href="/css/cssRoom/entrada/animacionesBaseEntrada.css">
+    <link rel="stylesheet" href="/css/cssRoom/entrada/estilosBaseEntrada.css">
 
 
 
@@ -55,7 +61,14 @@
 
     <!--BACKGROUNDS Y HUDS-->
 
+    <div id="TextPetRoom" class = "none">
+        <div>
+            <p>
+                y yo soy lo que va adecir la mascota Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod consectetur nobis eligendi, facere unde dicta placeat excepturi? Repellendus molestias ducimus, neque dolores sed mollitia autem debitis ipsum rem, voluptatibus beatae?
+            </p>
+        </div>
 
+    </div>
     <div id="hudPrin" class="none">
         <div id="hud"></div>
     </div>
@@ -65,26 +78,42 @@
     <div id = "hudBaño" class="none">
         <div id="hud"></div>
     </div>
+    <div id="hudSalaDeJuegos" class="none">
+        <div id="hud"></div>
+    </div>
+    <div id="hudSotano" class="none">
+        <div id="hud"></div>
+    </div>
+    <div id="TextPlayerRoom" class = "none">
+        <div>
+            <p id = "textTamagochiLog">
+                yo soy las frases del jugador y el obituario de lo que pasa en el juego
+            </p>
+        </div>
+
+    </div>
     <div id = "botoneraTamagochi" class="none">
+        <div id="timeOut"></div>
         <div>
-            <button id = "buttonUnoTamagochiMode" class="tamamagochiButton buttonActive investigar">inspeccionar</button>
+            <button id = "buttonUnoTamagochiMode" class="tamamagochiButton buttonActive investigar"></button>
         </div>
         <div>
-            <button id = "buttonDosTamagochiMode" class="tamamagochiButton buttonActive">acccion de habitacion 1 </button>
+            <button id = "buttonDosTamagochiMode" class="tamamagochiButton buttonActive"></button>
         </div>
         <div>
-            <button id = "buttonTresTamagochiMode" class="tamamagochiButton buttonActive">acccion de habitacion 2 </button>
+            <button id = "buttonTresTamagochiMode" class="tamamagochiButton buttonActive"></button>
         </div>
         <div>
-            <button id = "buttonCuatroTamagochiMode" class="tamamagochiButton buttonActive">acccion de habitacion 3 </button>
+            <button id = "buttonCuatroTamagochiMode" class="tamamagochiButton buttonActive"></button>
         </div>
     </div>
- 
+
+    
 
 
     <!--TAMAGOCHI Y FLECHAS-->
     <div id="prota" class = "none"  >
-        <img src="/assets/nemesis.gif" alt="prota">
+        <img class="pat" src="/assets/nemesis.gif" alt="prota">
     </div>
     <div id="flechas" class = "none">
         <button id="left"><img id = "arrowTwo" class="arrow arrowButton" src="/assets/arrowLeft.png" alt="izquierda"></button>
@@ -94,6 +123,8 @@
     <!--------------------------FIN MODO TAMAGOCHI---------------------------------------->
 
     <!---------------------------MODO PELEA----------------------------------------------->
+
+
     <div id="gamePeleaHud" class = "none">
         <div id="nemesisHeal">
             <p>
@@ -129,16 +160,20 @@
         </div>
         </div>
         <div id="botonesHudPelea">
-            <div><button id = "botonPeleaUno" class="buttonActive">bomba acuatica</button></div>
-            <div><button id = "botonPeleaDos" class="buttonActive">mordida ferrea</button></div>
-            <div><button id = "botonPeleaTres" class="buttonActive">cantico mortal</button></div>
-            <div><button id = "botonPeleaCuatro" class="buttonActive">visualizacion divina</button></div>
-            <div><button id = "botonPeleaCinco" class="buttonActive">curacion de maxima velocidad </button></div>
-            <div><button id = "close" class="buttonActive">Volver al modo Tamagochi</button></div>
+            <div><button id = "botonPeleaUno" class="buttonActive cursorPelea">bomba acuatica</button></div>
+            <div><button id = "botonPeleaDos" class="buttonActive cursorPelea">mordida ferrea</button></div>
+            <div><button id = "botonPeleaTres" class="buttonActive cursorPelea">cantico mortal</button></div>
+            <div><button id = "botonPeleaCuatro" class="buttonActive cursorPelea">visualizacion divina</button></div>
+            <div><button id = "botonPeleaCinco" class="buttonActive cursorPelea">curacion de maxima velocidad </button></div>
+            <div><button id = "close" class="buttonActive cursorPelea">Volver al modo Tamagochi</button></div>
         </div>
     </div>
 
+
     <!---------------FIN MODO PELEA------------------------------------------------------->
+
+
+
 </body>
 <script type="text/javascript" src="/js/jsStart/pantallaInicio.js"></script>
 <script type="text/javascript" src="/js/jsRoom/index.js"></script>
@@ -146,4 +181,8 @@
 <script type="text/javascript" src="/js/jsRoom/modoTamagochi.js"></script>
 <script type="text/javascript" src="/js/jsPelea/modoPelea.js"></script>
 <script type="text/javascript" src="/js/jsPelea/iniciarPelea.js"></script>
+<script type="text/javascript" src="/js/jsRoom/hudPrin.js"></script>
+<script type="text/javascript" src="/js/jsRoom/hudCocina.js"></script>
+<script type="text/javascript" src="/js/jsRoom/hudBaño.js"></script>
+<script type="text/javascript" src="/js/jsRoom/hudSalaDeJuegos.js"></script>
 </html>

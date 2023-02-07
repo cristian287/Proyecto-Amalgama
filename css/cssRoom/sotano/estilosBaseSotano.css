@@ -1,7 +1,7 @@
-#hudBaño{ 
+#hudSotano{ 
     height: 55%;
     z-index: 1;
-    background: url(/assets/Room2.jpg) no-repeat center center;
+    background: url(/assets/Room5.gif) no-repeat center center;
     background-size: 100%;
     background-position: center;
 }

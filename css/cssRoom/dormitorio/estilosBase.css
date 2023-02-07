@@ -1,9 +1,8 @@
+
 .arrowButton{
     background:none;
     border: none;
     z-index: 3;
-
-    
 }
 #arrowControl{
     display: flex;
@@ -17,70 +16,104 @@
 .arrow{
     height: 100%;
     z-index: 3;
+    width: auto;
 }
 #arrowTwo:hover{
     content: url(/assets/puerpleArrow.png);
-    animation-name: arrowHover ;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
 }
 #arrowOne:hover{
     content: url(/assets/puerpleArrowR.png);
-    animation-name: arrowHover ;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
 }
 #hudPrin{
-    height: 100vh;
+    height: 55%;
     z-index: 1;
-    background: url(/assets/Room0.png) no-repeat center center fixed;
-    background-attachment: fixed;
+    background: url(/assets/Room0.png) no-repeat center center;
     background-size: 100%;
     background-position: center;
 }
 #flechas{
-    height: 100px;
-    z-index: 3;
+    position: sticky;
+    height: 20%;
+    z-index: 1;
     display: flex;
     flex-direction: space-between;
+    justify-content: center;
     gap: 80%;
-    padding-left: 4%;
-    bottom: 115vh;
+    bottom: 23%;
 }
 #off{
     background-color:red ;
     border: 1px black solid;
 }
 #off:hover{
-
     transition: 1s;
     background-color: blue;
 }
 #botoneraTamagochi{
     z-index: 3;
-    height: 15%;
+    height: 20%;
     display:flex;
     justify-content: space-around;
-    position: relative;
-    bottom: 19vh;
-    
 }
 #botoneraTamagochi div{
     height: 90%;
+    display:flex;
+    justify-content: space-around;
+    justify-content: end;
+    
 }
 .tamamagochiButton{
-    background-color: aqua;
-    border: 2px solid red;
     height: 100%;
     text-transform: uppercase;
     text-transform: full-width;
     text-decoration: underline;
     text-decoration-style: wavy;
-    
-
+    width: 100vh;
+    line-height: 30px;
 }
 .investigar{
-    cursor: url(/assets/investigacion.cur),auto;
+    cursor: url(/assets/cursores/investigacion.cur),auto;
+}
+#TextPetRoom{
+    width: 30%;
+    position: fixed;
+    z-index: 3;
+    background-color: rgba(250, 235, 215, 0.349);
+    text-transform: uppercase;
+    text-decoration: underline;
+    top:4%;
+    line-height: 150%;
+    left: 2%;
+    border: 1px solid black;
+    text-shadow: 12px 12px 12px black;
+}
+#TextPlayerRoom{
+    display: flex;
+    background-color: antiquewhite;
+    height: 27%;
+    text-align: center;
+    border: 1px solid black;
+    justify-content: center;
+    
+}
+#TextPlayerRoom div{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    border: 5px solid black;
+}
+#TextPlayerRoom p{
+    width: 100%;
+    text-align: center;
+    line-height: 35px;
+    font-size: large;
+    text-decoration: underline;
+    border: 1px solid black;
+}
+#timeOut{
+    top: 9vh;
+    position: fixed;
+    z-index: 1;
+    border: 500px solid rgba(255, 0, 0, 0);
+
 }

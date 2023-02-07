@@ -1,0 +1,18 @@
+[
+    {
+        "inspeccionar" : "inspeccionar baño",
+        "consumePuntos" : true
+    },
+    {
+        "accionUno" : "bañarse",
+        "consumePuntos" : true
+    },
+    {
+        "accionDos" : "ir al baño",
+        "consumePuntos" : true
+    },
+    {
+        "accionTres" : "ver las estadisticas",
+        "consumePuntos" : false
+    }
+]

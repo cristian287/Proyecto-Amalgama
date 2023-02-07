@@ -1,9 +1,26 @@
-function RNG(min,max){
+function RNG(min,max){ //Cualquier tipo de azar
     let random = 0
     do{
     random = Math.round(Math.random()*max);
     }while(random < min)
    return random;
+}
+function recreateNode(el, withChildren) { //Recrear el nodo para sacarle los eventos
+    if (withChildren) {
+        el.parentNode.replaceChild(el.cloneNode(true), el);
+    }
+    else {
+        var newEl = el.cloneNode(false);
+        while (el.hasChildNodes()) newEl.appendChild(el.firstChild);
+        el.parentNode.replaceChild(newEl, el);
+    }
+}
+function unbind(){ //Funcion a llamar para simplificar el recrear nodos
+    recreateNode(document.getElementById("botonPeleaUno"))
+    recreateNode(document.getElementById("botonPeleaDos"))
+    recreateNode(document.getElementById("botonPeleaTres"))
+    recreateNode(document.getElementById("botonPeleaCuatro"))
+    recreateNode(document.getElementById("botonPeleaCinco"))
 }
 let skillUno
 let skillDos
@@ -14,7 +31,7 @@ let skillsCollection
 let i = 0
 function setSkills(isInitial){//Cambiar los skills. Si isInitial = true se setean las 5 habilidades,
                               //caso contrario se elige una (codigo por hacer)
-    fetch("/js/jsPelea/skills.JSON")
+    fetch("/json/jsonPelea/skills.JSON")
     .then((response)=>response.json())
     .then((skills)=>{
             if (isInitial){
@@ -41,4 +58,12 @@ function firstSetSkills(skill){ //Setear los 5 skills iniciales
         i = 0
     }
 }
+  
 setSkills(true)
+function turnoJugador(){
+    document.getElementById("botonPeleaUno").addEventListener("click",function e(){console.log("ejecutar skill");unbind()})
+    document.getElementById("botonPeleaDos").addEventListener("click",function e(){console.log("ejecutar skill");unbind()})
+    document.getElementById("botonPeleaTres").addEventListener("click",function e(){console.log("ejecutar skill");unbind()})
+    document.getElementById("botonPeleaCuatro").addEventListener("click",function e(){console.log("ejecutar skill");unbind()})
+    document.getElementById("botonPeleaCinco").addEventListener("click",function e(){console.log("ejecutar skill");unbind()})
+}

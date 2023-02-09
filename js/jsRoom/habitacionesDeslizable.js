@@ -43,7 +43,7 @@ function botoneraTamagochiHandler(habitacion,callback){
     let dos = document.getElementById("buttonDosTamagochiMode")
     let tres = document.getElementById("buttonTresTamagochiMode")
     let cuatro = document.getElementById("buttonCuatroTamagochiMode")
-    switch(habitacion){
+    switch(habitacion){ //me rindo aca asi que lo hardcodeo
         case "hudPrin"         :    uno.addEventListener("click",function(e){inspeccionarSala();unbindBotoneraTamagochi()})
                                     dos.addEventListener("click",function(e){dormir();unbindBotoneraTamagochi()})
                                     tres.addEventListener("click",function(e){hablar();unbindBotoneraTamagochi()})

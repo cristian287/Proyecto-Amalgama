@@ -10,6 +10,7 @@ function tamagochiMode(){ //Ir al modo Tamagochi (Entrar en modo deslizable)
         sala = 0
         setTimeout(() => {
             document.getElementById("textTamagochiLog").textContent = "Tamagochi listo!"
+            document.getElementById("cajaTextoSentimientosTamagochi").textContent = "Cuida de mi!"
         }, 2000);
         
     }
@@ -45,3 +46,4 @@ function mostrarDesaparecer(nombre,swap){
     if (swap === "aparecer"){document.getElementById(nombre).classList.remove("none")}
     else{document.getElementById(nombre).classList.add("none")}
 }
+mostrarDesaparecer("gameOver","desaparecer")

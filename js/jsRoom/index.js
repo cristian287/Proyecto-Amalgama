@@ -1,14 +1,3 @@
-let sala
-let leftKey = document.getElementById("left")
-let rightKey = document.getElementById("right")
-let energia = 10
-let felicidad = 10
-let higiene = 10
-let vejiga = 10
-let saciedad = 10
-let comidaDisponible = 4
-let voracidad = 0
-let maxStats = 10
 //DETECCION DE CLICKS
 leftKey.addEventListener("click",function(){handlerClickKeys("left")})
 rightKey.addEventListener("click",function(){handlerClickKeys("right")})
@@ -50,9 +39,15 @@ function timePass(){
 	else if (momento === "mañana"){momento = "noche"}
 	document.getElementById("timeNow").textContent = "Es el dia " + dia + " y es de " + momento
 }
-function gameOver(tipo){
-	console.log("game over :(")
-}
+
+
+
+
+
+
+
+
+
 function statCheck(stat,deathStat){
 	let s
 	if (stat>maxStats){s = maxStats}

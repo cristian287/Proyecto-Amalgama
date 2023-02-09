@@ -126,9 +126,3 @@
     width: 0%;
     text-transform: capitalize;
 }
-#gameOver{
-    display: flex;
-    justify-content: center;
-    background-color: black;
-    color: red;
-}

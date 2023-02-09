@@ -16,7 +16,7 @@ function bañarse(){
     statsManager("higiene","suma",RNG(1,2))
     statsManager("energia","resta",RNG(1,2))
     statsManager("felicidad","resta",RNG(1,2))
-    chatTamagochi("baño","bañarse","bañarseTamagochi")
+    chatTamagochi("baño","bañarse")
     timePass()
 }
 function inodoro(){
@@ -24,7 +24,7 @@ function inodoro(){
     statsManager("vejiga","suma",RNG(1,2))
     statsManager("saciedad","resta",RNG(1,2))
     statsManager("higiene","resta",RNG(1,2))
-    chatTamagochi("baño","irBaño","irBañoTamagochi")
+    chatTamagochi("baño","irBaño")
     timePass()
 }
 function verStatsBaño(){

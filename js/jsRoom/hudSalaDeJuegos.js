@@ -1,10 +1,17 @@
+let frasesTamagochiSalaDeJuegos
+fetch("/json/jsonRoom/frases/frasesSalaDeJuegos.JSON")
+        .then((response)=>response.json())
+        .then((callback)=>{
+                frasesTamagochiSalaDeJuegos = callback
+            }
+        )
 function inspeccionarSalaDeJuegos(){
     document.getElementById("textTamagochiLog").textContent = ""
     autoType("textTamagochiLog","Inspeccionada la sala de juegos",50)
 }
 function jugar(){
     document.getElementById("textTamagochiLog").textContent = ""
-    autoType("textTamagochiLog","Juegas con el tamagochi",50)
+    chatTamagochi("salaDeJuegos","jugar")
     timePass()
 }
 function verSkills(){

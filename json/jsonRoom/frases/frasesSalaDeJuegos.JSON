@@ -3,16 +3,16 @@
         "fraseSobre" : "jugar",
         "frases" : [
             {
-                "enHud" : "enHudjugar",
-                "enTamagochi" : "enTamagochijugar"
+                "enHud" : "Vamos a jugar un rato",
+                "enTamagochi" : "Estara encantado de jugar junto a ti padre"
             },
             {
-                "enHud" : "enHudjugar1",
-                "enTamagochi" : "enTamagochijugar1"
+                "enHud" : "Creo que hay tiempo para jugar",
+                "enTamagochi" : "jugar junto a ti me hace realmente feliz "
             },
             {
-                "enHud" : "enHudjugar3",
-                "enTamagochi" : "enTamagochijugar3"
+                "enHud" : "vamos divertirno un rato",
+                "enTamagochi" : "ojala el momento de jugar dure para siempre..."
             }
         ]
     }

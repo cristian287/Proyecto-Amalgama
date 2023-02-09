@@ -3,16 +3,25 @@
         "fraseSobre" : "comer",
         "frases" : [
             {
-                "enHud" : "enHudcomer",
-                "enTamagochi" : "enTamagochicomer"
+                "enHud" : "yo... creo que es momento de que comas algo",
+                "enTamagochi" : "Si... estare agradecido de aceptar la comida"
             },
             {
-                "enHud" : "enHudcomer1",
-                "enTamagochi" : "enTamagochicomer1"
+                "enHud" : "Por favor come esto...",
+                "enTamagochi" : "se ve delicioso ..."
             },
             {
-                "enHud" : "enHudcomer3",
-                "enTamagochi" : "enTamagochicomer3"
+                "enHud" : "intenta comer un poco para hacerte fuerte",
+                "enTamagochi" : "si... puedo sentir el incremento de poder dentro de mi"
+            }
+        ]
+    },
+    {
+        "fraseSobre" : "sinComidaDisponible",
+        "frases" : [
+            {
+                "enHud" : "perdon pequeño pero ya no queda comida ...",
+                "enTamagochi" : "mmmm... creo que seria hora de 'cosechar' mas comida..."
             }
         ]
     }

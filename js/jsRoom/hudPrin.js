@@ -14,14 +14,14 @@ function dormir(){
     document.getElementById("textTamagochiLog").textContent = ""
     statsManager("energia","suma",RNG(1,2))
     statsManager("vejiga","resta",RNG(1,2))
-    chatTamagochi("habitacion","dormir","dormirTamagochi")
+    chatTamagochi("habitacion","dormir")
     timePass()
 }
 function hablar(){
     document.getElementById("textTamagochiLog").textContent = ""
     statsManager("felicidad","suma",RNG(1,2))
     statsManager("saciedad","resta",RNG(1,2))
-    chatTamagochi("habitacion","hablar","hablarTamagochi")
+    chatTamagochi("habitacion","hablar")
     timePass()
 }
 function verStatsSala(){

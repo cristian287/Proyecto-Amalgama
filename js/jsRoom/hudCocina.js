@@ -1,3 +1,10 @@
+let frasesTamagochiCocina
+fetch("/json/jsonRoom/frases/frasesCocina.JSON")
+        .then((response)=>response.json())
+        .then((callback)=>{
+                frasesTamagochiCocina = callback
+            }
+        )
 function inspeccionarCocina(){
     document.getElementById("textTamagochiLog").textContent = ""
     autoType("textTamagochiLog","Inspeccionada la cocina",50)
@@ -9,11 +16,11 @@ function comer(){
         statsManager("comidaDisponible","resta",1)
         statsManager("voracidad","suma",RNG(1,2))
         statsManager("vejiga","resta",RNG(1,2))
-        autoType("textTamagochiLog","Te comes un tamagochi",50)
+        chatTamagochi("cocina","comer")
         timePass()
     }
     else{
-        autoType("textTamagochiLog","No tienes mas comida, busca mas",50)
+       chatTamagochi("cocina","sinComidaDisponible")
     }
 }
 function revisarDespensa(){

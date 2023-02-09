@@ -8,11 +8,13 @@ let vejiga = 10
 let saciedad = 10
 let comidaDisponible = 4
 let voracidad = 0
+let maxStats = 10
 //DETECCION DE CLICKS
 leftKey.addEventListener("click",function(){handlerClickKeys("left")})
 rightKey.addEventListener("click",function(){handlerClickKeys("right")})
-
-function autoType(element,text,delay,condicionReEntrada) {
+let unlock
+function autoType(element,text,delay,conditionEnd){
+	if (conditionEnd){unlock = true}
 	temp = document.getElementById(element).innerHTML;
 	temp = temp.concat(text.charAt(0));
 	document.getElementById(element).innerHTML = temp;
@@ -21,7 +23,10 @@ function autoType(element,text,delay,condicionReEntrada) {
 		setTimeout(autoType,delay,element,text,delay);
 	}
 	else{
-		mostrarDesaparecer("timeOut","desaparecer")
+		if (unlock){
+			unlock = false
+			mostrarDesaparecer("timeOut","desaparecer")
+		}
 	}
 }
 function timePass(){
@@ -45,29 +50,45 @@ function timePass(){
 	else if (momento === "mañana"){momento = "noche"}
 	document.getElementById("timeNow").textContent = "Es el dia " + dia + " y es de " + momento
 }
-function statCheck(stat){
+function gameOver(tipo){
+	console.log("game over :(")
+}
+function statCheck(stat,deathStat){
 	let s
-	if (stat>10){s = 10}
-	else if (stat<0){s = 0}
+	if (stat>maxStats){s = maxStats}
+	else if (stat<=0){
+		stat = 0
+		switch(deathStat){
+			case "energia" : gameOver("energia");break;
+			case "felicidad" : gameOver("felicidad");break
+			case "saciedad" : gameOver("saciedad");break
+		}
+	}
+	if ((deathStat === "voracidad") && (stat >= 10)){
+		gameOver("voracidad")
+	}
 	else{s = stat}
 	return s
 }
 
 
 
-function chatTamagochi(sala,value,valueDos){
+function chatTamagochi(sala,value){
 	mostrarDesaparecer("timeOut","aparecer")
 	let toUse
 	switch(sala){
 		case "habitacion": toUse = frasesTamagochiRoom;break;
 		case "baño": toUse = frasesTamagochiBaño;break;
+		case "cocina": toUse = frasesTamagochiCocina;break;
+		case "salaDeJuegos" : toUse = frasesTamagochiSalaDeJuegos;break;
 	}
 	document.getElementById("cajaTextoSentimientosTamagochi").textContent = ""
 	let frase = toUse.filter(e => e.fraseSobre === value)
     frase = frase[0].frases[RNG(0,(frase[0].frases.length - 1))]
-	console.log(frase)
-	autoType("textTamagochiLog",frase.enHud,5)
-	autoType("cajaTextoSentimientosTamagochi",frase.enTamagochi,5)
+	autoType("textTamagochiLog",frase.enHud,20)
+	setTimeout(() => {
+		autoType("cajaTextoSentimientosTamagochi",frase.enTamagochi,20,true)
+	}, frase.enHud.length*40);
 }
 
 
@@ -95,11 +116,11 @@ function statsManager(punto,operacion,cantidad){
 			case "voracidad" : voracidad = voracidad - cantidad;break;
 		}
 	}
-	energia = statCheck(energia)
-	felicidad = statCheck(felicidad)
+	energia = statCheck(energia,"energia")
+	felicidad = statCheck(felicidad,"felicidad")
 	higiene = statCheck(higiene)
 	vejiga = statCheck(vejiga)
-	saciedad = statCheck(saciedad)
+	saciedad = statCheck(saciedad,"saciedad")
 	comidaDisponible = statCheck(comidaDisponible)
-	voracidad = statCheck(voracidad)
+	voracidad = statCheck(voracidad,"voracidad")
 }

@@ -1,0 +1,19 @@
+[
+    {
+        "fraseSobre" : "comer",
+        "frases" : [
+            {
+                "enHud" : "enHudcomer",
+                "enTamagochi" : "enTamagochicomer"
+            },
+            {
+                "enHud" : "enHudcomer1",
+                "enTamagochi" : "enTamagochicomer1"
+            },
+            {
+                "enHud" : "enHudcomer3",
+                "enTamagochi" : "enTamagochicomer3"
+            }
+        ]
+    }
+]

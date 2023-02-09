@@ -3,16 +3,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/css/cssStart/animacionesBase.css">
-    <link rel="stylesheet" type="text/css" href="/css/cssStart/estilosbase.css">
+    <link rel="stylesheet" type="text/css" href="/css/cssStart/animacionesBaseStart.css">
+    <link rel="stylesheet" type="text/css" href="/css/cssStart/estilosbaseStart.css">
     <link rel="stylesheet" href="/css/cssRoom/baño/estilosBaseBaño.css">
     <link rel="stylesheet" href="/css/cssRoom/baño/animacionesBaseBaño.css">
     <link rel="stylesheet" href="/css/cssRoom/cocina/animacionesBaseCosina.css">
     <link rel="stylesheet" href="/css/cssRoom/cocina/estilosBaseCocina.css">
-    <link rel="stylesheet" href="/css/cssRoom/dormitorio/animacionesBase.css">
-    <link rel="stylesheet" href="/css/cssRoom/dormitorio/estilosBase.css">
-    <link rel="stylesheet" href="/css/cssPelea/estilosbase.css">
-    <link rel="stylesheet" href="/css/cssPelea/animacionesBase.css">
+    <link rel="stylesheet" href="/css/cssRoom/dormitorio/animacionesBaseRoom.css">
+    <link rel="stylesheet" href="/css/cssRoom/dormitorio/estilosBaseRoom.css">
+    <link rel="stylesheet" href="/css/cssPelea/animacionesBasePelea.css">
+    <link rel="stylesheet" href="/css/cssPelea/estilosbasePelea.css">
     <link rel="stylesheet" href="/css/cssRoom/sotano/animacionesBaseSotano.css">
     <link rel="stylesheet" href="/css/cssRoom/sotano/estilosBaseSotano.css">
     <link rel="stylesheet" href="/css/cssRoom/salaDeJuegos/estilosBasePlayground.css">
@@ -24,7 +24,7 @@
 
     <link rel="stylesheet" type="text/css" href="/css/cssUniversal/AnimacionUniversal.css">
     <link rel="stylesheet" type="text/css" href="/css/cssUniversal/EstiloUniversal.css">
-    <link rel="shortcut icon" href="/assets/favicon.png">
+    <link rel="shortcut icon" href="/assets/otros/favicon.png">
     <title>tabú</title>
 </head>
 <body class="cursor">
@@ -35,7 +35,7 @@
     <div id="game" class = "1 none">
         <div id="inicio">
             <div id="title">
-                <img  src="/assets/99-Teaser.png" alt="">
+                <img  src="/assets/otros/99-Teaser.png" alt="">
             </div>
             <div>
                 <div class = "botonera">
@@ -101,7 +101,6 @@
                 yo soy las frases del jugador y el obituario de lo que pasa en el juego
             </p>
         </div>
-
     </div>
     <div id = "botoneraTamagochi" class="none">
         <div id="timeOut"></div>
@@ -124,11 +123,11 @@
 
     <!--TAMAGOCHI Y FLECHAS-->
     <div id="prota" class = "none"  >
-        <img class="pat" src="/assets/nemesis.gif" alt="prota">
+        <img class="pat" src="/assets/Protagonistas/nemesis.gif" alt="prota">
     </div>
     <div id="flechas" class = "none">
-        <button id="left"><img id = "arrowTwo" class="arrow arrowButton" src="/assets/arrowLeft.png" alt="izquierda"></button>
-        <button id="right" ><img id = "arrowOne" class="arrow arrowButton" src="/assets/arrowR.png" alt="derecha"></button>
+        <button id="left"><img id = "arrowTwo" class="arrow arrowButton" src="/assets/ElementosRooms/arrowLeft.png" alt="izquierda"></button>
+        <button id="right" ><img id = "arrowOne" class="arrow arrowButton" src="/assets/ElementosRooms/arrowR.png" alt="derecha"></button>
     </div>
 
     <!--------------------------FIN MODO TAMAGOCHI---------------------------------------->
@@ -136,13 +135,13 @@
     <!---------------------------MODO PELEA----------------------------------------------->
 
 
-    <div id="gamePeleaHud" class = "none">
+    <div id="gamePeleaHud" class = "none victimHit victimHitBlindness">
         <div id="nemesisHeal">
             <p>
                 soy la salud del enemigo
             </p>
         </div>
-        <div id="fondo"><img id="victima" src="/assets/nemesisVictima.gif" alt="victima">
+        <div id="fondo"><img id="victima" src="/assets/Protagonistas/nemesisVictima.gif" alt="victima">
             <div>
                 <p id="vitimText">
                     soy el texto de la vitima
@@ -161,12 +160,12 @@
             soy un obituario
             </p>
         </div>
-        <div id="battleHE">
+        <div id="battleHE" >
             <div>
-                <p>soy la salud del protagonista</p>
+                <p id="saludProta" class="healing">soy la salud del protagonista</p>
             </div>
             <div>
-                <p>y yo soy su energia</p>
+                <p id="energiaProta" class="energy">y yo soy su energia</p>
             </div>
         </div>
         </div>

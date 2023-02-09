@@ -7,27 +7,27 @@ let momento = "mañana"
 let dia = 0 //Devolver estas dos variables a sus valores base al perder
 function habitacion(){
     salaActual = "hudPrin"
-    botones(salaActual)
+    botones(salaActual,true)
     mostrarDesaparecer("hudPrin","aparecer")
 }
 function cocina(){
     salaActual = "hudCocina"
-    botones(salaActual)
+    botones(salaActual,true)
     mostrarDesaparecer("hudCocina","aparecer")
 }
 function baño(){
     salaActual = "hudBaño"
-    botones(salaActual)
+    botones(salaActual,true)
     mostrarDesaparecer("hudBaño","aparecer")
 }
 function salaDeJuegos(){
    salaActual = "hudSalaDeJuegos"
-   botones(salaActual)
+   botones(salaActual,true)
    mostrarDesaparecer("hudSalaDeJuegos","aparecer")
 }
 function sotano(){
     salaActual = "hudSotano"
-    botones(salaActual)
+    botones(salaActual,true)
     mostrarDesaparecer("hudSotano","aparecer")
 }
 function unbindBotoneraTamagochi(condition){
@@ -36,7 +36,7 @@ function unbindBotoneraTamagochi(condition){
     recreateNode(document.getElementById("buttonTresTamagochiMode"))
     recreateNode(document.getElementById("buttonCuatroTamagochiMode"))
     if (condition){return}
-    botones(salaActual)
+    botones(salaActual,false)
 }
 function botoneraTamagochiHandler(habitacion,callback){
     let uno = document.getElementById("buttonUnoTamagochiMode")
@@ -75,11 +75,13 @@ function botoneraTamagochiHandler(habitacion,callback){
                                     break
     }
 }
-function botones(habitacion){
-    mostrarDesaparecer("timeOut","aparecer")
-    setTimeout(() => {
-        mostrarDesaparecer("timeOut","desaparecer")
-    }, 2000);
+function botones(habitacion,condicionTimeOut){
+    if (condicionTimeOut){
+        mostrarDesaparecer("timeOut","aparecer")
+        setTimeout(() => {
+            mostrarDesaparecer("timeOut","desaparecer")
+        }, 2000);
+    }
     unbindBotoneraTamagochi(true)
         fetch("/json/jsonRoom/"+habitacion+".JSON")
         .then((response)=>response.json())

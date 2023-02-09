@@ -2,7 +2,7 @@
 #hudCocina{
     height: 55%;
     z-index: 1;
-    background: url(/assets/Room3.png) no-repeat center center;
+    background: url(/assets/Rooms/Room3.png) no-repeat center center;
     background-size: 100%;
     background-position: center;
 }
@@ -11,5 +11,7 @@
     justify-content: end;
     font-size:large ;
     right: 10%;
-    color: red;
+    line-height: 40px;
+    color: violet;
+    text-shadow: 3px 3px 3px red;
 }

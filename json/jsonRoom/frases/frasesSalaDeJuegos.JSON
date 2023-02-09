@@ -1,0 +1,19 @@
+[
+    {
+        "fraseSobre" : "jugar",
+        "frases" : [
+            {
+                "enHud" : "enHudjugar",
+                "enTamagochi" : "enTamagochijugar"
+            },
+            {
+                "enHud" : "enHudjugar1",
+                "enTamagochi" : "enTamagochijugar1"
+            },
+            {
+                "enHud" : "enHudjugar3",
+                "enTamagochi" : "enTamagochijugar3"
+            }
+        ]
+    }
+]

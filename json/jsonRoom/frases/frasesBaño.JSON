@@ -2,33 +2,35 @@
     {
         "fraseSobre" : "bañarse",
         "frases" : [
-            "frase sobre dormir 1",
-            "frase sobre dormir 2",
-            "frase sobre dormir 3"
+            {
+                "enHud" : "enHudBañarse",
+                "enTamagochi" : "enTamagochiBañarse"
+            },
+            {
+                "enHud" : "enHudBañarse2",
+                "enTamagochi" : "enTamagochiBañarse2"
+            },
+            {
+                "enHud" : "enHudBañarse3",
+                "enTamagochi" : "enTamagochiBañarse3"
+            }
         ]
     },
     {
         "fraseSobre" : "irBaño",
         "frases" : [
-            "frase sobre hablar 1",
-            "frase sobre hablar 2",
-            "frase sobre hablar 3"
-        ]
-    },
-    {
-        "fraseSobre" : "bañarseTamagochi",
-        "frases":[
-            "Respuesta a dormir 1",
-            "Respuesta a dormir 2",
-            "Respuesta a dormir 3"
-        ]
-    },
-    {
-        "fraseSobre" : "irBañoTamagochi",
-        "frases":[
-            "Respuesta a hablar 1",
-            "Respuesta a hablar 2",
-            "Respuesta a hablar 3"
+            {
+                "enHud" : "enHudBaño",
+                "enTamagochi" : "enTamagochiBaño"
+            },
+            {
+                "enHud" : "enHudBaño",
+                "enTamagochi" : "enTamagochiBaño"
+            },
+            {
+                "enHud" : "enHudBaño",
+                "enTamagochi" : "enTamagochiBaño"
+            }
         ]
     }
 ]

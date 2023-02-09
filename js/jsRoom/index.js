@@ -12,13 +12,16 @@ let voracidad = 0
 leftKey.addEventListener("click",function(){handlerClickKeys("left")})
 rightKey.addEventListener("click",function(){handlerClickKeys("right")})
 
-function autoType(element,text,delay) {
+function autoType(element,text,delay,condicionReEntrada) {
 	temp = document.getElementById(element).innerHTML;
 	temp = temp.concat(text.charAt(0));
 	document.getElementById(element).innerHTML = temp;
 	if (text.length > 1) {
 		text = text.substr(1);
 		setTimeout(autoType,delay,element,text,delay);
+	}
+	else{
+		mostrarDesaparecer("timeOut","desaparecer")
 	}
 }
 function timePass(){
@@ -53,18 +56,18 @@ function statCheck(stat){
 
 
 function chatTamagochi(sala,value,valueDos){
+	mostrarDesaparecer("timeOut","aparecer")
 	let toUse
 	switch(sala){
-		case "habitacion": toUse = frasesTamagochiRoom;;break;
+		case "habitacion": toUse = frasesTamagochiRoom;break;
 		case "baño": toUse = frasesTamagochiBaño;break;
 	}
 	document.getElementById("cajaTextoSentimientosTamagochi").textContent = ""
 	let frase = toUse.filter(e => e.fraseSobre === value)
-    frase = frase[0].frases[RNG(0,frase[0].frases.length)]
-	autoType("textTamagochiLog",frase,50)
-	frase = toUse.filter(e => e.fraseSobre === valueDos)
-    frase = frase[0].frases[RNG(0,frase[0].frases.length)]
-	autoType("cajaTextoSentimientosTamagochi",frase,50)
+    frase = frase[0].frases[RNG(0,(frase[0].frases.length - 1))]
+	console.log(frase)
+	autoType("textTamagochiLog",frase.enHud,5)
+	autoType("cajaTextoSentimientosTamagochi",frase.enTamagochi,5)
 }
 
 

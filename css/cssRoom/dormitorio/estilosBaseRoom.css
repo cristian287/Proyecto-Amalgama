@@ -19,15 +19,15 @@
     width: auto;
 }
 #arrowTwo:hover{
-    content: url(/assets/puerpleArrow.png);
+    content: url(/assets/ElementosRooms/puerpleArrow.png);
 }
 #arrowOne:hover{
-    content: url(/assets/puerpleArrowR.png);
+    content: url(/assets/ElementosRooms/puerpleArrowR.png);
 }
 #hudPrin{
     height: 55%;
     z-index: 1;
-    background: url(/assets/Room0.png) no-repeat center center;
+    background: url(/assets/Rooms/Room0.png) no-repeat center center;
     background-size: 100%;
     background-position: center;
 }

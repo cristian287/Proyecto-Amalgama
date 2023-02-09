@@ -109,9 +109,9 @@
 @keyframes timeOut {
     from { 
         border: 500px solid rgba(255, 0, 0, 0);
-        opacity: 95%;
+        opacity: 50%;
         background-size: 510px;
-        background-image: url(/assets/interferenciaHud.jpg);
+        background-image: url(/assets/ElementosRooms/interferenciaHud.jpg);
         background-position: center;
         background-repeat: none;
         transform: rotate(90deg)
@@ -120,10 +120,10 @@
     }
     to {
         border: 500px solid rgba(174, 0, 255, 0.123);
-        background-image: url(/assets/interferenciaHud.jpg);
+        background-image: url(/assets/ElementosRooms/interferenciaHud.jpg);
         background-position: center;
         background-repeat: none;
-        opacity: 1%;
+        opacity: 10%;
         background-size: 510px;
         transform:rotate(90deg);
 
@@ -131,7 +131,7 @@
 }
 #timeOut{
     animation-name: timeOut ;
-    animation-duration: 1s;
+    animation-duration: 1.5s;
     animation-iteration-count: 1;
     animation-fill-mode: both;
 }
@@ -163,7 +163,8 @@
 }
 @keyframes cartelEmergenteBlow {
     from {opacity: 100%;}
-    to {opacity: 0%;}
+    to {opacity: 0%;
+}
 }
 @keyframes cartelEmergenteGlow {
     from { }
@@ -174,10 +175,10 @@
     }
 }
 .cartelEmergenteDis{
-    animation-name: cartelEmergenteUp, cartelEmergenteShake, cartelEmergenteBlow, cartelEmergenteGlow  ;
-    animation-duration: 4s, 1s, 2s, .1s;
-    animation-iteration-count: infinite, infinite, infinite,infinite;
-    animation-fill-mode: backwards, both, backwards, both;
+    animation-name: cartelEmergenteUp, cartelEmergenteShake, cartelEmergenteGlow, cartelEmergenteBlow  ;
+    animation-duration: 1s , 1.5s , 1.5s ,  1s;
+    animation-iteration-count: 1, 2, 2,1;
+    animation-fill-mode:forwards, both, backwards, forwards;
     animation-direction: alternate, alternate, alternate, alternate;
-    animation-delay: 0s, 4s, 5s, 2s;
+    animation-delay: 0ms, 1s , 1s , 3s;
 }

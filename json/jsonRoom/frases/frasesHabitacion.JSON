@@ -2,33 +2,35 @@
     {
         "fraseSobre" : "dormir",
         "frases" : [
-            "frase sobre dormir 1",
-            "frase sobre dormir 2",
-            "frase sobre dormir 3"
+            {
+                "enHud" : "Espero que duermas bien.",
+                "enTamagochi" : "Gracias padre, espero que puedas descansar"
+            },
+            {
+                "enHud" : "Descanza pequeño...",
+                "enTamagochi" : "Claro padre ojala mañana nos divertiamos juntos"
+            },
+            {
+                "enHud" : "Creo que seria mejor que duermas un rato",
+                "enTamagochi" : "Seguro esa es una buena idea"
+            }
         ]
     },
     {
         "fraseSobre" : "hablar",
         "frases" : [
-            "frase sobre hablar 1",
-            "frase sobre hablar 2",
-            "frase sobre hablar 3"
-        ]
-    },
-    {
-        "fraseSobre" : "dormirTamagochi",
-        "frases":[
-            "Respuesta a dormir 1",
-            "Respuesta a dormir 2",
-            "Respuesta a dormir 3"
-        ]
-    },
-    {
-        "fraseSobre" : "hablarTamagochi",
-        "frases":[
-            "Respuesta a hablar 1",
-            "Respuesta a hablar 2",
-            "Respuesta a hablar 3"
+            {
+                "enHud" : "Nunca te pregunte pero... Que sueñas normalmente?",
+                "enTamagochi" : "Muchas cosas pero me encanta el sueño donde soy feliz con unos niños de una pequeña escuela de cerca"
+            },
+            {
+                "enHud" : "Que piensas de esta tormenta?",
+                "enTamagochi" : "Que puedo pensar?, es una tragedia que llueva tanto pero me gusta que podamos pasar tiempo juntos y nos entendamos"
+            },
+            {
+                "enHud" : "...Entonces como estas?",
+                "enTamagochi" : "Yo genial, me gustaria tambien hablar por ti pero realmente llevas mal lo de la tormenta. no?"
+            }
         ]
     }
 ]

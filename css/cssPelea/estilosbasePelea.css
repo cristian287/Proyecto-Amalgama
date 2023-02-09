@@ -3,7 +3,7 @@
     text-transform: uppercase;
 }
 #fondo{
-    background-image: url(/assets/Room7.gif);
+    background-image: url(/assets/Rooms/Room7.gif);
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;

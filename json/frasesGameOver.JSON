@@ -1,0 +1,26 @@
+[
+    {
+        "muertePor" : "energia",
+        "frases" : [
+            "se murio de cansancio"
+        ]
+    },
+    {
+        "muertePor" : "felicidad",
+        "frases" : [
+            "se murio de infelicidad"
+        ]
+    },
+    {
+        "muertePor" : "saciedad",
+        "frases" : [
+            "no comio lo suficiente"
+        ]
+    },
+    {
+        "muertePor" : "voracidad",
+        "frases" : [
+            "Tu tamagochi sigue vivo.. Vos sos el muerto"
+        ]
+    }
+]

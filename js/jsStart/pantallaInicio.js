@@ -9,7 +9,13 @@ let saciedad = 10
 let comidaDisponible = 4
 let voracidad = 0
 let maxStats = 10
-
+let frasesEnMuerte
+fetch("/json/frasesGameOver.JSON")
+.then((response)=>response.json())
+.then((callback)=>{
+        frasesEnMuerte = callback
+    }
+)
 function iniciarJuego(){
     mostrarDesaparecer("gameOver","desaparecer")
     dia = 0
@@ -24,9 +30,15 @@ function iniciarJuego(){
     pantallaInicio()
 }
 document.getElementById("volverMenu").addEventListener("click",function(e){iniciarJuego()})
+
+
+
 function gameOver(tipo){
     tamagochiModeOff()
     terminarModoPelea()
+    let fraseFinal = frasesEnMuerte.filter(e=> e.muertePor === tipo)
+    fraseFinal = fraseFinal[0].frases[(RNG(0,fraseFinal[0].frases.length - 1))]
+    document.getElementById("razonMuerte").textContent = fraseFinal
 	mostrarDesaparecer("gameOver","aparecer")
 }
 

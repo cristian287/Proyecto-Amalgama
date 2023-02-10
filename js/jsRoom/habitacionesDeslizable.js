@@ -4,7 +4,7 @@ let primeraEntrada = true //Definir la sala a 0 si es la primera vez que se acce
 let maximasSalas = 4 //Cantidad máxima de switch a salas
 let obituarioTamagochi
 let momento = "mañana"
-let dia = 0 //Devolver estas dos variables a sus valores base al perder
+let dia = 0
 function habitacion(){
     salaActual = "hudPrin"
     botones(salaActual,true)
@@ -43,7 +43,7 @@ function botoneraTamagochiHandler(habitacion,callback){
     let dos = document.getElementById("buttonDosTamagochiMode")
     let tres = document.getElementById("buttonTresTamagochiMode")
     let cuatro = document.getElementById("buttonCuatroTamagochiMode")
-    switch(habitacion){ //me rindo aca asi que lo hardcodeo
+    switch(habitacion){
         case "hudPrin"         :    uno.addEventListener("click",function(e){inspeccionarSala();unbindBotoneraTamagochi()})
                                     dos.addEventListener("click",function(e){dormir();unbindBotoneraTamagochi()})
                                     tres.addEventListener("click",function(e){hablar();unbindBotoneraTamagochi()})

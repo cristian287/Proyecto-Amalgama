@@ -2,6 +2,31 @@
 leftKey.addEventListener("click",function(){handlerClickKeys("left")})
 rightKey.addEventListener("click",function(){handlerClickKeys("right")})
 let unlock
+let habilidadesEquipadas = [] //cambiar skills
+let habilidadesDisponibles = [] //cambiar skills
+
+
+function none(){ //Eliminar
+	terminarModoPelea()
+	salirPantallaInicio()
+	document.getElementById("comoJugarDisplay").classList.add("none")
+}
+
+function recreateNode(el, withChildren) { //Recrear el nodo para sacarle los eventos
+    if (withChildren) {
+        el.parentNode.replaceChild(el.cloneNode(true), el);
+    }
+    else {
+        var newEl = el.cloneNode(false);
+        while (el.hasChildNodes()) newEl.appendChild(el.firstChild);
+        el.parentNode.replaceChild(newEl, el);
+    }
+}
+
+
+
+
+
 function autoType(element,text,delay,conditionEnd){
 	if (conditionEnd){unlock = true}
 	temp = document.getElementById(element).innerHTML;
@@ -18,6 +43,21 @@ function autoType(element,text,delay,conditionEnd){
 		}
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function timePass(){
 	if (momento === "noche"){
 		dia++

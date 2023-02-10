@@ -5,16 +5,6 @@ function RNG(min,max){ //Cualquier tipo de azar
     }while(random < min)
    return random;
 }
-function recreateNode(el, withChildren) { //Recrear el nodo para sacarle los eventos
-    if (withChildren) {
-        el.parentNode.replaceChild(el.cloneNode(true), el);
-    }
-    else {
-        var newEl = el.cloneNode(false);
-        while (el.hasChildNodes()) newEl.appendChild(el.firstChild);
-        el.parentNode.replaceChild(newEl, el);
-    }
-}
 function unbind(){ //Funcion a llamar para simplificar el recrear nodos
     recreateNode(document.getElementById("botonPeleaUno"))
     recreateNode(document.getElementById("botonPeleaDos"))
@@ -42,6 +32,10 @@ function setSkills(isInitial){//Cambiar los skills. Si isInitial = true se setea
     )
 }
 function firstSetSkills(skill){ //Setear los 5 skills iniciales
+    if (skill !== undefined){
+        habilidadesEquipadas.push(skill) //cambiar skills
+        habilidadesDisponibles.push(skill) //cambiar skills
+    }
     skillsCollection = skillsCollection.filter (e=>e !== skill)
     i++
     if (i<6){
@@ -58,8 +52,8 @@ function firstSetSkills(skill){ //Setear los 5 skills iniciales
         i = 0
     }
 }
-  
-setSkills(true)
+setSkills(true) 
+
 function turnoJugador(){
     document.getElementById("botonPeleaUno").addEventListener("click",function e(){unbind()})
     document.getElementById("botonPeleaDos").addEventListener("click",function e(){unbind()})

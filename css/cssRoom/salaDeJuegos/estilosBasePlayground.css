@@ -5,3 +5,29 @@
     background-size: 100%;
     background-position: center;
 }
+#viewSkills{
+    position: fixed;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    padding-top: 1%;
+    padding-left: 6%;
+}
+#viewSkills div{
+    padding-top: 5%;
+    
+}
+
+#selecSkills{
+    position: fixed;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    overflow:scroll;
+    height: 100%;
+    width: 30%;
+    visibility: hidden;
+}
+#selecSkills div{
+
+}

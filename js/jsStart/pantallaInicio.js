@@ -28,6 +28,7 @@ function iniciarJuego(){
 	saciedad = 10
 	comidaDisponible = 4
 	voracidad = 0
+    habilidadesEquipadas = []
     pantallaInicio()
 }
 document.getElementById("volverMenu").addEventListener("click",function(e){iniciarJuego()})

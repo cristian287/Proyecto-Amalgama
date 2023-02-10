@@ -15,11 +15,25 @@ function jugar(){
     timePass()
 }
 function verSkills(){
-    console.log(skillUno)
     document.getElementById("textTamagochiLog").textContent = ""
-    autoType("textTamagochiLog","*Miras tus skills*",50)
+    mostrarDesaparecer("viewSkills","aparecer")
+    mostrarDesaparecer(salaActual,"desaparecer")
+    for(let i = 0;i<=4;i++){
+        document.getElementById("skill"+i).textContent = "En el boton " + (i+1) + " posees la habilidad " + habilidadesEquipadas[i].name + " la cual gasta " + habilidadesEquipadas[i].mpDrained + " puntos de mana"
+    }
+    document.getElementById("viewSkills").addEventListener("click",function(e){
+        mostrarDesaparecer("viewSkills","desaparecer")
+        mostrarDesaparecer(salaActual,"aparecer")
+        recreateNode(document.getElementById("viewSkills"))
+    })
 }
-function cambiarSkills(){
+function cambiarSkills(){ //ROTO
+    let skillsDisponibles = habilidadesDisponibles
+    habilidadesEquipadas.forEach(function e(valorActual,index){
+        console.log(valorActual)
+        skillsDisponibles = skillsDisponibles.filter(e=>e.name !== valorActual.name)
+        console.log(skillsDisponibles)
+    })
     document.getElementById("textTamagochiLog").textContent = ""
     autoType("textTamagochiLog","*cambias los skills*",50)
     timePass()

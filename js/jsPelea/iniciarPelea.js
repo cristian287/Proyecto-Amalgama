@@ -48,9 +48,9 @@ function firstSetSkills(skill){ //Setear los 5 skills iniciales
         switch(i){
             case 1: skillUno = skill;document.getElementById("botonPeleaUno").textContent = skill.name;break
             case 2: skillDos = skill;document.getElementById("botonPeleaDos").textContent = skill.name;break
-            case 3: skillDos = skill;document.getElementById("botonPeleaTres").textContent = skill.name;break
-            case 4: skillDos = skill;document.getElementById("botonPeleaCuatro").textContent = skill.name;break
-            case 5: skillDos = skill;document.getElementById("botonPeleaCinco").textContent = skill.name;break
+            case 3: skillTres = skill;document.getElementById("botonPeleaTres").textContent = skill.name;break
+            case 4: skillCuatro = skill;document.getElementById("botonPeleaCuatro").textContent = skill.name;break
+            case 5: skillCinco = skill;document.getElementById("botonPeleaCinco").textContent = skill.name;break
         }
         firstSetSkills(skillsCollection[RNG(0,skillsCollection.length - 1)])
     }

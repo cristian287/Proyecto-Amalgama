@@ -17,6 +17,7 @@ fetch("/json/frasesGameOver.JSON")
     }
 )
 function iniciarJuego(){
+    document.getElementById("timeNow").textContent = "Es el dia " + dia + " y es de " + momento
     mostrarDesaparecer("gameOver","desaparecer")
     dia = 0
     momento = "mañana"

@@ -15,6 +15,7 @@ function jugar(){
     timePass()
 }
 function verSkills(){
+    console.log(skillUno)
     document.getElementById("textTamagochiLog").textContent = ""
     autoType("textTamagochiLog","*Miras tus skills*",50)
 }

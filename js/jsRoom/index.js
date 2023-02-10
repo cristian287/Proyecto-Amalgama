@@ -50,7 +50,7 @@ function timePass(){
 
 function statCheck(stat,deathStat){
 	let s
-	if (stat>maxStats){s = maxStats}
+	if (stat>maxStats){stat = maxStats}
 	else if (stat<=0){
 		stat = 0
 		switch(deathStat){

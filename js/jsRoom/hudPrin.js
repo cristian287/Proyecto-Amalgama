@@ -5,10 +5,8 @@ fetch("/json/jsonRoom/frases/frasesHabitacion.JSON")
                 frasesTamagochiRoom = callback
             }
         )
-
 function inspeccionarSala(){
-    document.getElementById("textTamagochiLog").textContent = ""
-    autoType("textTamagochiLog","Inspeccionada la sala",50)
+    goInspect("hudPrin")
 }
 function dormir(){
     document.getElementById("textTamagochiLog").textContent = ""

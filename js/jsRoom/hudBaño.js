@@ -8,8 +8,7 @@ fetch("/json/jsonRoom/frases/frasesBaño.JSON")
 
 
 function inspeccionarBaño(){
-    document.getElementById("textTamagochiLog").textContent = ""
-    autoType("textTamagochiLog","Inspeccionado el baño",50)
+    goInspect("hudBaño")
 }
 function bañarse(){
     document.getElementById("textTamagochiLog").textContent = ""

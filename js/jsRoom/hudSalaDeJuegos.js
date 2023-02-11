@@ -16,8 +16,7 @@ fetch("/json/jsonRoom/frases/frasesSalaDeJuegos.JSON")
             }
         )
 function inspeccionarSalaDeJuegos(){
-    document.getElementById("textTamagochiLog").textContent = ""
-    autoType("textTamagochiLog","Inspeccionada la sala de juegos",50)
+    goInspect("hudSalaDeJuegos")
 }
 function jugar(){
     document.getElementById("textTamagochiLog").textContent = ""
@@ -27,13 +26,19 @@ function jugar(){
 function verSkills(){
     document.getElementById("textTamagochiLog").textContent = ""
     mostrarDesaparecer("viewSkills","aparecer")
+    mostrarDesaparecer("flechas","desaparecer")
+    mostrarDesaparecer("prota","desaparecer")
     mostrarDesaparecer(salaActual,"desaparecer")
+    mostrarDesaparecer("TextPetRoom","desaparecer")
     for(let i = 0;i<=4;i++){
         document.getElementById("skill"+i).textContent = "En el boton " + (i+1) + " posees la habilidad " + habilidadesEquipadas[i].name + " la cual gasta " + habilidadesEquipadas[i].mpDrained + " puntos de mana"
     }
     document.getElementById("viewSkills").addEventListener("click",function(e){
         mostrarDesaparecer("viewSkills","desaparecer")
         mostrarDesaparecer(salaActual,"aparecer")
+        mostrarDesaparecer("flechas","aparecer")
+        mostrarDesaparecer("prota","aparecer")
+        mostrarDesaparecer("TextPetRoom","aparecer")
         recreateNode(document.getElementById("viewSkills"))
     })
 }

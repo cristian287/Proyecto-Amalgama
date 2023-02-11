@@ -19,6 +19,7 @@ fetch("/json/frasesGameOver.JSON")
 function iniciarJuego(){
     document.getElementById("timeNow").textContent = "Es el dia " + dia + " y es de " + momento
     mostrarDesaparecer("gameOver","desaparecer")
+    pantallaInicio()
     dia = 0
     momento = "mañana"
 	energia = 10
@@ -29,7 +30,8 @@ function iniciarJuego(){
 	comidaDisponible = 4
 	voracidad = 0
     habilidadesEquipadas = []
-    pantallaInicio()
+    habilidadesDisponibles = []
+    setSkills(true)
 }
 document.getElementById("volverMenu").addEventListener("click",function(e){iniciarJuego()})
 
@@ -50,6 +52,7 @@ function pantallaInicio(){
 }
 function salirPantallaInicio(argumento){
     if (argumento){
+        iniciarJuego()
         tamagochiMode()
         return document.getElementById("game").classList.add("none")
         //Salir de la pantalla e ir al juego

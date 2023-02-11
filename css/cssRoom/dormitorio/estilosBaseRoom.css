@@ -51,7 +51,7 @@
 }
 #botoneraTamagochi{
     z-index: 3;
-    height: 20%;
+    height: 17%;
     display:flex;
     justify-content: space-around;
 }
@@ -91,11 +91,10 @@
 #TextPlayerRoom{
     display: flex;
     background-color: antiquewhite;
-    height: 27%;
+    height: 30%;
     text-align: center;
     border: 1px solid black;
     justify-content: center;
-    
 }
 #TextPlayerRoom div{
     display: flex;

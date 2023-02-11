@@ -48,7 +48,7 @@
 
 .pat{
     animation-name: patMove, pat, patMoveBack;
-    animation-duration: 15s, .9s, 20s;
+    animation-duration: 15s, .9s, 10s;
     animation-iteration-count: infinite,infinite,infinite;
     animation-timing-function: linear,linear,linear;
     animation-direction: alternate,alternate,alternate;

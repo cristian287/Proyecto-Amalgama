@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="/css/cssRoom/entrada/animacionesBaseEntrada.css">
     <link rel="stylesheet" href="/css/cssRoom/entrada/estilosBaseEntrada.css">
     <link rel="stylesheet" href="/css/cssFinDelJuego/gameOver.css">
+    <link rel="stylesheet" href="/css/cssFinDelJuego/gameOverAnimaciones.css">
 
 
     <link rel="stylesheet" type="text/css" href="/css/cssUniversal/AnimacionUniversal.css">
@@ -37,7 +38,7 @@
             <div id="title">
                 <img  src="/assets/otros/99-Teaser.png" alt="">
             </div>
-            <div>
+            <div id="StartButtons">
                 <div class = "botonera">
                     <button id = "iniciarJuegoBoton"><p class="botonStart">Iniciar Juego</p></button>
                 </div>
@@ -97,27 +98,27 @@
     </div>
         <div id="gameOver">
             <div>
-                <p>fin del juego</p>
+                <p id="FinDelJuego">fin del juego</p>
             </div>
             <div>
-                <p><img src="/assets/Protagonistas/nemesisVictima.gif" alt="gameOver"></p>
+                <p><img id="gameOverVictim" src="/assets/Protagonistas/nemesisVictima.gif" alt="gameOver"></p>
             </div>
-            <div>
-                <p id = "razonMuerte">razon de muerte</p>
+            <div id = "razonMuerte">
+                <p >no no no .... no te quedes callado... grita fuerte ... que en la realidad misma quede grabado el dolor de ser devorado por mi </p>
             </div>
-            <div>
-                <p><button id ="volverMenu">volver al menu principal</button></p>
+            <div id ="volverMenu">
+                <p><button >volver al menu principal</button></p>
              </div>
          </div>
          <div>
-           <div id="viewSkills" class="none"> 
+           <div id="viewSkills" class="none" > 
             <div id = "skill0">1</div>
             <div id = "skill1">2</div>
             <div id = "skill2">3</div>
             <div id = "skill3">4</div>
             <div id = "skill4">5</div>
-            <div>Haz click en cualquier lugar para volver al modo tamagochi</div>
-           </div> 
+            <div>Haz click en cualquier lugar para volver</div>
+           </div>
          </div>
          <div>
             <div id="selecSkills" class="none"></div> 
@@ -226,6 +227,7 @@
 
 
 </body>
+
 <script type="text/javascript" src="/js/jsStart/pantallaInicio.js"></script>
 <script type="text/javascript" src="/js/jsRoom/index.js"></script>
 <script type="text/javascript" src="/js/jsRoom/habitacionesDeslizable.js"></script>

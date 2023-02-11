@@ -7,6 +7,7 @@
         background: none;
         visibility: hidden;
         transform: scale(0);
+        animation-play-state: paused;
     }
     to {
         background: none;
@@ -16,6 +17,7 @@
         width: 0px;
         visibility: hidden;
         transform: scale(0);
+        animation-play-state: paused;
     }
 }
 .none{

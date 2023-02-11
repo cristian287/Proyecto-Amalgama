@@ -6,8 +6,7 @@ fetch("/json/jsonRoom/frases/frasesCocina.JSON")
             }
         )
 function inspeccionarCocina(){
-    document.getElementById("textTamagochiLog").textContent = ""
-    autoType("textTamagochiLog","Inspeccionada la cocina",50)
+    goInspect("hudCocina")
 }
 function comer(){
     document.getElementById("textTamagochiLog").textContent = ""

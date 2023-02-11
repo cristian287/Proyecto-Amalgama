@@ -1,0 +1,114 @@
+[
+    {
+        "sala":"hudPrin",
+        "accion":[
+            {
+                "encontrarComida" :[
+                    {
+                        "min" : 2,
+                        "max" : 3,
+                        "mensaje" : [
+                            "Has encontrado X piezas de comida!",
+                            "wow encontre X pedazos de carne debajo de la cama",
+                            "quien lo diria, encontre X trozos de carne debajo de la alfombra, quien puso eso ahi?"
+                        ]
+                    }
+                ],
+                "noEncontrarNada" : [
+                    {
+                        "frases" : [
+                            "mmm... debajo de la cama no hay nada ...",
+                            "Puedo ver una silueta negra a lo lejos por la ventana... salio corriendo. espero que no vuelva",
+                            "debajo de la alfombra no hay mucho mas que polvo",
+                            "quien lo diria, debajo de la lampara no hay nada..."
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "sala":"hudBaño",
+        "accion":[
+            {
+                "encontrarComida" :[
+                    {
+                        "min" : 0,
+                        "max" : 1,
+                        "mensaje" : [
+                            "Has encontrado X piezas de comida!",
+                            "wow encontre X pedazos de carne sobre el laba manos",
+                            "quien lo diria, encontre X trozos de carne detras del inodoro quien puso eso ahi?"
+                        ]
+                    }
+                ],
+                "noEncontrarNada" : [
+                    {
+                        "frases" : [
+                            "mmm... aqui detras no hay nada",
+                            "quien penso que poner una ventana en la puerta era una buena idea ? ",
+                            "pues parece que no hay nada por aca ",
+                            "y detrasd del botiquin no hay nada quien lo diria"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "sala":"hudCocina",
+        "accion":[
+            {
+                "encontrarComida" :[
+                    {
+                        "min" : 3,
+                        "max" : 4,
+                        "mensaje" : [
+                            "Has encontrado X piezas de comida!",
+                            "wow encontre X pedazos de carne debajo de la mesa",
+                            "quien lo diria, encontre X trozos de carne detras de la mesada"
+                        ]
+                    }
+                ],
+                "noEncontrarNada" : [
+                    {
+                        "frases" : [
+                            "mmm... aqui detras no hay nada",
+                            "puedo ver una persona feliz a lo lejos.. parece que su sonrisa es muy grande ... me pregunto que lo hace tan feliz",
+                            "pues parece que no hay nada por aca ",
+                            "en efecto, en esta habitacion ya no hay nada"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "sala":"hudSalaDeJuegos",
+        "accion":[
+            {
+                "encontrarComida" :[
+                    {
+                        "min" : 0,
+                        "max" : 1,
+                        "mensaje" : [
+                            "Has encontrado X piezas de comida!",
+                            "wow encontre X pedazos de carne sobre los juguetes",
+                            "quien lo diria, encontre X trozos de carne detras de la caja de zapatos quien puso eso ahi?"
+                        ]
+                    }
+                ],
+                "noEncontrarNada" : [
+                    {
+                        "frases" : [
+                            "mmm... aqui detras no hay nada",
+                            "quien lo diria por aca no hay nada ",
+                            "pues parece que no hay nada por aca ",
+                            "y detras de la puerta no hay nada quien lo diria"
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

@@ -1,6 +1,13 @@
 //DETECCION DE CLICKS
 leftKey.addEventListener("click",function(){handlerClickKeys("left")})
 rightKey.addEventListener("click",function(){handlerClickKeys("right")})
+let inspeccionarJson
+fetch("/json/jsonRoom/inspeccionar.JSON")
+.then((response)=>response.json())
+.then((callback)=>{
+	inspeccionarJson = callback
+})
+
 let unlock
 let habilidadesEquipadas = [] //cambiar skills
 let habilidadesDisponibles = [] //cambiar skills
@@ -41,6 +48,19 @@ function autoType(element,text,delay,conditionEnd){
 			unlock = false
 			mostrarDesaparecer("timeOut","desaparecer")
 		}
+	}
+}
+
+function autoTypeInspect(element,text,delay){
+	temp = document.getElementById(element).innerHTML;
+	temp = temp.concat(text.charAt(0));
+	document.getElementById(element).innerHTML = temp;
+	if (text.length > 1) {
+		text = text.substr(1);
+		setTimeout(autoTypeInspect,delay,element,text,delay);
+	}
+	else{
+		mostrarDesaparecer("timeOut","desaparecer")
 	}
 }
 
@@ -158,4 +178,40 @@ function statsManager(punto,operacion,cantidad){
 	saciedad = statCheck(saciedad,"saciedad")
 	comidaDisponible = statCheck(comidaDisponible)
 	voracidad = statCheck(voracidad,"voracidad")
+}
+
+
+function goInspect(sala){//LUEGO AGREGARLE ALEATORIEDAD A LA ACCION A REALIZAR
+    iSala = inspeccionarJson.filter(e=>e.sala === sala)
+    console.log(iSala[0].accion.length)
+    let selectAction = RNG(0,10)
+    if (selectAction === 10){
+        selectAction = 0
+    }
+    else{
+        selectAction = 1
+    }
+    mostrarDesaparecer("timeOut","aparecer")
+    let mensaje
+    selectAction
+    switch(selectAction){
+        case 0:{ //ENCONTRAR COMIDA
+            iSala = iSala[0].accion[0].encontrarComida[0]
+            let minComida = iSala.min
+            let maxComida = iSala.max
+            let comidaDropeada = RNG(minComida,maxComida)
+            mensaje = iSala.mensaje[RNG(0,iSala.mensaje.length - 1)]
+            mensaje = mensaje.replace("X",comidaDropeada)
+            statsManager("comidaDisponible","suma",comidaDropeada)
+            break
+        }
+        case 1:{//NO ENCONTRAR NADA
+            iSala = iSala[0].accion[0].noEncontrarNada[0].frases
+            console.log(iSala)
+            mensaje = iSala[RNG(0,iSala.length-1)]
+        }
+    }
+    document.getElementById("textTamagochiLog").textContent = ""
+    autoTypeInspect("textTamagochiLog",mensaje,50)
+    timePass()
 }

@@ -18,15 +18,37 @@ let skillTres
 let skillCuatro
 let skillCinco
 let skillsCollection
+let fullSkillsCollection
 let i = 0
-function setSkills(isInitial){//Cambiar los skills. Si isInitial = true se setean las 5 habilidades,
+function addSkill(name){ //PARA TESTS
+    console.log(name)
+    console.log(fullSkillsCollection)
+    let skillAdd = fullSkillsCollection.filter(e=>e.name === name)
+    setSkills(false,...skillAdd)
+}
+function setSkills(isInitial,skillToAdd){//Cambiar los skills. Si isInitial = true se setean las 5 habilidades,
                               //caso contrario se elige una (codigo por hacer)
     fetch("/json/jsonPelea/skills.JSON")
     .then((response)=>response.json())
     .then((skills)=>{
+            fullSkillsCollection = skills
             if (isInitial){
                 skillsCollection = skills.filter(e => e.initial === "true") //Coleccion de skills iniciales
                 firstSetSkills(skillsCollection[RNG(0,skillsCollection.length - 1)])
+            }
+            else{
+                console.log("se detecto un skill no inicial")
+                let agregarSkill
+                habilidadesDisponibles.forEach(function e(value){
+                    if (value.name === skillToAdd.name){
+                        console.log("se detecto que la habilidad ya existe")
+                        agregarSkill = 0
+                    }
+                })
+                if (agregarSkill !== 0){
+                    console.log("se pusheo exitosamente")
+                    habilidadesDisponibles.push(skillToAdd)
+                }
             }
         }
     )

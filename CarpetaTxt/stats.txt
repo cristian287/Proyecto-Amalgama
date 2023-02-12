@@ -1,0 +1,11 @@
+-energia(durmiendo en la cama de la habitaion)
+-felicidad(hablando en la hacitacion)
+-Higiene(nesecidad de bañarse)
+-vejiga (ir al baño)
+-saciedad(comer)
+-cantidad de comida(revisar la cocina)
+-voracidad(cantidad ingerida de carne tabu)
+
+-fuerza(sumatoria de otras estadisticas)
+-mana(sumatoria de otras estadisticas)
+-salud(sumatoria de otras estadisticas)

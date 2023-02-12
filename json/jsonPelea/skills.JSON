@@ -1,6 +1,6 @@
 [
     {
-        "name" : "uno",
+        "name" : "flasheada cosmica",
         "min_damage" : 1,
         "max_damage" : 4,
         "canBeDodged" : false,
@@ -10,7 +10,7 @@
         "initial" : "true"
     },
     {
-        "name" : "dos",
+        "name" : "puto el que lee",
         "min_damage" : 4,
         "max_damage" : 10,
         "canBeDodged" : true,
@@ -20,7 +20,7 @@
         "initial" : "true"
     },
     {
-        "name" : "tres",
+        "name" : "no tengo imaginacion",
         "min_damage" : 11,
         "max_damage" : 12,
         "canBeDodged" : false,
@@ -30,7 +30,7 @@
         "initial" : "true"
     },
     {
-        "name" : "cuatro",
+        "name" : "mala practica salvaje",
         "min_damage" : 11,
         "max_damage" : 12,
         "canBeDodged" : false,
@@ -40,7 +40,7 @@
         "initial" : "true"
     },
     {
-        "name" : "cinco",
+        "name" : "sanacion exquisita",
         "min_damage" : 11,
         "max_damage" : 12,
         "canBeDodged" : false,
@@ -50,7 +50,7 @@
         "initial" : "true"
     },
     {
-        "name" : "seis",
+        "name" : "prueba",
         "min_damage" : 11,
         "max_damage" : 12,
         "canBeDodged" : false,

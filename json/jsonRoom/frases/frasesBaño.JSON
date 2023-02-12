@@ -1,0 +1,36 @@
+[
+    {
+        "fraseSobre" : "bañarse",
+        "frases" : [
+            {
+                "enHud" : "Te ves terrible vamos a darte un baño",
+                "enTamagochi" : "seguro... tal ves un baño me calme "
+            },
+            {
+                "enHud" : "mirate, tienes toda la cara sucia vamos a bañarte",
+                "enTamagochi" : "me gusta sentir el olor a carne que emana mi pelaje pero me bañare "
+            },
+            {
+                "enHud" : "ya calente el agua , vamos a darte un baño",
+                "enTamagochi" : "me gusta el agua caliente "
+            }
+        ]
+    },
+    {
+        "fraseSobre" : "irBaño",
+        "frases" : [
+            {
+                "enHud" : "quieres ir al baño?",
+                "enTamagochi" : "justo estaba pensando en eso"
+            },
+            {
+                "enHud" : "creo que deberias ir al baño",
+                "enTamagochi" : "como sabias que queria ir al baño... aterrador"
+            },
+            {
+                "enHud" : "ya te vi que la cara de querer ir al baño, ve",
+                "enTamagochi" : "gracias padre..."
+            }
+        ]
+    }
+]

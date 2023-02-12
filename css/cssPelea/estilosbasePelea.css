@@ -1,18 +1,20 @@
 #gamePeleaHud{
     height: 100%;
+    text-transform: uppercase;
 }
 #fondo{
-    background-image: url(/assets/Room1.png);
+    background-image: url(/assets/Rooms/Room7.gif);
+    background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 60%;
+    height: 55%;
 }
 #botonesHudPelea{
     display: flex;
     flex-direction: row;
     top: 2%;
-    height:10vh;
+    height:23%;
     justify-content:space-between;
 }
 #botonesHudPelea div{
@@ -22,14 +24,29 @@
 
 }
 #botonesHudPelea button{
-    height: 60px;
+    height: 60%;
     width: 200px;
-    border: 2px solid black;
+    border: 22px black;
+    text-transform: uppercase;
+    background-color: purple;
+    border-width: 12px;
+    border-style:double;
+}
+#botonesHudPelea button:hover{
+    border-width: 12px;
+    border-style:dashed;
+    background-color: royalblue;
+    text-orientation: sideways-right;
+}
+#botonesHudPelea button:active{
+    background-color: chartreuse;
+
 }
 #texto{
     display: flex;
     position: relative;
     justify-self: center;
+    text-transform: uppercase;
 }
 #victima{
     z-index: 10;
@@ -38,31 +55,31 @@
     width: auto;
     margin: auto;
     height: 200px;
-    top: 20vh;
+    top: 20%;
 
 }
 #vitimText{
-    background-color: rgba(255, 127, 80, 0.623);
-    max-width: 350px;
+    background-color: rgba(255, 80, 80, 0.623);
+    max-width: 30%;
     font-size: 16px;
     position: fixed;
-    bottom: 50vh;
+    bottom: 52%;
+    height: 40%;
+    left: 2%;
 }
-
 #nemesisHeal{
     position: fixed;
     z-index: 10;
-    top: 10vh;
-    left: 80vh;
+    top: 10%;
+    left: 35%;
 }
 #protaTextBattle{
     border: black 2px solid;
     background-color: antiquewhite;
     height: 100px;
     color: black;
-    height: 75px;
+    height: 12%;
     text-align: center;
-    padding-top: 15px;
     background: rgb(65,232,216);
     text-decoration: underline;
     text-transform: uppercase;
@@ -78,11 +95,21 @@
     text-transform: uppercase;
     text-decoration-style: wavy;
     line-height: 30px;
-    height: 35px;
+    height: 10% ;
 }
 #battleHE{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     line-height: 30px;
+    border: 1px black solid;
+    height: 5%;
+}
+#battleHE p{
+    border: 1px black solid;
+    background-color: green;
+    text-transform: uppercase;
+}
+.cursorPelea{
+    cursor: url('/assets/cursores/cursorF.cur'),auto;
 }

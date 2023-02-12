@@ -1,0 +1,18 @@
+[
+    {
+        "inspeccionar" : "inspeccionar cocina",
+        "consumePuntos" : true
+    },
+    {
+        "accionUno" : "comer",
+        "consumePuntos" : true
+    },
+    {
+        "accionDos" : "revisar comida disponible",
+        "consumePuntos" : true
+    },
+    {
+        "accionTres" : "ver las estadisticas",
+        "consumePuntos" : false
+    }
+]

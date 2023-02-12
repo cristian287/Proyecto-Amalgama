@@ -1,0 +1,26 @@
+@keyframes skills {
+    from {
+    position: sticky;
+    z-index: 132;
+    background-color: aqua;
+    height: 101%
+    }
+    to {
+        z-index: 132;
+        position: sticky;
+        z-index: 132;
+        background-color: aqua;
+        height: 101%
+    }
+}
+
+
+
+
+#viewSkills{
+
+    animation-name: skill1s ;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}

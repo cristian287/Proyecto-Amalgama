@@ -1,0 +1,15 @@
+@keyframes screamer {
+    from {}
+    to {
+        content: url(/assets/Protagonistas/nemesisFase10.png);
+        z-index: 5;
+        transform: scale(1.5);
+    }
+}
+#gameOverVictim:hover{
+    animation-name:screamer;
+    animation-duration: 1ms;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 3s;
+}

@@ -1,0 +1,51 @@
+#game{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    
+}
+#title{
+    height: 250px;
+    left: 35vh;
+    z-index: 1;
+   
+}
+#StartButtons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#inicio{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    top: 5vh;
+
+    
+}
+.botonera{
+    float: inline-start;
+    position: relative;
+    top: 2vh; 
+    transition-delay:.1s ;
+    justify-content: center;
+    display: flex;
+    min-height: 10vh;
+}
+.botonera:hover{
+    z-index: 10;
+    transition: .2s;
+    scale: 1.1; 
+}
+#inicio  button {
+    height: 120px;
+    width: 1000px;
+    font-size: xx-large;
+    
+}
+.botonStart{
+    height: 90px;
+}
+#comoJugarBoton{
+    padding-top: 5%;
+}

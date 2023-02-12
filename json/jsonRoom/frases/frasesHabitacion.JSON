@@ -1,0 +1,36 @@
+[
+    {
+        "fraseSobre" : "dormir",
+        "frases" : [
+            {
+                "enHud" : "Espero que duermas bien.",
+                "enTamagochi" : "Gracias padre, espero que puedas descansar"
+            },
+            {
+                "enHud" : "Descanza pequeño...",
+                "enTamagochi" : "Claro padre ojala mañana nos divirtamos juntos"
+            },
+            {
+                "enHud" : "Creo que seria mejor que duermas un rato",
+                "enTamagochi" : "Seguro esa es una buena idea"
+            }
+        ]
+    },
+    {
+        "fraseSobre" : "hablar",
+        "frases" : [
+            {
+                "enHud" : "Nunca te pregunte pero... Que sueñas normalmente?",
+                "enTamagochi" : "Muchas cosas pero me encanta el sueño donde soy feliz con unos niños de una pequeña escuela de cerca"
+            },
+            {
+                "enHud" : "Que piensas de esta tormenta?",
+                "enTamagochi" : "Que puedo pensar?, es una tragedia que llueva tanto pero me gusta que podamos pasar tiempo juntos y nos entendamos"
+            },
+            {
+                "enHud" : "...Entonces como estas?",
+                "enTamagochi" : "Yo genial, me gustaria tambien hablar por ti pero realmente llevas mal lo de la tormenta. no?"
+            }
+        ]
+    }
+]

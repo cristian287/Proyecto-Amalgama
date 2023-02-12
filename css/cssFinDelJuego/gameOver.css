@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Babylonica&display=swap');
+#gameOver{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    height: 101%;
+    width: 100%;
+    
+} 
+#gameOver div {
+    color: white;
+    top: 10%;
+    height: 1000vh;
+}
+#gameOver button{
+    color: white;
+    background-color: grey;
+    font-size: x-large;
+    left: 28%;
+    margin-top: 4%;
+}
+#gameOver p{
+    display: flex;
+    justify-content: center;
+}
+#gameOverVictim{
+    position: fixed;
+    height: 70%;
+    z-index: 1;
+    left: 35%;
+    bottom: 20%;
+}
+#razonMuerte p{
+    z-index: 2;
+    color: red;
+    line-height: 30px;
+    left: 3%;
+    background-color: black;
+    text-decoration: underline;
+    text-decoration-style: double;
+    height: 50vh;
+}
+#FinDelJuego{
+    font-family: 'Babylonica', cursive;
+    color: red;
+    font-size: 700%;
+    z-index: 2;
+    bottom: 15%;
+    text-shadow: 12px 14px 42px;
+    height: 100vh;
+}
+#volverAlMenu{
+    height: 30%;
+    width: 100vh;
+    z-index: 2;
+    position: fixed;
+}

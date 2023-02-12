@@ -1,0 +1,63 @@
+[
+    {
+        "muertePor" : "energia",
+        "frases" : [
+            "estoy tan cansado... ya no puedo continuar...",
+            "ya no puedo seguir... estoy demaciado cansado",
+            "solo... voy a descanzar los ojos un rato ... si?",
+            "padre... las piernas me flaquean mucho .. creo que me voy asentar un rato",
+            "ahora nunca voy a poder escapar de la tormenta. estoy demaciado cansado pra continuar",
+            "que pasa... ya no puedo moverme... creo que es el final para mi... estoy demaciado cansado",
+            "creo que di todo lo que tenia... estoy demaciado cansado",
+            "je... estoy demaciado cansado... sigue tu camino padre ... puedes dejarme atras...",
+            "no es tu culpa querido padre, estoy demaciado cansado voy a quedarme aqui un rato",
+            "al final ... todo ese esfuerzo me canso demaciado "
+        ]
+    },
+    {
+        "muertePor" : "felicidad",
+        "frases" : [
+            "... real? ... hubo algo real en todo lo que hiciste? ya no quiero luchar padre ... ",
+            "por que ? por que no me quieres?",
+            "entonces todas esas promesas de ser felices eran falsas?",
+            "que clase de mala mascota tuve que ser para que me odies de esta manera ",
+            "yo te queria padre ... era feliz junto ti me hubier gustado que sea reciproco",
+            "fui feliz en el tiempo que estube a tu lado ...",
+            "que la felicidad no abandone tu cuerpo como abandono el mio",
+            "aunque no me quieras, te estare esperando del otro lado... si?",
+            "no es tu culpa papá, son... cosas que pasan...",
+            "entonces este es mi final, tengo mucho miedo papá ayudame "
+        ]
+    },
+    {
+        "muertePor" : "saciedad",
+        "frases" : [
+            "el hambre... no me permite continuar... ",
+            "mi estomago esta demaciado vacio para continar",
+            "estoy demaciado hambriento para continar...",
+            "entonces nos gano la tormenta eh?... qeu horrible es morir de hambre",
+            "tener tanta hambre me canso demaciado ... creo que voy a dormir un rato ",
+            "entonces no hay mas comida verdad? quiere decir que es mi final...",
+            "que frio... tener el estomago vacio no me deja pensar con claridad... deberia descansar",
+            "morir de hambre duele mas de lo que pense...",
+            "tendriamos que ir a buscar mas comida... lastima que ahora es demaciado tarde...",
+            "que padre permitiria que su mascota muera de hambre?"
+        ]
+    },
+    {
+        "muertePor" : "voracidad",
+        "frases" : [
+            "gracias padre... ahora tu carne me servira de sustento",
+            "la voracidad es poder y ahora que soy mas fuerte que tu... tu vida me pertenece",
+            "tu carne no sabia como esperaba pero voy a disfrutarte hasta los huesos",
+            "entonces me desepcionas padre... ahora tu vida es mia...",
+            "voy a torturarte toda la noche hasta que tu mismo te arranques la carne de los huesos y me la des...",
+            "no voy a devorarte rapido... voy a tener una lenta cena con tu cadaver",
+            "no pienses ni por un segundo que esto va a ser rapido ... hay cosas en la vida que se disfrutan mejor lentas",
+            "tu vida ahora es mia padre...",
+            "esa es toda la carne que tienes?",
+            "no no no .... no te quedes callado... grita fuerte ... que en la realidad misma quede grabado el dolor de ser devorado por mi ",
+            "Ahora no dices nada? te comio la lengua el gato?"
+        ]
+    }
+]

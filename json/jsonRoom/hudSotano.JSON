@@ -1,0 +1,18 @@
+[
+    {
+        "inspeccionar" : "caza",
+        "consumePuntos" : true
+    },
+    {
+        "accionUno" : "caza",
+        "consumePuntos" : true
+    },
+    {
+        "accionDos" : "caza",
+        "consumePuntos" : true
+    },
+    {
+        "accionTres" : "caza",
+        "consumePuntos" : false
+    }
+]

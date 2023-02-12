@@ -1,0 +1,128 @@
+
+.arrowButton{
+    background:none;
+    border: none;
+    z-index: 3;
+}
+#arrowControl{
+    display: flex;
+    z-index: 10;
+}
+
+#hud{
+    display: flex;
+    flex-direction: row;
+}
+.arrow{
+    height: 100%;
+    z-index: 3;
+    width: auto;
+}
+#arrowTwo:hover{
+    content: url(/assets/ElementosRooms/puerpleArrow.png);
+}
+#arrowOne:hover{
+    content: url(/assets/ElementosRooms/puerpleArrowR.png);
+}
+#hudPrin{
+    height: 55%;
+    z-index: 1;
+    background: url(/assets/Rooms/Room0.png) no-repeat center center;
+    background-size: 100%;
+    background-position: center;
+}
+#flechas{
+    position: sticky;
+    height: 20%;
+    z-index: 1;
+    display: flex;
+    flex-direction: space-between;
+    justify-content: center;
+    gap: 80%;
+    bottom: 23%;
+}
+#off{
+    background-color:red ;
+    border: 1px black solid;
+}
+#off:hover{
+    transition: 1s;
+    background-color: blue;
+}
+#botoneraTamagochi{
+    z-index: 3;
+    height: 17%;
+    display:flex;
+    justify-content: space-around;
+}
+#botoneraTamagochi div{
+    height: 90%;
+    display:flex;
+    justify-content: space-around;
+    justify-content: end;
+    
+}
+.tamamagochiButton{
+    height: 100%;
+    text-transform: uppercase;
+    text-transform: full-width;
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    width: 100vh;
+    line-height: 30px;
+    font-size: large;
+}
+.investigar{
+    cursor: url(/assets/cursores/investigacion.cur),auto;
+}
+#TextPetRoom{
+    width: 30%;
+    position: fixed;
+    z-index: 3;
+    background-color: rgba(255, 255, 255, 0.568);
+    text-transform: uppercase;
+    text-decoration: underline;
+    top:4%;
+    line-height: 150%;
+    left: 2%;
+    border: 1px solid black;
+    text-shadow: 12px 12px 12px black;
+}
+#TextPlayerRoom{
+    display: flex;
+    background-color: antiquewhite;
+    height: 30%;
+    text-align: center;
+    border: 1px solid black;
+    justify-content: center;
+}
+#TextPlayerRoom div{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    border: 5px solid black;
+}
+#TextPlayerRoom p{
+    width: 100%;
+    text-align: center;
+    line-height: 35px;
+    font-size: large;
+    text-decoration: underline;
+    border: 1px solid black;
+}
+#timeOut{
+    top: 9vh;
+    position: fixed;
+    z-index: 1;
+    border: 500px solid rgba(255, 0, 0, 0);
+
+}
+#cartelEmergente{
+    position: fixed;
+    right: 2%;
+    bottom: 55%;
+    background-color: aliceblue;
+    height: auto;
+    width: 0%;
+    text-transform: capitalize;
+}

@@ -40,6 +40,7 @@ function irSala(ubicacion){
         case 2: banio();break;
         case 3: salaDeJuegos();break
         case 4: sotano();break
+        case 5: entrada();break
     }
 }
 function mostrarDesaparecer(nombre,swap){

@@ -1,0 +1,18 @@
+[
+    {
+        "inspeccionar" : "Explorar",
+        "consumePuntos" : true
+    },
+    {
+        "accionUno" : "Explorar",
+        "consumePuntos" : true
+    },
+    {
+        "accionDos" : "Explorar",
+        "consumePuntos" : true
+    },
+    {
+        "accionTres" : "Explorar",
+        "consumePuntos" : false
+    }
+]

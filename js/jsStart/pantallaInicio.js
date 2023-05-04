@@ -37,6 +37,25 @@ function iniciarJuego(){
 document.getElementById("volverMenu").addEventListener("click",function(e){iniciarJuego()})
 
 
+//prueba sonidos
+
+function sonido(sonido){
+    this.sound = document.createElement("audio")
+    this.sound.src = sonido
+    this.sound.setAttribute("preload","auto")
+    this.sound.setAttribute("controls", "none")
+    this.sound.style.display = "none"
+    document.body.appendChild(this.sound)
+    this.play = function(){
+        this.sound.play();
+    }
+    this.stop = function(){
+        this.sound.pause();
+    }
+}
+
+let sonidoPrueba = new sonido("assets/sounds/sonidoPerturbador.mp3")
+console.log(sonidoPrueba)
 
 function gameOver(tipo){
     tamagochiModeOff()
@@ -61,7 +80,7 @@ function salirPantallaInicio(argumento){
     document.getElementById("game").classList.add("none")
     document.getElementById("comoJugarDisplay").classList.remove("none")
 }
-document.getElementById("iniciarJuegoBoton").addEventListener("click",function(){salirPantallaInicio(true)})
+document.getElementById("iniciarJuegoBoton").addEventListener("click",function(){salirPantallaInicio(true);sonidoPrueba.play()})
 document.getElementById("comoJugarBoton").addEventListener("click",function(){salirPantallaInicio(false)})
 document.getElementById("volverInicio").addEventListener("click",function(){pantallaInicio();document.getElementById("comoJugarDisplay").classList.add("none")})
 pantallaInicio()

@@ -1,7 +1,7 @@
 //Salas existentes
 let salaActual 
 let primeraEntrada = true //Definir la sala a 0 si es la primera vez que se accede
-let maximasSalas = 4 //Cantidad máxima de switch a salas
+let maximasSalas = 5 //Cantidad máxima de switch a salas
 let obituarioTamagochi
 let momento = "mañana"
 let dia = 0
@@ -30,6 +30,11 @@ function sotano(){
     salaActual = "hudSotano"
     botones(salaActual,true)
     mostrarDesaparecer("hudSotano","aparecer")
+}
+function entrada(){
+    salaActual = "hudEntrada"
+    botones(salaActual,true)
+    mostrarDesaparecer("hudEntrada","aparecer")
 }
 function unbindBotoneraTamagochi(condition){
     let imagenProta = document.getElementById("protaImagen")
@@ -82,6 +87,13 @@ function botoneraTamagochiHandler(habitacion,callback){
                                     cuatro.addEventListener("click",function(e){iniciarModoPelea();tamagochiModeOff();unbindBotoneraTamagochi(true)})
                                     mostrarDesaparecer("prota","desaparecer")
                                     break
+
+        case "hudEntrada"       :   uno.addEventListener("click",function(e){modoExploracion();tamagochiModeOff();unbindBotoneraTamagochi(true)})
+                                    dos.addEventListener("click",function(e){modoExploracion();tamagochiModeOff();unbindBotoneraTamagochi(true)})
+                                    tres.addEventListener("click",function(e){modoExploracion();tamagochiModeOff();unbindBotoneraTamagochi(true)})
+                                    cuatro.addEventListener("click",function(e){modoExploracion();tamagochiModeOff();unbindBotoneraTamagochi(true)})
+                                    mostrarDesaparecer("prota","desaparecer")
+                                    break
     }
 }
 function botones(habitacion,condicionTimeOut){
@@ -91,9 +103,6 @@ function botones(habitacion,condicionTimeOut){
         setTimeout(() => {
             mostrarDesaparecer("timeOut","desaparecer")
         }, 2000);
-    }
-    else{
-        
     }
     unbindBotoneraTamagochi(true)
         fetch("json/jsonRoom/"+habitacion+".JSON")
@@ -106,5 +115,4 @@ function botones(habitacion,condicionTimeOut){
                 botoneraTamagochiHandler(habitacion,callback)
             }
         )
-    
 }

@@ -4,51 +4,39 @@
     width: 100%;
     
 }
-#title{
-    height: 250px;
-    left: 35vh;
+#inicio{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#title img{
     z-index: 1;
-   
+    width:100%;
+    height: 30%;
 }
 #StartButtons{
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-#inicio{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    top: 5vh;
-
-    
-}
 .botonera{
     float: inline-start;
     position: relative;
-    top: 2vh; 
     transition-delay:.1s ;
     justify-content: center;
     display: flex;
-    min-height: 10vh;
-}
-.botonera:hover{
-    z-index: 10;
-    transition: .2s;
-    scale: 1.1; 
+
 }
 #inicio  button {
-    height: 120px;
-    width: 1000px;
     font-size: xx-large;
-    
+    margin-bottom: 5%;
+    margin-top: 1%;
 }
 .botonStart{
-    height: 90px;
+    justify-content: center;
 }
-#comoJugarBoton{
-    padding-top: 5%;
-}
+
 #comoJugarDisplay div{
     text-align: center;
     font-size: large;

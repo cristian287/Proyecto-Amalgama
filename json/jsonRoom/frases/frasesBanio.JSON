@@ -1,6 +1,6 @@
 [
     {
-        "fraseSobre" : "bañarse",
+        "fraseSobre" : "baniarse",
         "frases" : [
             {
                 "enHud" : "Te ves terrible vamos a darte un baño",
@@ -17,7 +17,7 @@
         ]
     },
     {
-        "fraseSobre" : "irBaño",
+        "fraseSobre" : "irBanio",
         "frases" : [
             {
                 "enHud" : "quieres ir al baño?",

@@ -5,6 +5,7 @@ let maximasSalas = 4 //Cantidad máxima de switch a salas
 let obituarioTamagochi
 let momento = "mañana"
 let dia = 0
+let diaMaximo = 30
 function habitacion(){
     salaActual = "hudPrin"
     botones(salaActual,true)
@@ -15,10 +16,10 @@ function cocina(){
     botones(salaActual,true)
     mostrarDesaparecer("hudCocina","aparecer")
 }
-function baño(){
-    salaActual = "hudBaño"
+function banio(){
+    salaActual = "hudBanio"
     botones(salaActual,true)
-    mostrarDesaparecer("hudBaño","aparecer")
+    mostrarDesaparecer("hudBanio","aparecer")
 }
 function salaDeJuegos(){
    salaActual = "hudSalaDeJuegos"
@@ -31,6 +32,13 @@ function sotano(){
     mostrarDesaparecer("hudSotano","aparecer")
 }
 function unbindBotoneraTamagochi(condition){
+    let imagenProta = document.getElementById("protaImagen")
+    if (voracidad === 0){
+        imagenProta.src = "assets/Protagonistas/nemesis.gif"
+    }
+    else if (voracidad <10) {
+        imagenProta.src = "assets/Protagonistas/prota-Corrupted/nemesisFase"+voracidad+".png"
+    }
     recreateNode(document.getElementById("buttonUnoTamagochiMode"))
     recreateNode(document.getElementById("buttonDosTamagochiMode"))
     recreateNode(document.getElementById("buttonTresTamagochiMode"))
@@ -56,10 +64,10 @@ function botoneraTamagochiHandler(habitacion,callback){
                                     cuatro.addEventListener("click",function(e){verStatsCocina();unbindBotoneraTamagochi()})
                                     break
 
-        case "hudBaño"         :    uno.addEventListener("click",function(e){inspeccionarBaño();unbindBotoneraTamagochi()})
-                                    dos.addEventListener("click",function(e){bañarse();unbindBotoneraTamagochi()})
+        case "hudBanio"         :    uno.addEventListener("click",function(e){inspeccionarBanio();unbindBotoneraTamagochi()})
+                                    dos.addEventListener("click",function(e){baniarse();unbindBotoneraTamagochi()})
                                     tres.addEventListener("click",function(e){inodoro();unbindBotoneraTamagochi()})
-                                    cuatro.addEventListener("click",function(e){verStatsBaño();unbindBotoneraTamagochi()})
+                                    cuatro.addEventListener("click",function(e){verStatsBanio();unbindBotoneraTamagochi()})
                                     break
 
         case "hudSalaDeJuegos" :    uno.addEventListener("click",function(e){inspeccionarSalaDeJuegos();unbindBotoneraTamagochi()})
@@ -72,18 +80,23 @@ function botoneraTamagochiHandler(habitacion,callback){
                                     dos.addEventListener("click",function(e){iniciarModoPelea();tamagochiModeOff();unbindBotoneraTamagochi(true)})
                                     tres.addEventListener("click",function(e){iniciarModoPelea();tamagochiModeOff();unbindBotoneraTamagochi(true)})
                                     cuatro.addEventListener("click",function(e){iniciarModoPelea();tamagochiModeOff();unbindBotoneraTamagochi(true)})
+                                    mostrarDesaparecer("prota","desaparecer")
                                     break
     }
 }
 function botones(habitacion,condicionTimeOut){
     if (condicionTimeOut){
+        mostrarDesaparecer("prota","aparecer")
         mostrarDesaparecer("timeOut","aparecer")
         setTimeout(() => {
             mostrarDesaparecer("timeOut","desaparecer")
         }, 2000);
     }
+    else{
+        
+    }
     unbindBotoneraTamagochi(true)
-        fetch("/json/jsonRoom/"+habitacion+".JSON")
+        fetch("json/jsonRoom/"+habitacion+".JSON")
         .then((response)=>response.json())
         .then((callback)=>{
                 document.getElementById("buttonUnoTamagochiMode").textContent = callback[0].inspeccionar

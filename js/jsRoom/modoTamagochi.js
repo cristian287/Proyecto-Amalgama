@@ -37,7 +37,7 @@ function irSala(ubicacion){
     switch(ubicacion){
         case 0: habitacion();break;
         case 1: cocina();break;
-        case 2: baño();break;
+        case 2: banio();break;
         case 3: salaDeJuegos();break
         case 4: sotano();break
     }

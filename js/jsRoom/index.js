@@ -2,7 +2,7 @@
 leftKey.addEventListener("click",function(){handlerClickKeys("left")})
 rightKey.addEventListener("click",function(){handlerClickKeys("right")})
 let inspeccionarJson
-fetch("/json/jsonRoom/inspeccionar.JSON")
+fetch("json/jsonRoom/inspeccionar.JSON")
 .then((response)=>response.json())
 .then((callback)=>{
 	inspeccionarJson = callback
@@ -11,13 +11,6 @@ fetch("/json/jsonRoom/inspeccionar.JSON")
 let unlock
 let habilidadesEquipadas = [] //cambiar skills
 let habilidadesDisponibles = [] //cambiar skills
-
-
-function none(){ //Eliminar
-	terminarModoPelea()
-	salirPantallaInicio()
-	document.getElementById("comoJugarDisplay").classList.add("none")
-}
 
 function recreateNode(el, withChildren) { //Recrear el nodo para sacarle los eventos
     if (withChildren) {
@@ -29,7 +22,6 @@ function recreateNode(el, withChildren) { //Recrear el nodo para sacarle los eve
         el.parentNode.replaceChild(newEl, el);
     }
 }
-
 
 
 
@@ -46,7 +38,10 @@ function autoType(element,text,delay,conditionEnd){
 	else{
 		if (unlock){
 			unlock = false
-			mostrarDesaparecer("timeOut","desaparecer")
+			setTimeout(() => {
+				mostrarDesaparecer("timeOut","desaparecer")
+			}, 1000);
+			
 		}
 	}
 }
@@ -60,7 +55,9 @@ function autoTypeInspect(element,text,delay){
 		setTimeout(autoTypeInspect,delay,element,text,delay);
 	}
 	else{
-		mostrarDesaparecer("timeOut","desaparecer")
+		setTimeout(() => {
+			mostrarDesaparecer("timeOut","desaparecer")
+		}, 1000);
 	}
 }
 
@@ -89,8 +86,9 @@ function timePass(){
 			case 2: statLoss = "vejiga";break;
 			case 3: statLoss = "saciedad";break;
 		}
-		statsManager(statLoss,"resta",1)
-		document.getElementById("cartelEmergente").textContent = "perdi 1 punto de " + statLoss + " :("
+		let number = RNG(1,3)
+		statsManager(statLoss,"resta",number)
+		document.getElementById("cartelEmergente").textContent = "perdi " + number + " puntos de " + statLoss + " :("
 		document.getElementById("cartelEmergente").classList.add("cartelEmergenteDis")
 		setTimeout(() => {
 			document.getElementById("cartelEmergente").classList.remove("cartelEmergenteDis")
@@ -133,7 +131,7 @@ function chatTamagochi(sala,value){
 	let toUse
 	switch(sala){
 		case "habitacion": toUse = frasesTamagochiRoom;break;
-		case "baño": toUse = frasesTamagochiBaño;break;
+		case "banio": toUse = frasesTamagochiBanio;break;
 		case "cocina": toUse = frasesTamagochiCocina;break;
 		case "salaDeJuegos" : toUse = frasesTamagochiSalaDeJuegos;break;
 	}
@@ -181,9 +179,9 @@ function statsManager(punto,operacion,cantidad){
 }
 
 
-function goInspect(sala){//LUEGO AGREGARLE ALEATORIEDAD A LA ACCION A REALIZAR
+function goInspect(sala){
     iSala = inspeccionarJson.filter(e=>e.sala === sala)
-    console.log(iSala[0].accion.length)
+
     let selectAction = RNG(0,10)
     if (selectAction === 10){
         selectAction = 0
@@ -203,12 +201,13 @@ function goInspect(sala){//LUEGO AGREGARLE ALEATORIEDAD A LA ACCION A REALIZAR
             mensaje = iSala.mensaje[RNG(0,iSala.mensaje.length - 1)]
             mensaje = mensaje.replace("X",comidaDropeada)
             statsManager("comidaDisponible","suma",comidaDropeada)
+			statsManager("voracidad","resta",1)
             break
         }
         case 1:{//NO ENCONTRAR NADA
             iSala = iSala[0].accion[0].noEncontrarNada[0].frases
-            console.log(iSala)
             mensaje = iSala[RNG(0,iSala.length-1)]
+			statsManager("voracidad","resta",1)
         }
     }
     document.getElementById("textTamagochiLog").textContent = ""

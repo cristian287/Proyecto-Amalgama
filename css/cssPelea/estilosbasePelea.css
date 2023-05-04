@@ -3,17 +3,16 @@
     text-transform: uppercase;
 }
 #fondo{
-    background-image: url(/assets/Rooms/Room7.gif);
+    background-image: url(../../assets/Rooms/Room7.gif);
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 55%;
+    height: 50%;
 }
 #botonesHudPelea{
     display: flex;
     flex-direction: row;
-    top: 2%;
     height:23%;
     justify-content:space-between;
 }
@@ -54,8 +53,8 @@
     justify-content: center;
     width: auto;
     margin: auto;
-    height: 200px;
-    top: 20%;
+    height: 250px;
+    top: 15%;
 
 }
 #vitimText{
@@ -66,25 +65,35 @@
     bottom: 52%;
     height: 40%;
     left: 2%;
+    line-height: 30px;
+    transition: .5;
+    transition-delay: .1;
 }
 #nemesisHeal{
     position: fixed;
     z-index: 10;
-    top: 10%;
-    left: 35%;
+    top: 2%;
+    left: 33%;
+    font-size: xx-large;
+    color: chartreuse;
+    font-family: 'Silkscreen', cursive;
+}
+#nemesisHeal::first-letter{
+    color: red;
 }
 #protaTextBattle{
     border: black 2px solid;
     background-color: antiquewhite;
     height: 100px;
     color: black;
-    height: 12%;
+    height: 10%;
     text-align: center;
     background: rgb(65,232,216);
     text-decoration: underline;
     text-transform: uppercase;
     text-decoration-style: wavy;
     line-height: 30px;
+    
 }
 #vitimObi{
     border: black 2px solid;
@@ -93,9 +102,8 @@
     text-align: center;
     text-decoration: underline;
     text-transform: uppercase;
-    text-decoration-style: wavy;
     line-height: 30px;
-    height: 10% ;
+    height: 15% ;
 }
 #battleHE{
     display: flex;
@@ -103,13 +111,28 @@
     justify-content: space-around;
     line-height: 30px;
     border: 1px black solid;
-    height: 5%;
+    height: 10%;
 }
 #battleHE p{
     border: 1px black solid;
-    background-color: green;
     text-transform: uppercase;
+    height: 100%;
+    font-size: x-large;
+    line-height: 55px;
+    letter-spacing: 20px;
+    text-shadow: red 2px 2px;
+}
+#battleHE p::first-letter{
+    color: red;
+    
 }
 .cursorPelea{
-    cursor: url('/assets/cursores/cursorF.cur'),auto;
+    cursor: url('../../assets/cursores/cursorF.cur'),auto;
+}
+.energy{
+    background-color: aqua;
+}
+.healing{
+    background-color: green;
+    
 }

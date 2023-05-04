@@ -8,6 +8,7 @@
         visibility: hidden;
         transform: scale(0);
         animation-play-state: paused;
+        pointer-events: none;
     }
     to {
         background: none;
@@ -18,6 +19,7 @@
         visibility: hidden;
         transform: scale(0);
         animation-play-state: paused;
+        pointer-events: none;
     }
 }
 .none{
@@ -32,10 +34,10 @@
 
 @keyframes cursor {
     from {
-         cursor: url(/assets/cursores/cursorOpen.cur), auto; 
+         cursor: url(../../assets/cursores/cursorOpen.cur), auto; 
     }
     to {
-        cursor: url(/assets/cursores/cursorClosed.cur), auto; 
+        cursor: url(../../assets/cursores/cursorClosed.cur), auto; 
     }
 }
 
@@ -52,7 +54,7 @@
     from {
     }
     to {
-        content: url(/assets/Protagonistas/nemesisVictima.gif);
+        content: url(../../assets/Protagonistas/nemesisVictima.gif);
     }
 }
 .scare{

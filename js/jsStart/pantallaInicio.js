@@ -8,9 +8,9 @@ let vejiga = 10
 let saciedad = 10
 let comidaDisponible = 4
 let voracidad = 0
-let maxStats = 10
+let maxStats = 100
 let frasesEnMuerte
-fetch("/json/frasesGameOver.JSON")
+fetch("json/frasesGameOver.JSON")
 .then((response)=>response.json())
 .then((callback)=>{
         frasesEnMuerte = callback
@@ -20,13 +20,14 @@ function iniciarJuego(){
     document.getElementById("timeNow").textContent = "Es el dia " + dia + " y es de " + momento
     mostrarDesaparecer("gameOver","desaparecer")
     pantallaInicio()
+    enemigosEspecialesSinDerrotar = [] //Ir agregando los enemigos especiales
     dia = 0
     momento = "mañana"
-	energia = 10
-	felicidad = 10
-	higiene = 10
-	vejiga = 10
-	saciedad = 10
+	energia = RNG(2,5)
+	felicidad = RNG(2,5)
+	higiene = RNG(2,5)
+	vejiga = RNG(2,5)
+	saciedad = RNG(4,6)
 	comidaDisponible = 4
 	voracidad = 0
     habilidadesEquipadas = []

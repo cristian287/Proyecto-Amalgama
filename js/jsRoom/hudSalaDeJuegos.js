@@ -2,14 +2,14 @@ let frasesTamagochiSalaDeJuegos
 for(let i = 0;i<=44;i++){
     let newDiv = document.createElement("div")
     let newButton = document.createElement("button")
-    let texto = document.createTextNode("Slot de habilidad vacio")
+    let texto = document.createTextNode("habilidad bloqueada")
     newDiv.appendChild(newButton)
     newButton.appendChild(texto)
     newButton.setAttribute("id",("skillAdquirido"+i))
     let idInsert = document.getElementById("selecSkills")
     idInsert.appendChild(newDiv)
 }
-fetch("/json/jsonRoom/frases/frasesSalaDeJuegos.JSON")
+fetch("json/jsonRoom/frases/frasesSalaDeJuegos.JSON")
         .then((response)=>response.json())
         .then((callback)=>{
                 frasesTamagochiSalaDeJuegos = callback
@@ -20,6 +20,7 @@ function inspeccionarSalaDeJuegos(){
 }
 function jugar(){
     document.getElementById("textTamagochiLog").textContent = ""
+    statsManager("felicidad","sumar",RNG(1,5))
     chatTamagochi("salaDeJuegos","jugar")
     timePass()
 }
@@ -31,7 +32,12 @@ function verSkills(){
     mostrarDesaparecer(salaActual,"desaparecer")
     mostrarDesaparecer("TextPetRoom","desaparecer")
     for(let i = 0;i<=4;i++){
-        document.getElementById("skill"+i).textContent = "En el boton " + (i+1) + " posees la habilidad " + habilidadesEquipadas[i].name + " la cual gasta " + habilidadesEquipadas[i].mpDrained + " puntos de mana"
+        document.getElementById("skill"+i).innerHTML = "En el boton " + (i+1) + 
+        " posees la habilidad " + habilidadesEquipadas[i].name + 
+        "<br/>" + "Descripcion: " + habilidadesEquipadas[i].description + "<br/> recurso consumido: " +
+        habilidadesEquipadas[i].resource + ", " + habilidadesEquipadas[i].mpDrained + 
+        " puntos. Categoria: " +habilidadesEquipadas[i].category + ", efectua de "+
+        habilidadesEquipadas[i].min_damage + " a " + habilidadesEquipadas[i].max_damage + " puntos"
     }
     document.getElementById("viewSkills").addEventListener("click",function(e){
         mostrarDesaparecer("viewSkills","desaparecer")
@@ -43,12 +49,13 @@ function verSkills(){
     })
 }
 let skillPorAgregar
-function cambiarSkills(){ //ROTO
+function cambiarSkills(){
     let skillsDisponibles = habilidadesDisponibles
     habilidadesEquipadas.forEach(function e(valorActual,index){
         skillsDisponibles = skillsDisponibles.filter(e=>e.name !== valorActual.name)
     })
     if (skillsDisponibles.length > 0){
+        mostrarDesaparecer("prota","desaparecer")
         timePass()
         tamagochiModeOff()
         mostrarDesaparecer("selecSkills","aparecer")
@@ -68,9 +75,6 @@ function cambiarSkills(){ //ROTO
         document.getElementById("textTamagochiLog").textContent = "No tienes ninguna skill ademas de las equipadas!"
     }
     
-}
-function type(){
-
 }
 function replaceSkill(value){
     mostrarDesaparecer("selecSkills","desaparecer")
@@ -100,19 +104,28 @@ function replaceSkill(value){
         }
         a.textContent = aSkill.name
     }
+    document.getElementById("botonPeleaCambioSalir").addEventListener("click",function e(){abort();unbindPeleaButton()})
     b1.addEventListener("click",function e(){end(value,skillUno);skillUno = value,button.textContent = value.name;unbindPeleaButton()})
     b2.addEventListener("click",function e(){end(value,skillDos);skillDos = value,buttonDos.textContent = value.name;unbindPeleaButton()})
     b3.addEventListener("click",function e(){end(value,skillTres);skillTres = value,buttonTres.textContent = value.name;unbindPeleaButton()})
     b4.addEventListener("click",function e(){end(value,skillCuatro);skillCuatro = value,buttonCuatro.textContent = value.name;unbindPeleaButton()})
     b5.addEventListener("click",function e(){end(value,skillCinco);skillCinco = value,buttonCinco.textContent = value.name;unbindPeleaButton()})
+    document.getElementById("skillChange").innerHTML = "toca la habilidad a cambiar por " 
+        + value.name + "<br/> Descripcion: " + value.description + "<br/> recurso consumido: " +
+        value.resource + ", " + value.mpDrained + " puntos. Categoria: " +value.category + 
+        ", efectua de "+ value.min_damage + " a " + value.max_damage + " puntos"
     function end(value,skill){
         let index = habilidadesEquipadas.indexOf(skill)+1
-        console.log("reemplazando la habilidad " + skill.name + " por la habilidad " + value.name + " en el index " + index)
         habilidadesEquipadas[habilidadesEquipadas.indexOf(skill)] = value
         mostrarDesaparecer("cambiarSkills","desaparecer")
         primeraEntrada = false
         document.getElementById("textTamagochiLog").textContent = "El cambio de habilidades fue exitoso!"
         tamagochiMode()
+    }
+    function abort(){
+        primeraEntrada = false
+        tamagochiMode()
+        mostrarDesaparecer("cambiarSkills","desaparecer")
     }
 }
 function unbindPeleaButton (){
@@ -121,4 +134,5 @@ function unbindPeleaButton (){
     recreateNode(document.getElementById("botonPeleaCambioTres"))
     recreateNode(document.getElementById("botonPeleaCambioCuatro"))
     recreateNode(document.getElementById("botonPeleaCambioCinco"))
+    recreateNode(document.getElementById("botonPeleaCambioSalir"))
 }

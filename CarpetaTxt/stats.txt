@@ -6,6 +6,6 @@
 -cantidad de comida(revisar la cocina)
 -voracidad(cantidad ingerida de carne tabu)
 
--fuerza(sumatoria de otras estadisticas)
--mana(sumatoria de otras estadisticas)
--salud(sumatoria de otras estadisticas)
+-fuerza(sumatoria de voracidad y saciedad)
+-mana(sumatoria de vejiga, energia)
+-salud(sumatoria de energia,felicidad,higiene)

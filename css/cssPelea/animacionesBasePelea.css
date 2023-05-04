@@ -1,65 +1,17 @@
-@keyframes victimHit {
-    from { 
-        transform: 
-        translateX(200px)
-        ;
-        background-color: white;
-        color: white;
-
-    }
-    to {
-        transform: 
-        translateX(-200px)
-        ;
-        filter: invert();
-    }
-}
-.victimHit1{
-    animation-name: victimHit ;
-    animation-duration: .1s;
-    animation-iteration-count: 4;
-    animation-fill-mode: both;
-    animation-direction: alternate;
-}
-@keyframes victimHitBlindness1 {
-    from { 
-        filter: blur(1px);
-    }
-    to {
-        filter: blur(20px);
-    }
-}
-@keyframes victimHitBlindness{
-    from { 
-        display: flex;
-        flex-direction: row-reverse;
-    }
-    to {
-
-    }
-}
-.victimHitBlindness1234 #botonesHudPelea{
-    animation-name: victimHitBlindness, victimHitBlindness1 ;
-    animation-duration: .5s, 4s;
-    animation-iteration-count: infinite, infinite; 
-    animation-direction: alternate, alternate;
-}
-
-
-
-
 
 
 @keyframes salud {
     from { 
-        background-color: antiquewhite;
+        text-decoration: underline;
+        color: red;
     }
     to {
-
+        text-decoration: underline;
+        color: blue;
     }
 }
-.healing{
-    animation-name: salud3 ;
+.healing::first-letter{   
+    animation-name: salud ;
     animation-duration: .1s;
     animation-iteration-count: infinite;
     animation-fill-mode: both;

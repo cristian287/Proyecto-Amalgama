@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Babylonica&display=swap');
+
 #gameOver{
     display: flex;
     flex-direction: column;
@@ -14,10 +14,11 @@
 }
 #gameOver button{
     color: white;
-    background-color: grey;
-    font-size: x-large;
-    left: 28%;
-    margin-top: 4%;
+    border: 2px double grey;
+    font-size: 9vh;
+    text-shadow: 12px 14px 42px;
+    font-family: 'Babylonica', cursive;
+    color: red;
 }
 #gameOver p{
     display: flex;
@@ -28,17 +29,19 @@
     height: 70%;
     z-index: 1;
     left: 35%;
-    bottom: 20%;
+    bottom: 19%;
 }
-#razonMuerte p{
+#razonMuerte {
     z-index: 2;
     color: red;
     line-height: 30px;
-    left: 3%;
+    display: flex;
+    justify-content: center;
     background-color: black;
     text-decoration: underline;
     text-decoration-style: double;
     height: 50vh;
+    text-align: center;
 }
 #FinDelJuego{
     font-family: 'Babylonica', cursive;
@@ -49,9 +52,6 @@
     text-shadow: 12px 14px 42px;
     height: 100vh;
 }
-#volverAlMenu{
-    height: 30%;
-    width: 100vh;
-    z-index: 2;
-    position: fixed;
+#volverMenu p{
+    z-index: 2;   
 }

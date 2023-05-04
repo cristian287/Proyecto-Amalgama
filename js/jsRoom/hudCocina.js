@@ -1,5 +1,5 @@
 let frasesTamagochiCocina
-fetch("/json/jsonRoom/frases/frasesCocina.JSON")
+fetch("json/jsonRoom/frases/frasesCocina.JSON")
         .then((response)=>response.json())
         .then((callback)=>{
                 frasesTamagochiCocina = callback
@@ -11,7 +11,7 @@ function inspeccionarCocina(){
 function comer(){
     document.getElementById("textTamagochiLog").textContent = ""
     if (comidaDisponible>0){
-        statsManager("saciedad","suma",RNG(1,2))
+        statsManager("saciedad","suma",RNG(1,5))
         statsManager("comidaDisponible","resta",1)
         statsManager("voracidad","suma",RNG(1,2))
         statsManager("vejiga","resta",RNG(1,2))
@@ -32,6 +32,7 @@ function revisarDespensa(){
     }
 }
 function verStatsCocina(){
+    mostrarDesaparecer("timeOut","aparecer")
     document.getElementById("textTamagochiLog").textContent = ""
-    autoType("textTamagochiLog","Tienes " + saciedad + " puntos de saciedad",15)
+    autoTypeInspect("textTamagochiLog","Tienes " + energia + " puntos de energía, " + felicidad + " puntos de felicidad, " + saciedad + " puntos de saciedad, " + vejiga + " puntos de vejiga y " + higiene + " puntos de higiene",15)
 }

@@ -108,25 +108,24 @@
 
 @keyframes timeOut {
     from { 
-        border: 500px solid rgba(255, 0, 0, 0);
-        opacity: 50%;
+        border: 500px solid rgba(0, 0, 0, 0);
+        opacity: 60%;
         background-size: 510px;
-        background-image: url(/assets/ElementosRooms/interferenciaHud.jpg);
+        background-image: url(../../../assets/ElementosRooms/interferenciaHud.png);
         background-position: center;
         background-repeat: none;
         transform: rotate(90deg)
         translateY(0px);
-
     }
     to {
-        border: 500px solid rgba(174, 0, 255, 0.123);
-        background-image: url(/assets/ElementosRooms/interferenciaHud.jpg);
+        border: 500px solid rgba(0, 0, 0, 0);
+        background-image: url(../../../assets/ElementosRooms/interferenciaHud.png);
         background-position: center;
         background-repeat: none;
-        opacity: 10%;
+        opacity: 40%;
         background-size: 510px;
         transform:rotate(90deg);
-
+        
     }
 }
 #timeOut{
@@ -176,10 +175,47 @@
 }
 .cartelEmergenteDis{
     animation-name: cartelEmergenteUp, cartelEmergenteShake, cartelEmergenteGlow, cartelEmergenteBlow  ;
-    animation-duration: 1s , 1.5s , 1.5s ,  1s;
-    animation-iteration-count: 1, 2, 2,1;
+    animation-duration: 2s , 2.5s , 2s ,  2s;
+    animation-iteration-count: 1, 10, 20,1;
     animation-fill-mode:forwards, both, backwards, forwards;
     animation-direction: alternate, alternate, alternate, alternate;
-    animation-delay: 0ms, 1s , 1s , 3s;
+    animation-delay: 0ms, 3s , 2s , 4.3s;
 }
+@keyframes change {
+    from {
+        filter: blur(12px);
+        background-color: black;
+        background-image: none;
+    }
+    to {
+        
+    }
+}
+.change{
+    animation-name: change ;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+}
+
+@keyframes changeDay {
+    from {
+        filter: brightness(1%);
+        
+    }
+    to {
+      
+    }
+
+}
+.changeDay{
+    animation-name: changeDay ;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+
+  
 

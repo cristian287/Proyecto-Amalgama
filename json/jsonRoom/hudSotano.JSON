@@ -1,18 +1,18 @@
 [
     {
-        "inspeccionar" : "caza",
+        "inspeccionar" : "Cosechar carne",
         "consumePuntos" : true
     },
     {
-        "accionUno" : "caza",
+        "accionUno" : "Cosechar carne",
         "consumePuntos" : true
     },
     {
-        "accionDos" : "caza",
+        "accionDos" : "Cosechar carne",
         "consumePuntos" : true
     },
     {
-        "accionTres" : "caza",
+        "accionTres" : "Cosechar carne",
         "consumePuntos" : false
     }
 ]

@@ -1,7 +1,7 @@
 @keyframes screamer {
     from {}
     to {
-        content: url(/assets/Protagonistas/nemesisFase10.png);
+        content: url(../../../assets/Protagonistas/nemesisFase10.png);
         z-index: 5;
         transform: scale(1.5);
     }
@@ -11,5 +11,27 @@
     animation-duration: 1ms;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+    animation-delay: 3s;
+}
+@keyframes fog {
+    from {
+        color: black;
+        filter: blur(100px);}
+    to {
+
+    }
+}
+#gameOver #razonMuerte apagado {
+    animation-name:fog;
+    animation-duration: 5s;
+    animation-iteration-count: 13;
+    animation-fill-mode: backwards;
+    animation-delay: 1s;
+}
+#gameOver #volverMenu button apagado{
+    animation-name:fog;
+    animation-duration: 5s;
+    animation-iteration-count: 13;
+    animation-fill-mode: backwards;
     animation-delay: 3s;
 }

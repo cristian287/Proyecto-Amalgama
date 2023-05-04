@@ -19,17 +19,21 @@
     width: auto;
 }
 #arrowTwo:hover{
-    content: url(/assets/ElementosRooms/puerpleArrow.png);
+    filter: hue-rotate(-0.25turn);
 }
 #arrowOne:hover{
-    content: url(/assets/ElementosRooms/puerpleArrowR.png);
+    filter: hue-rotate(-0.25turn);
+}
+.arrow:active{
+    filter:invert();
 }
 #hudPrin{
     height: 55%;
     z-index: 1;
-    background: url(/assets/Rooms/Room0.png) no-repeat center center;
+    background: url(../../../assets/Rooms/Room0.png) no-repeat center center;
     background-size: 100%;
     background-position: center;
+
 }
 #flechas{
     position: sticky;
@@ -71,9 +75,16 @@
     width: 100vh;
     line-height: 30px;
     font-size: large;
+    transition: .3s;
+}
+.tamamagochiButton:hover{
+    transition: .3s;
+    filter: invert() ;
+    
+    
 }
 .investigar{
-    cursor: url(/assets/cursores/investigacion.cur),auto;
+    cursor: url(../../../assets/cursores/investigacion.cur),auto;
 }
 #TextPetRoom{
     width: 30%;
@@ -125,4 +136,13 @@
     height: auto;
     width: 0%;
     text-transform: capitalize;
+}
+#prota{
+    height: max-content;
+}
+#protaImagen{
+    height: 250px;
+}
+#cajaTextoSentimientosTamagochi::before{
+    content: "mascota :";
 }

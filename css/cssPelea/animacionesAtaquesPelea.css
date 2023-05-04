@@ -1,0 +1,91 @@
+@keyframes victimHit {
+    from { 
+        transform: 
+        translateX(200px)
+        ;
+        background-color: white;
+        color: white;
+
+    }
+    to {
+        transform: 
+        translateX(-200px)
+        ;
+        filter: invert();
+    }
+}
+.victimHit apagado {
+    animation-name: victimHit ;
+    animation-duration: .1s;
+    animation-iteration-count: 4;
+    animation-direction: alternate;
+}
+@keyframes victimHitBlindness1 {
+    from { 
+        filter: blur(1px);
+    }
+    to {
+        filter: blur(2px);
+    }
+    to {
+        filter: blur(3px);
+    }
+    to {
+        filter: blur(4px);
+    }
+    to {
+        filter: blur(20px);
+    }
+}
+@keyframes victimHitBlindness{
+    from { 
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    to {
+        
+    }
+}
+.victimHitBlindness #botonesHudPelea {
+    animation-name: victimHitBlindness, victimHitBlindness1 ;
+    animation-duration: 1s, 3s;
+    animation-iteration-count: infinite, infinite; 
+    animation-direction: alternate, alternate;
+    animation-timing-function:normal, step-start;
+}
+.victimHitBlindness #vitimText {
+    animation-name: victimHitBlindness, victimHitBlindness1 ;
+    animation-duration: 1s, 3s;
+    animation-iteration-count: infinite, infinite; 
+    animation-direction: alternate, alternate;
+    animation-timing-function:normal, step-start;
+}
+
+@keyframes euphoria {
+    from { 
+        background-color: red;
+        text-shadow: red 2px 3px;
+    }
+    to {
+        background-color: green;
+        text-shadow: blue 3px 4px;
+    }
+    to {
+        background-color: violet;
+        text-shadow: green 4px 5px;
+    }
+    to {
+        background-color: purple;
+        text-shadow: violet 5px 6px;
+    }
+    to {
+        background-color: green;
+        text-shadow: purple 6px 7px;
+    }
+}
+.euphoria apagado{
+    animation-name: euphoria;
+    animation-duration: .5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}

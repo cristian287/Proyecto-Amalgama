@@ -1,28 +1,32 @@
-let frasesTamagochiRoom
-fetch("json/jsonRoom/frases/frasesHabitacion.JSON")
+let frasesTamagochiBanio
+fetch("json/jsonRoom/frases/frasesBanio.JSON")
         .then((response)=>response.json())
         .then((callback)=>{
-                frasesTamagochiRoom = callback
+                frasesTamagochiBanio = callback
             }
         )
-function inspeccionarSala(){
-    goInspect("hudPrin")
+
+
+function inspeccionarBanio(){
+    goInspect("hudBanio")
 }
-function dormir(){
+function baniarse(){
     document.getElementById("textTamagochiLog").textContent = ""
-    statsManager("energia","suma",RNG(1,5))
-    statsManager("vejiga","resta",RNG(1,2))
-    chatTamagochi("habitacion","dormir")
+    statsManager("higiene","suma",RNG(1,5))
+    statsManager("energia","resta",RNG(1,2))
+    statsManager("felicidad","resta",RNG(1,2))
+    chatTamagochi("banio","baniarse")
     timePass()
 }
-function hablar(){
+function inodoro(){
     document.getElementById("textTamagochiLog").textContent = ""
-    statsManager("felicidad","suma",RNG(1,5))
+    statsManager("vejiga","suma",RNG(1,5))
     statsManager("saciedad","resta",RNG(1,2))
-    chatTamagochi("habitacion","hablar")
+    statsManager("higiene","resta",RNG(1,2))
+    chatTamagochi("banio","irBanio")
     timePass()
 }
-function verStatsSala(){
+function verStatsBanio(){
     mostrarDesaparecer("timeOut","aparecer")
     document.getElementById("textTamagochiLog").textContent = ""
     autoTypeInspect("textTamagochiLog","Tienes " + energia + " puntos de energía, " + felicidad + " puntos de felicidad, " + saciedad + " puntos de saciedad, " + vejiga + " puntos de vejiga y " + higiene + " puntos de higiene",15)

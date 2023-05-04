@@ -1,7 +1,7 @@
 #hudSalaDeJuegos{ 
     height: 55%;
     z-index: 1;
-    background: url(/assets/Rooms/Room4.png) no-repeat center center;
+    background: url(../../../assets/Rooms/Room4.png) no-repeat center center;
     background-size: 100%;
     background-position: center;
 }
@@ -9,25 +9,30 @@
     background-color: #ffc1ff;
     display: flex;
     flex-direction: column;
-    padding-left: 20%;
+    justify-content: center;
     height: 101%;
 }
 #viewSkills div{
+    left: 2%;
     display: flex;
-    padding-top: 5%;
     border:2px solid black;
-    max-width:75%;
+    max-width:95%;
     margin-bottom: 1%;
     box-shadow: 32px 12px;
     z-index: 1;
+    line-height: 30px;
+    text-decoration: underline;
+    transition: .1s;
+    transition-delay: .1;
+    max-height: 9%;
 }
+
 #viewSkills div:hover{
     color: blue;
-    transform: scale(1.1);
     z-index: 3;
-    top: 1%;
-   
-    
+    transition: .2s;
+    transition-delay: .1;
+    max-height: 100%;
 }
 #selecSkills{
     position: fixed;
@@ -85,25 +90,23 @@
     justify-content: space-around;
     line-height: 30px;
     border: 1px black solid;
-    height: 5%;
+    height: 25%;
 }
 #playgroundSkills p{
     border: 1px black solid;
     background-color: green;
     text-transform: uppercase;
 }
-
 #botonesPlayground{
     display: flex;
     flex-direction: row;
-    top: 2%;
     height:23%;
     justify-content:space-between;
+    
 }
 #botonesPlayground div{
     display: block;
     justify-content:space-around;
-
 
 }
 #botonesPlayground button{
@@ -116,7 +119,7 @@
     border-style:double;
 }
 #cambiarSkills{
-    top: 45%;
+    top: 35%;
 }
 
 #botonesPlayground button:hover{

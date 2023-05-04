@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Babylonica&family=Covered+By+Your+Grace&family=Fredericka+the+Great&family=Fredoka+One&family=Libre+Barcode+128&family=Press+Start+2P&family=Redacted&family=Redacted+Script:wght@300&family=Silkscreen&display=swap');
 *{
     font-family: 'Press Start 2P', cursive;
     overflow: hidden;
@@ -8,8 +8,20 @@
     position: relative;
     text-transform: capitalize;
 }
+
+.fonts{
+    font-family: 'Babylonica', cursive;
+    font-family: 'Covered By Your Grace', cursive;
+    font-family: 'Fredericka the Great', cursive;
+    font-family: 'Fredoka One', cursive;
+    font-family: 'Libre Barcode 128', cursive;
+    font-family: 'Press Start 2P', cursive;
+    font-family: 'Redacted', cursive;
+    font-family: 'Redacted Script', cursive;
+    font-family: 'Silkscreen', cursive;
+}
 button{
-    cursor: url('/assets/cursores/cursorOnButton.cur'), auto;
+    cursor: url('../../assets/cursores/cursorOnButton.cur'), auto;
     background:none;
     border: none;
 }
@@ -29,4 +41,76 @@ body{
     width: auto;
     margin: auto;
     bottom: 86vh;
+}
+
+@media (max-width: 950px) and (orientation: landscape) { 
+    
+    #title{
+        scale: .6;
+        margin-left: -21px;
+    }
+    #StartButtons{
+        scale: .5;
+        margin-bottom: 450px;
+        bottom: 90px;
+    }
+    #protaImagen{
+        transform: rotate(3deg);
+        animation-name: patMove, pat, patMoveBack;
+        animation-play-state: paused, paused, paused;
+        height: 150px;
+    }
+    #botoneraTamagochi {
+        border: none;
+    }
+    #botoneraTamagochi button{
+        font-size: small;
+        height:70px;
+        bottom: 5px;
+        
+    }
+    .tamamagochiButton{
+        animation-name: tamamagochiButton ;
+        animation-play-state: paused;
+    }
+    #fondo{
+        height: 40%;
+    }
+    #victima{
+        z-index: 10;
+        display: flex;
+        justify-content: center;
+        width: auto;
+        margin: auto;
+        height: 150px;
+    }
+    #battleHE{
+        height: 30px;
+    }
+    #battleHE p{
+        font-size: smaller;
+        line-height: 30px;
+    }
+    #botonesHudPelea{
+        height: 100px;
+        display: flex;
+        display: grid;
+        grid-template-columns: repeat(3, 200px);
+        grid-template-rows:repeat( 1, 49px);
+        row-gap: 0%;
+    }
+    #botonesHudPelea button{
+        border: 1px solid black;
+        height: 40%;
+        width: 49vh;
+        
+    }
+    #botonesHudPelea div{
+        height: 100px;
+        line-height: 0%;
+    }
+
+
+
+
 }

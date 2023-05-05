@@ -1,7 +1,28 @@
 #hudSotano{ 
     height: 55%;
     z-index: 1;
+    background: url(../../../assets/Rooms/Room5.gif) no-repeat center center;
+    background-size: 100%;
+    background-position: center;
+}
+#modoCosechaHud{
+    height: 100%;
+    z-index: 1;
     background: url(../../../assets/Rooms/Room7.gif) no-repeat center center;
     background-size: 100%;
     background-position: center;
+    
+}
+
+#partes{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 40vh; 
+    margin-top: 35vh;
+    position: absolute;
+    margin-left: 35%;
+}
+#preza img{
+    
+    height: 150px;
 }

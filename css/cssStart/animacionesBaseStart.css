@@ -16,16 +16,53 @@
         background-image: url(./../../assets/otros/My_First_Friend2.png) ;
     }
 }
-
-.title1{animation-play-state: paused;
-    animation-name: titleScreamer ; 
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    animation-fill-mode: backwards;
-    animation-direction: alternate;
-    
+@keyframes LeterScreamer {
+    from { 
+        font-size: xx-large;
+    }
+    to { 
+        color: red;
+    }
 }
-#inicio:hover .title1{
+
+@keyframes inicioScreamer {
+    from { 
+    }
+    to { 
+        background-color: black;
+    }
+}
+
+.botonStart{
+    animation-name: LeterScreamer; 
+    animation-duration: 3.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: backwards;
+    animation-direction: normal;
+    animation-delay: 1.5s;
+}
+.title1{
+    animation-play-state: paused;
+    animation-name: titleScreamer ; 
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: backwards;
+    animation-direction: normal;
+    animation-delay: 2s;
+}
+#inicio:hover {
+    animation-name: inicioScreamer ; 
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: backwards;
+    animation-direction: normal;
+    animation-delay: 2s;
+}
+#inicio:hover .botonStart{
+    animation-play-state: running;
+    animation-name: LeterScreamer ; 
+}
+#inicio:hover .title1 {
     animation-name: titleScreamer ;
     animation-play-state: running;
 

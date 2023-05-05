@@ -62,3 +62,11 @@
     border: 2px solid rgb(255, 0, 0);
     height: 50px;
 }
+#iniciarJuegoBoton:hover{
+    scale:1.2;
+    border-bottom: 12px dotted black;
+}
+#comoJugarBoton:hover{
+    scale:1.2;
+    border-bottom: 12px dotted black;
+}

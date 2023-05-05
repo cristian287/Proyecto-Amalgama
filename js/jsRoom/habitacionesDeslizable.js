@@ -81,10 +81,10 @@ function botoneraTamagochiHandler(habitacion,callback){
                                     cuatro.addEventListener("click",function(e){verSkills();unbindBotoneraTamagochi()})
                                     break
 
-        case "hudSotano"       :    uno.addEventListener("click",function(e){iniciarModoPelea();tamagochiModeOff();unbindBotoneraTamagochi(true)})
-                                    dos.addEventListener("click",function(e){iniciarModoPelea();tamagochiModeOff();unbindBotoneraTamagochi(true)})
-                                    tres.addEventListener("click",function(e){iniciarModoPelea();tamagochiModeOff();unbindBotoneraTamagochi(true)})
-                                    cuatro.addEventListener("click",function(e){iniciarModoPelea();tamagochiModeOff();unbindBotoneraTamagochi(true)})
+        case "hudSotano"       :    uno.addEventListener("click",function(e){modoCosecha();tamagochiModeOff();unbindBotoneraTamagochi(true)})
+                                    dos.addEventListener("click",function(e){modoCosecha();tamagochiModeOff();unbindBotoneraTamagochi(true)})
+                                    tres.addEventListener("click",function(e){modoCosecha();tamagochiModeOff();unbindBotoneraTamagochi(true)})
+                                    cuatro.addEventListener("click",function(e){modoCosecha();tamagochiModeOff();unbindBotoneraTamagochi(true)})
                                     mostrarDesaparecer("prota","desaparecer")
                                     break
 

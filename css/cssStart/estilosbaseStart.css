@@ -10,10 +10,17 @@
     flex-direction: column;
 }
 
-#title img{
+#title{
     z-index: 1;
-    width:100%;
-    height: 30%;
+    height: 400px;
+    width: 100%
+
+}
+.title1{
+    height: 400px;
+    width: 100%;
+    background-image: url(./../../assets/otros/My_First_Friend.jpg);
+    background-size: contain;
 }
 #StartButtons{
     display: flex;

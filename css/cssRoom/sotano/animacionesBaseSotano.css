@@ -1,17 +1,26 @@
-
-@keyframes darked {
+@keyframes skills {
     from {
-        filter: 
-        brightness(45%);
+    position: sticky;
+    z-index: 132;
+    background-color: aqua;
+    height: 101%
     }
     to {
-        filter: 
-        brightness(25%);
+        z-index: 132;
+        position: sticky;
+        z-index: 132;
+        background-color: aqua;
+        height: 101%
     }
 }
-#hudSotano{
-    animation-name: darked;
-    animation-duration: .9s;
+
+
+
+
+#viewSkills{
+
+    animation-name: skill1s ;
+    animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }

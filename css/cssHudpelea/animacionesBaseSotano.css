@@ -1,0 +1,17 @@
+
+@keyframes darked {
+    from {
+        filter: 
+        brightness(45%);
+    }
+    to {
+        filter: 
+        brightness(25%);
+    }
+}
+#hudSotano{
+    animation-name: darked;
+    animation-duration: .9s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}

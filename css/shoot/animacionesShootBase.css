@@ -1,0 +1,12 @@
+@keyframes flash {
+    from {background-color: aliceblue;}
+    to {background-color: aliceblue; filter: invert();}
+}
+#ronda{
+    animation-name: flash ; 
+    animation-duration: .5s;
+    animation-iteration-count: 10;
+    animation-timing-function: linear;
+    animation-direction: normal;
+    animation-delay: 1.5s
+}

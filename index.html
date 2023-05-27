@@ -4,13 +4,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href=":/../css/start/estilosStartBase.css">
+    <link rel="stylesheet" href="./css/shoot/estilosShootBase.css">
+    <link rel="stylesheet" href="./css/shoot/animacionesShootBase.css">
 
     <link rel="stylesheet" href="././css/UNIVERSAL/estilosUniversales.css">
     <title>La noche de los furrys</title>
 </head>
 <body>
     <div id="TotalGame"><!--juego completo-->
-        <div id="start"><!--PANTALLA INICIO--> 
+        <div id="start" class="none"><!--PANTALLA INICIO--> 
             <div id="gameTitle">
                 <div id="logo">Logo</div>
                 <div id="startGame"><button id="startGameB">Start</button></div>
@@ -18,15 +20,18 @@
                 <div id="configuration"><button id="configurationB">Configuration</button></div>
             </div>
         </div>   
-        <div id="shoot" class="none"><!--PANTALLA DE JUEGO-->
+        <div id="shoot"><!--PANTALLA DE JUEGO-->
             <div id="shootGame">
-                <div id="health"></div>
-                <div id="shootArea"></div>
+                <div id="health">salud-100%</div>
+                <div id="shootArea">
+                    <div id="ronda">fase 1 estas listo?</div>
+                    <div id="spawnPoints"></div>
+                </div>
                 <div id="Accion">
-                    <div id="aidkitH"></div>
-                    <div id="weaponH"></div>
-                    <div id="remainingAmmunitionH"></div>
-                    <div id="bombH"></div>
+                    <div id="aidkitH">Botiquin restante = 0</div>
+                    <div id="weaponH">arma equipada = pistola</div>
+                    <div id="remainingAmmunitionH">Municion restante = 0/0</div>
+                    <div id="bombH">bombas = 0</div>
                 </div>
             </div>
         </div>

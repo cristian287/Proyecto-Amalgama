@@ -13,6 +13,7 @@ const pantallaDeInicio = document.getElementById("start")
 function irAInicioDeJuego(){
     transicionar(pantallaDeJuego,"aparecer")
     transicionar(pantallaDeInicio,"desaparecer")
+    iniciarGameplay()
 }
 
 function irAComoJugar(){

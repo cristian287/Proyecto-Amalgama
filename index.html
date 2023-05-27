@@ -6,21 +6,22 @@
     <link rel="stylesheet" href=":/../css/start/estilosStartBase.css">
     <link rel="stylesheet" href="./css/shoot/estilosShootBase.css">
     <link rel="stylesheet" href="./css/shoot/animacionesShootBase.css">
+    <link rel="stylesheet" href="./css/dead/estilosDeadBase.css">
 
     <link rel="stylesheet" href="././css/UNIVERSAL/estilosUniversales.css">
     <title>La noche de los furrys</title>
 </head>
 <body>
-    <div id="TotalGame"><!--juego completo-->
+    <div id="TotalGame" ><!--juego completo-->
         <div id="start" class="none"><!--PANTALLA INICIO--> 
-            <div id="gameTitle">
+            <div id="gameTitle" >
                 <div id="logo">Logo</div>
-                <div id="startGame"><button id="startGameB">Start</button></div>
+                <div id="startGame"><button id="startGameB"></button></div>
                 <div id="HowToPlay"><button id="HowToPlayB">How to play</button></div>
                 <div id="configuration"><button id="configurationB">Configuration</button></div>
             </div>
         </div>   
-        <div id="shoot"><!--PANTALLA DE JUEGO-->
+        <div id="shoot" class="none"><!--PANTALLA DE JUEGO-->
             <div id="shootGame">
                 <div id="health">salud-100%</div>
                 <div id="shootArea">
@@ -35,10 +36,10 @@
                 </div>
             </div>
         </div>
-        <div id="dead" class="none"><!--PANTALLA DE MUERTE   -->
+        <div id="dead" ><!--PANTALLA DE MUERTE   -->
+            <div id="deadTitle">you are dead</div>
             <div id="deadLogo"></div>
-            <div id="deadTitle"></div>
-            <div id="reverseButtonB"></div>
+            <div id="reverseButtonB">Reintentar</div>
         </div>  
     </div>
 </body>

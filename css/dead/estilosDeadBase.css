@@ -1,0 +1,30 @@
+#dead{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+    background-color: black;
+    color: white;
+    
+
+}
+#deadTitle{
+    font-family: 'Great Vibes', cursive;
+    font-size: 100px;
+    color: red;
+    text-shadow: 1px 1px 1px white, 2px 2px 2px blue, 10px 10px 1000px red;
+}
+@keyframes deadFlash {
+    from {text-shadow: 1px 1px 1px white, 2px 2px 2px blue, 10px 10px 1000px red;}
+    to {text-shadow: 10px 10px 1500px red;}
+}
+#deadTitle{
+    animation-name: deadFlash; 
+    animation-duration: 1s;
+    animation-iteration-count: 10;
+    animation-timing-function: linear;
+    animation-direction: normal;
+    animation-delay: 0s
+}

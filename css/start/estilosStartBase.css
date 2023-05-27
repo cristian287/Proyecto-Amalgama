@@ -6,6 +6,7 @@
     align-items: center;
     height: 100vh; 
     gap: 1000px;
+    overflow: hidden;
   }
 #gameTitle{
     display: flex;
@@ -28,4 +29,10 @@
 #gameTitle button{
     height: 100px;
     width: 400px;
+}
+#startGameB{
+    background: url(:/../../../assets/start/empezar1.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: none;
 }

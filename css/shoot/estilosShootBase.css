@@ -72,3 +72,15 @@
     z-index: 2;
     height: 15%;
 }
+#municionRestante{
+    position: absolute;
+}
+#tienda{
+    z-index: 2;
+    background-color: rgba(220, 20, 60, 0.212);
+    height: 400px;
+    width: 400px;
+    position: absolute;
+    border: 5px dotted;
+    display: none;
+}

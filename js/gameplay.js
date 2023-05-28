@@ -64,13 +64,10 @@ function asignarTeclas(tecla,efecto){
     })
 }
 
-function recargar(){
-    console.log("recargando")
-}
-
 function actualizarValoresPantalla(){
     divMunicionRestante.textContent = player.armas[player.equipada].balas+"/"+player.armas[player.equipada].balasMaximas
     botiquinesRestantes.textContent = "botiquines restantes: " + player.botiquinesDisponibles
     saludRestantePlayer.style.width = player.salud + "%"
     saludRestantePlayer.textContent = player.salud + "%"
+    balasDisponiblesParaRecargar.textContent = "balas disponibles: " + player.balasDisponibles
 }

@@ -30,15 +30,33 @@ function iniciarGameplay(){
         botiquinesDisponibles:2, //Cantidad de botiquines disponibles
       }
     if (player.armas.length === 0){
-        let armaPrincipal = armas.find(a=>a.nombre === "primaria")
+        let armaPrincipal = armas.find(a=>a.nombre === "pistola")
         player.armas.push(armaPrincipal)
     }
+    actualizarBalas()
 }
+function actualizarBalas(){
+  divMunicionRestante.textContent = player.armas[player.equipada].balas+"/"+player.armas[player.equipada].balasMaximas
+}
+
 
 asignarTeclas("r",recargar)
 asignarTeclas("R",recargar)
 asignarTeclas("c",usarBotiquin)
 asignarTeclas("C",usarBotiquin)
+
+const divMunicionRestante = document.getElementById("municionRestante")
+document.addEventListener("mousemove", function(event) {
+  var offsetX = 10; // Valor para alejar el div a la derecha del cursor
+  var offsetY = -50; // Valor para alejar el div hacia abajo del cursor
+
+  var mouseX = event.clientX + offsetX;
+  var mouseY = event.clientY + offsetY;
+
+  divMunicionRestante.style.left = mouseX + "px";
+  divMunicionRestante.style.top = mouseY + "px";
+});
+
 
 
 function asignarTeclas(tecla,efecto){

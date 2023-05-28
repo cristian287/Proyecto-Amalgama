@@ -1,0 +1,16 @@
+#configuration{
+height: 100%;
+width: 100%;
+display: flex;
+flex-direction: column;
+justify-content:space-around;
+align-items: center;
+background-color: palevioletred;
+color: white;
+}
+#configuration button{
+    height: 100px;
+    width: 300px;
+    font-size: xx-large;
+    border: 5px dotted;
+}

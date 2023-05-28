@@ -7,5 +7,5 @@ gameArea.addEventListener("click",function(e){
         armaEquipada.balas--
       }
     }
-    actualizarBalas()
+    actualizarValoresPantalla()
 })

@@ -33,10 +33,7 @@ function iniciarGameplay(){
         let armaPrincipal = armas.find(a=>a.nombre === "pistola")
         player.armas.push(armaPrincipal)
     }
-    actualizarBalas()
-}
-function actualizarBalas(){
-  divMunicionRestante.textContent = player.armas[player.equipada].balas+"/"+player.armas[player.equipada].balasMaximas
+    actualizarValoresPantalla()
 }
 
 
@@ -70,6 +67,10 @@ function asignarTeclas(tecla,efecto){
 function recargar(){
     console.log("recargando")
 }
-function usarBotiquin(){
-    console.log("usando botiquin")
+
+function actualizarValoresPantalla(){
+    divMunicionRestante.textContent = player.armas[player.equipada].balas+"/"+player.armas[player.equipada].balasMaximas
+    botiquinesRestantes.textContent = "botiquines restantes: " + player.botiquinesDisponibles
+    saludRestantePlayer.style.width = player.salud + "%"
+    saludRestantePlayer.textContent = player.salud + "%"
 }

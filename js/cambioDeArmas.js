@@ -21,7 +21,7 @@ document.addEventListener("wheel", function(e) { //Cambiar arma
     console.log(armaEquipada)
     const armaEquipadaDisplay = document.getElementById("weaponH")
     armaEquipadaDisplay.textContent = "Arma equipada: " +armaEquipada.nombre;
-    //municionActual.textContent = armaEquipada.balas + "/" + armaEquipada.balasMaximas;
+    actualizarValoresPantalla()
     triggerTimeout = setTimeout(function() {
       triggerDelay = false;
     }, 500);

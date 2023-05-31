@@ -1,3 +1,9 @@
+function RNG(maximo){
+  //* CUALQUIER TIPO DE RNG
+ let aleatoriedad = Math.round(Math.random()*maximo);
+ return aleatoriedad;
+}
+
 let player
 const armas = [{ //Armas adquiridas
     nombre:"pistola",
@@ -34,6 +40,7 @@ function iniciarGameplay(){
         player.armas.push(armaPrincipal)
     }
     actualizarValoresPantalla()
+    iniciarGeneracionAutomatica()
 }
 
 

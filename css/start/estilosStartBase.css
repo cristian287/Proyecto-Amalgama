@@ -30,9 +30,45 @@
     height: 100px;
     width: 400px;
 }
-#startGameB{
-    background: url(:/../../../assets/start/empezar1.png) no-repeat;
+#startGameB {
+    background: url(:/../../../assets/start/Empezar0.png) no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: contain;
     border: none;
 }
+  
+  #startGameB:hover {
+    background: url(:/../../../assets/start/Empezar05.png) no-repeat;
+      background-position: center;
+      background-size: contain;
+  }
+#configurationB{
+    background: url(:/../../../assets/start/Configurar2.png) no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: none;
+}
+#configurationB:hover{
+    background: url(:/../../../assets/start/Configuracion05.png) no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: none;
+}
+#HowToPlayB{
+    background: url(:/../../../assets/start/Como_jugar_2.png) no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: none;
+}
+#HowToPlayB:hover{
+    background: url(:/../../../assets/start/Como_jugar05.png) no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: none;
+}
+  
+  
+  
+  
+  
+  

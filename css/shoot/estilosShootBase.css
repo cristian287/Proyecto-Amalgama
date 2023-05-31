@@ -48,6 +48,8 @@
 }
 #ronda{    
     font-size: xx-large;
+    position: absolute;
+    z-index: 1;
 }
 #Accion{
     transition: 1s;
@@ -83,4 +85,17 @@
     position: absolute;
     border: 5px dotted;
     display: none;
+}
+#spawnPoints{
+    
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+#spawnPoints div{
+    z-index: 0;
+    position: relative;
+    width: 400px;
+    height: 100px;
 }

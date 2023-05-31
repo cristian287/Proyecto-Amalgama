@@ -48,6 +48,8 @@
 }
 #ronda{    
     font-size: xx-large;
+    position: absolute;
+    z-index: 1;
 }
 #Accion{
     transition: 1s;
@@ -71,4 +73,29 @@
 #Accion:hover{
     z-index: 2;
     height: 15%;
+}
+#municionRestante{
+    position: absolute;
+}
+#tienda{
+    z-index: 2;
+    background-color: rgba(220, 20, 60, 0.212);
+    height: 400px;
+    width: 400px;
+    position: absolute;
+    border: 5px dotted;
+    display: none;
+}
+#spawnPoints{
+    
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+#spawnPoints div{
+    z-index: 0;
+    position: relative;
+    width: 400px;
+    height: 100px;
 }

@@ -54,12 +54,16 @@
   }
   
   @keyframes enemyMoveFive {
-      from {}
+      from {padding-left: 20px;}
       to {}
-      to{}
   }
   .moveFive{
       animation: enemyMoved 3.7s 1 linear 1.5s, enemyMovePat .9s infinite alternate linear 0s, enemyMoveFive 2s infinite alternate linear 0s;
   }
+  .movepause div{
+    animation-name: none !important;
+    animation-play-state: paused !important;
 
+}
+  
 

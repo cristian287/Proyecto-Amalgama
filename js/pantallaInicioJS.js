@@ -11,9 +11,14 @@ const pantallaDeJuego = document.getElementById("shoot")
 const pantallaDeInicio = document.getElementById("start")
 
 function irAInicioDeJuego(){
-    transicionar(pantallaDeJuego,"aparecer")
-    transicionar(pantallaDeInicio,"desaparecer")
-    iniciarGameplay()
+    displayPantallaDeCarga(true)
+    setTimeout(() => { //Delay irreal para ver la pantalla de carga
+        transicionar(pantallaDeJuego,"aparecer")
+        transicionar(pantallaDeInicio,"desaparecer")
+        displayPantallaDeCarga(false)
+        iniciarGameplay()
+    }, 2000);
+    
 }
 
 function irAComoJugar(){

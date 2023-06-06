@@ -5,6 +5,7 @@ function RNG(maximo){
 }
 
 let player
+let fase
 const armas = [{ //Armas adquiridas
     nombre:"pistola",
     balas:10,

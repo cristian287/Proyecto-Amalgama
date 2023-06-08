@@ -2,8 +2,7 @@
     background-color: aqua;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content:space-around;
     height: 100vh; 
     gap: 1000px;
     overflow: hidden;
@@ -11,6 +10,8 @@
 #gameTitle{
     display: flex;
     flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
     gap: 15px;
     align-items: center;
     justify-content: center;

@@ -10,6 +10,7 @@
     <link rel="stylesheet" href=":/../css/start/estilosHowToPlay.css">
     <link rel="stylesheet" href=":/../css/shoot/patronesDeMovimiento.css">
 
+    <link rel="stylesheet" href=":/../css/start/pantallaDeCarga.css">
     <link rel="stylesheet" href="././css/UNIVERSAL/estilosUniversales.css">
     <title>La noche de los furrys</title>
 </head>
@@ -49,13 +50,15 @@
         </div>
         <div id="configurationH" class="none" ><!--PANTALLA DE CONFIGURACON   -->
             <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni dicta delectus unde, dolores ab enim, itaque neque aut officia hic laudantium earum dolore alias vel molestiae deserunt, ratione temporibus quidem iure officiis? Aperiam, veritatis. Ratione mollitia necessitatibus voluptate magni, distinctio veniam pariatur odio asperiores. Excepturi quasi reiciendis id et. Similique voluptates doloremque quam ipsum ex. Similique eum voluptas quisquam ad ut aliquid vitae cum aperiam. Nostrum sequi necessitatibus cum, laborum repudiandae natus tempora. Natus adipisci libero dolor ratione debitis, dolore ipsam aliquid perspiciatis labore quas officiis sit harum dolorem error ipsa mollitia ut. Quasi quibusdam minus doloremque quos commodi magni.</div>
-            <button>recargar/R</button>
-            <button>curarte/Q</button>
+            <button id = "reasignarTeclaRecargar">recargar/R</button>
+            <button id = "reasignarTeclaBotiquin">curarte/Q</button>
             <button>musica/ON</button>
             <button>1</button>
+            <button id = "volverAInicio">Volver</button>
+            <div id="replace" class="none"><div>Pulsa una tecla para remplazar</div></div>
         </div>
     </div>
-    <div id="pantallaDeCarga"  >
+    <div id="pantallaDeCarga" class="none" >
         <div id="cargando"><div id="fountainTextG"><div id="fountainTextG_1" class="fountainTextG">C</div><div id="fountainTextG_2" class="fountainTextG">A</div><div id="fountainTextG_3" class="fountainTextG">R</div><div id="fountainTextG_4" class="fountainTextG">G</div><div id="fountainTextG_5" class="fountainTextG">A</div><div id="fountainTextG_6" class="fountainTextG">N</div><div id="fountainTextG_7" class="fountainTextG">D</div><div id="fountainTextG_8" class="fountainTextG">O</div></div></div>
         <div><img src="./assets/enemy/Foxy_corrupted.png" alt=""></div>
         <div><img src="./assets/enemy/Mily_corrupted.png" alt=""></div>
@@ -69,6 +72,7 @@
 <script src="js/recargarArma.js"></script>
 <script src="js/pantallaInicioJS.js"></script>
 <script src="js/gameplay.js"></script>
+<script src="js/pantallaConfiguracion.js"></script>
 <script src="js/cambioDeArmas.js"></script>
 <script src="js/gastoDeBalas.js"></script>
 <script src="js/generarEnemigo.js"></script>

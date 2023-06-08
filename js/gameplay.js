@@ -44,12 +44,6 @@ function iniciarGameplay(){
     iniciarGeneracionAutomatica()
 }
 
-
-asignarTeclas("r",recargar)
-asignarTeclas("R",recargar)
-asignarTeclas("c",usarBotiquin)
-asignarTeclas("C",usarBotiquin)
-
 const divMunicionRestante = document.getElementById("municionRestante")
 document.addEventListener("mousemove", function(event) {
   var offsetX = 10; // Valor para alejar el div a la derecha del cursor
@@ -62,15 +56,6 @@ document.addEventListener("mousemove", function(event) {
   divMunicionRestante.style.top = mouseY + "px";
 });
 
-
-
-function asignarTeclas(tecla,efecto){
-    document.addEventListener("keydown",function(e){
-        if (e.key === tecla){
-            efecto()
-        }
-    })
-}
 
 function actualizarValoresPantalla(){
     divMunicionRestante.textContent = player.armas[player.equipada].balas+"/"+player.armas[player.equipada].balasMaximas

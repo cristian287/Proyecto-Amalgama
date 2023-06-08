@@ -14,3 +14,38 @@ color: white;
     font-size: xx-large;
     border: 5px dotted;
 }
+#configurationH button:hover{
+    height: 100px;
+    width: 300px;
+    font-size: xx-large;
+    border: 5px ;
+    border-style:dashed;
+    background-color: bisque;
+}
+#replace{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.863);
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+    transition: 1s;
+}
+#replace div{
+    font-size: xx-large;
+    background-color: bisque;
+    border: 15px dotted black;
+    color: #000;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    transition: 1s;
+    animation: shadow 1s infinite alternate;
+}
+@keyframes shadow{0%{scale: 1.1;}100%{}}

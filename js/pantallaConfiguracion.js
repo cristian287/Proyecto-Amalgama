@@ -1,5 +1,7 @@
 const botonReasignarTeclaRecargar = document.getElementById("reasignarTeclaRecargar")
 const botonReasignarTeclaUsarBotiquin = document.getElementById("reasignarTeclaBotiquin")
+const bloqueoPantallaDeConfiguracion = document.getElementById("replace")
+const textoBloqueoPantallaDeConfiguracion = document.getElementById("textoReplace")
 
 let teclas = {
     recargar:"R",
@@ -17,9 +19,12 @@ document.addEventListener("keydown",function(e){
 })
 function reasignarTeclas(elemento,tipo){
     elemento.addEventListener("click",function(){
+        textoBloqueoPantallaDeConfiguracion.textContent = "Elige una tecla para reemplazar: " + tipo
+        transicionar(bloqueoPantallaDeConfiguracion,"aparecer")
         document.addEventListener("keydown",function handleKeyDown(e){
             for (let a in teclas){
                 if (e.key.toUpperCase() === teclas[a]){
+                    textoBloqueoPantallaDeConfiguracion.textContent = "Esa tecla ya esta en uso, elige otra"
                     elemento.textContent = tipo + "/" + teclas[tipo]
                     return
                 }
@@ -27,6 +32,7 @@ function reasignarTeclas(elemento,tipo){
             teclas[tipo] = e.key.toUpperCase()
             document.removeEventListener("keydown", handleKeyDown);
             elemento.textContent = tipo + "/" +  teclas[tipo]
+            transicionar(bloqueoPantallaDeConfiguracion,"desaparecer")
         })
     })
 }

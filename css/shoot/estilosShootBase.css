@@ -24,10 +24,10 @@
     font-size: x-large;
     letter-spacing: 30px;
     transition: 1s;
-    z-index: 100;
+    z-index: 1000;
 }
 #health:hover{
-    z-index: 2;
+    z-index: 200;
     height: 10%;
 }
 #shootArea{
@@ -70,7 +70,7 @@
     border-top:1px solid ;
     background-color: darkmagenta;
     align-items: center;
-    font-size: x-large;
+    font-size: 22px;
 }
 #Accion:hover{
     z-index: 2;

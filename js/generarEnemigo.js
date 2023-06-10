@@ -69,7 +69,8 @@ function iniciarGeneracionAutomatica() {
        index: index,
        vida: enemigoGenerico.vida,
        indiceBorrar: nuevoEnemigo,
-       imagen: spriteEnemigoActual
+       imagen: spriteEnemigoActual,
+       monedas: 10,
       });
     nuevoEnemigo.addEventListener("animationend", function (event) {
       damage(event, index, nuevoEnemigo);

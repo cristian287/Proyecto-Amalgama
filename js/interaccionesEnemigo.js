@@ -11,7 +11,8 @@ function enemigoRecibeDaño(event, index, enemy) {
     if ((player.armas[player.equipada].balas>0) && (!recargando)){
         enemigosVivos[index].vida--;
         if (enemigosVivos[index].vida === 0) {
-            console.log("removiendo el enemigo " + index);
+            let enemyActual = enemigosVivos[index]
+            crearMoneda(enemyActual.monedas)
             enemy.remove();
             let existenEnemigosVivos = enemigosVivos.filter(e=>e.vida>0)
             console.log(existenEnemigosVivos.length)

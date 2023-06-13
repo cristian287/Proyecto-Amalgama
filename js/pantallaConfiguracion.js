@@ -1,11 +1,13 @@
 const botonReasignarTeclaRecargar = document.getElementById("reasignarTeclaRecargar")
 const botonReasignarTeclaUsarBotiquin = document.getElementById("reasignarTeclaBotiquin")
+const botonReasignarTeclaUsarBomba = document.getElementById("reasignarTeclaBomba")
 const bloqueoPantallaDeConfiguracion = document.getElementById("replace")
 const textoBloqueoPantallaDeConfiguracion = document.getElementById("textoReplace")
 
 let teclas = {
     recargar:"R",
-    usarBotiquin:"C"
+    usarBotiquin:"C",
+    usarBomba:"Y"
 }
 document.addEventListener("keydown",function(e){
     for(let a in teclas){
@@ -13,6 +15,7 @@ document.addEventListener("keydown",function(e){
             switch(a){
                 case "recargar":recargar();break
                 case "usarBotiquin":usarBotiquin();break
+                case "usarBomba":usarBomba();break
             }
         }
     }
@@ -38,6 +41,7 @@ function reasignarTeclas(elemento,tipo){
 }
 reasignarTeclas(botonReasignarTeclaRecargar,"recargar")
 reasignarTeclas(botonReasignarTeclaUsarBotiquin,"curarse")
+reasignarTeclas(botonReasignarTeclaUsarBomba,"bomba")
 
 
 document.getElementById("volverAInicio").addEventListener("click",function(e){

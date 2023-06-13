@@ -18,3 +18,16 @@
     transition: 2s;
 }
 @keyframes roll{0%{transform: rotateY(360deg);}100%{}}
+
+.catchCoins{
+    animation: catch 2s 1 !important ;
+    transition: 2s;
+}
+@keyframes catch {0%{}100%{
+    position: absolute;
+    transform: translateX(500px)
+    translateY(150px)
+    skew(50deg);
+    scale: 4.5;
+    filter: invert();
+}}

@@ -44,7 +44,7 @@
     align-items: center;
     margin: 0;
 }
-#shootArea div{
+#spawnPoints div{
     cursor: url(./../../assets/cursores/crossHairBang.cur),auto ;
 }
 #ronda{    

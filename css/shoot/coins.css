@@ -14,5 +14,6 @@
     width: 20px;
     z-index: 0;
     animation: roll 1s infinite ;
+    transition: 2s;
 }
 @keyframes roll{0%{transform: rotateY(360deg);}100%{}}

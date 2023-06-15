@@ -6,7 +6,6 @@
     font-family: 'Silkscreen', cursive;
     text-transform: capitalize;
     user-select: none;
-    overflow: hidden;
 }
 *::selection{
     background: none;
@@ -58,7 +57,6 @@ body{
         cursor: url(../../assets/cursores/cursorClosed.cur), auto; 
     }
 }
-
 
 .view{
     animation-name: cursor ;

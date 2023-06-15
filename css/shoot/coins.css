@@ -1,10 +1,11 @@
 #moneySpawn{
     position: fixed;
-    top: 50%;
+    top: 47%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 0;
-    height: 100px;
+    height: 80%;
+    width: 100%;
 }
 #moneySpawn div{
     position: absolute;
@@ -17,3 +18,16 @@
     transition: 2s;
 }
 @keyframes roll{0%{transform: rotateY(360deg);}100%{}}
+
+.catchCoins{
+    animation: catch 2s 1 !important ;
+    transition: 2s;
+}
+@keyframes catch {0%{}100%{
+    position: absolute;
+    transform: translateX(500px)
+    translateY(150px)
+    skew(50deg);
+    scale: 4.5;
+    filter: invert();
+}}

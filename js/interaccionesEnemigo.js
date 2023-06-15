@@ -22,6 +22,9 @@ function enemigoRecibeDaño(event, index, enemy) {
                 indiceEnemigo = -1
                 if (terminarFase){
                     recolectarMonedas()
+                    setTimeout(() => {
+                        cambioDeFase()
+                    }, 2500);
                     //botonCambioDeFase.textContent = "¿Listo para la siguiente fase?"
                 }
             }

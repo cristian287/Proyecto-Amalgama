@@ -98,3 +98,14 @@
     /* Estilos adicionales */
   
 }
+#finalRonda{
+    border: 3px double;
+    font-size: xx-large;
+    z-index: 20;
+}
+#finalRondaB{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 4%;
+}

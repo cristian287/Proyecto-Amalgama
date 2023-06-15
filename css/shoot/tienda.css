@@ -1,0 +1,24 @@
+#tienda{
+    z-index: 2;
+    background-color: rgba(220, 20, 60, 0.212);
+    height: 400px;
+    width: 400px;
+    position: absolute;
+    border: 5px dotted;
+}
+#tiendaName{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 100px; 
+    font-size: larger;
+    padding-bottom: 4%;
+    padding-top: 4%;
+    border-bottom: 3px solid;
+}
+#itemStore{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    transform: translate(15%);
+}

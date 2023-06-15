@@ -10,6 +10,7 @@
     <link rel="stylesheet" href=":/../css/start/estilosHowToPlay.css">
     <link rel="stylesheet" href=":/../css/shoot/patronesDeMovimiento.css">
     <link rel="stylesheet" href=":/../css/shoot/coins.css">
+    <link rel="stylesheet" href="./css/shoot/tienda.css">
 
     <link rel="stylesheet" href=":/../css/start/pantallaDeCarga.css">
     <link rel="stylesheet" href="././css/UNIVERSAL/estilosUniversales.css">
@@ -31,9 +32,33 @@
                 <div id="shootArea">
                     <div id="moneySpawn"></div>
                     <div id="ronda" class="none"></div>
-                    <div id="tienda"></div>
+                    <div id="tienda" class="none">
+                        <div id="tiendaName">
+                            <div><p>tienda</p></div>
+                            <div><button>salir de la tienda</button></div>
+                        </div>
+                        <div id="itemStore">
+                            <div>1</div>
+                            <div>1</div>
+                            <div>1</div>
+                            <div>1</div>
+                            <div>1</div>
+                            <div>1</div>
+                            <div>1</div>
+                            <div>1</div>
+                            <div>1</div>
+                            <div>1</div>
+                        </div>
+                    </div>
                     <div id="spawnPoints"></div>
                     <div id="municionRestante"></div>
+                    <div id="finalRonda" class="none">
+                        <div>ronda completada continuar?</div>
+                        <div id="finalRondaB">
+                            <button id="tiendaB">tienda</button>
+                            <button id="continuarB">continuar</button>
+                        </div>
+                    </div>
                 </div>
                 <div id="Accion" class="view">
                     <div id="aidkitH">Botiquin restante = 0</div>
@@ -46,8 +71,38 @@
         </div>
         <div id="dead" class="none"><!--PANTALLA DE MUERTE   -->
             <div id="deadTitle">you are dead</div>
-            <div id="deadLogo"></div>
-            <div id="reverseButtonB">Reintentar</div>
+            <div id="deadLogo">
+                <div id="ranking">
+                    <div id="prompt">
+                        <legend id="puntuacion">tu puntuacion : 00000
+                        <form id="myForm">
+                            <label for="input1">Nombre:</label>
+                            <input type="text" id="input1" name="input1" placeholder="introduce tu nombre"><br><br>
+                            <button type="button" onclick="enviarFormulario()">Enviar</button>
+                          </form>
+                        </legend>
+                    </div>
+                </div>
+                <div id="top">
+                    <div class="top10">
+                      <div class="column">
+                        <p class="first">1. Nombre 1</p>
+                        <p class="second">2. Nombre 2</p>
+                        <p class="third">3. Nombre 3</p>
+                      </div>
+                      <div class="column">
+                        <p>4. Nombre 4</p>
+                        <p>5. Nombre 5</p>
+                        <p>6. Nombre 6</p>
+                        <p>7. Nombre 7</p>
+                        <p>8. Nombre 8</p>
+                        <p>9. Nombre 9</p>
+                        <p>10. Nombre 10</p>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div id="reverseButtonB">Volver al menu</div>
         </div>
         <div id="HowToPlayH" class="none"><!--PANTALLA DE COMO JUGAR   -->
             <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni dicta delectus unde, dolores ab enim, itaque neque aut officia hic laudantium earum dolore alias vel molestiae deserunt, ratione temporibus quidem iure officiis? Aperiam, veritatis. Ratione mollitia necessitatibus voluptate magni, distinctio veniam pariatur odio asperiores. Excepturi quasi reiciendis id et. Similique voluptates doloremque quam ipsum ex. Similique eum voluptas quisquam ad ut aliquid vitae cum aperiam. Nostrum sequi necessitatibus cum, laborum repudiandae natus tempora. Natus adipisci libero dolor ratione debitis, dolore ipsam aliquid perspiciatis labore quas officiis sit harum dolorem error ipsa mollitia ut. Quasi quibusdam minus doloremque quos commodi magni.</div>

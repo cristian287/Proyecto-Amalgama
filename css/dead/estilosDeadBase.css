@@ -24,3 +24,41 @@
     animation-timing-function: linear;
     animation-direction: alternate;
 }
+#ranking{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    top: 50%;
+}
+#top {
+    padding-top: 20%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .top10 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  
+  .column {
+    display: grid;
+    gap: 10px;
+  }
+  
+  .first {
+    font-size: x-large;
+    color: gold;
+  }
+  
+  .second {
+    font-size: larger;
+    color: silver;
+    grid-row: 2;
+  }
+  
+  .third {
+    color: darkgoldenrod;
+    grid-row: 3;
+  }

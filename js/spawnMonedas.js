@@ -1,5 +1,6 @@
 const setSpawnCoins = document.getElementById("moneySpawn")
 const monedasRestantes = document.getElementById("coinsH")
+var monedasPorRecolectar = []
 function crearMoneda(cantidad){
     const limites = setSpawnCoins.getBoundingClientRect();
     var minX = 0
@@ -12,9 +13,11 @@ function crearMoneda(cantidad){
     monedas.style.top = coordenadaY + "px";
     monedas.style.left = coordenadaX + "px";
     setSpawnCoins.appendChild(monedas)
+    monedasPorRecolectar.push({div:monedas,cantidad:cantidad})
     monedas.addEventListener("mouseover",function(e){
         monedas.classList.add("catchCoins")
         monedas.addEventListener("animationend",function(e){
+            monedasPorRecolectar = monedasPorRecolectar.filter(e=>e.div!==monedas)
             player.monedas = player.monedas + cantidad
             monedas.remove()
             actualizarValoresPantalla()

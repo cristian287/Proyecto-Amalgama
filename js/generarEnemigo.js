@@ -18,8 +18,9 @@ function generarEnemigo() {
 
 
 function iniciarGeneracionAutomatica() {
+  rondaActual++
   let enemigosGenerados = 0
-    var intervalo = 1000;
+    var intervalo = 1000 - (rondaActual*10);
     generarEnemigo();
     generadorEnemigos = setInterval(function () {
       generarEnemigo();
@@ -28,8 +29,8 @@ function iniciarGeneracionAutomatica() {
       if (enemigosGenerados===10) {
         terminarFase = true
         detenerGeneracionAutomatica()
-        intervalo = 1000
-        enemigoGenerico.vida += 3
+        intervalo = 1000 - (rondaActual*10)
+        enemigoGenerico.vida = 3*rondaActual
       }
     }, intervalo);
   }

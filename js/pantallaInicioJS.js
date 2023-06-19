@@ -11,6 +11,8 @@ const pantallaDeJuego = document.getElementById("shoot")
 const pantallaDeInicio = document.getElementById("start")
 const pantallaDeConfiguracion = document.getElementById("configurationH")
 
+let rondaActual
+
 function irAInicioDeJuego(){
     displayPantallaDeCarga(true)
     setTimeout(() => { //Delay irreal para ver la pantalla de carga
@@ -18,6 +20,7 @@ function irAInicioDeJuego(){
         transicionar(pantallaDeInicio,"desaparecer")
         displayPantallaDeCarga(false)
         iniciarGameplay()
+        rondaActual = 1
     }, 2000);
     
 }

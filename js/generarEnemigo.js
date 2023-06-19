@@ -2,7 +2,8 @@ let enemigosVivos = []
 const spriteEnemigos = ["soyUnSpriteDeEnemigo"]
 
 var enemigoGenerico = {
-    vida:3
+    vida:3,
+    monedas:0
 }
 
 var indiceEnemigo = -1;
@@ -18,19 +19,25 @@ function generarEnemigo() {
 
 
 function iniciarGeneracionAutomatica() {
-    var intervalo = 1000;
-    generarEnemigo();
+  setTimeout(() => {
+    let enemigosGenerados = 1
+    var intervalo = 1000 - (rondaActual*10);
     generadorEnemigos = setInterval(function () {
       generarEnemigo();
+      enemigosGenerados++
       intervalo -= 50;
-      if (intervalo <= 0) {
+      console.log(enemigosGenerados)
+      if (enemigosGenerados>rondaActual) {
+        rondaActual++
+        console.log("acabada la ronda " + (rondaActual-1))
         terminarFase = true
         detenerGeneracionAutomatica()
-        intervalo = 1000
-    
-        enemigoGenerico.vida += 3
+        intervalo = 1000 - (rondaActual*10)
+        enemigoGenerico.vida = 3*rondaActual
+        enemigoGenerico.monedas = rondaActual
       }
-    }, intervalo);
+      }, intervalo);
+    }, 2000);
   }
   
   function detenerGeneracionAutomatica() {
@@ -70,7 +77,7 @@ function iniciarGeneracionAutomatica() {
        vida: enemigoGenerico.vida,
        indiceBorrar: nuevoEnemigo,
        imagen: spriteEnemigoActual,
-       monedas: 10,
+       monedas: enemigoGenerico.monedas,
       });
     nuevoEnemigo.addEventListener("animationend", function (event) {
       damage(event, index, nuevoEnemigo);

@@ -18,16 +18,17 @@ function generarEnemigo() {
 
 
 function iniciarGeneracionAutomatica() {
+  let enemigosGenerados = 0
     var intervalo = 1000;
     generarEnemigo();
     generadorEnemigos = setInterval(function () {
       generarEnemigo();
+      enemigosGenerados++
       intervalo -= 50;
-      if (intervalo <= 0) {
+      if (enemigosGenerados===10) {
         terminarFase = true
         detenerGeneracionAutomatica()
         intervalo = 1000
-    
         enemigoGenerico.vida += 3
       }
     }, intervalo);

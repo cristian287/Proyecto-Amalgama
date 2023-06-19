@@ -20,7 +20,7 @@ function irAInicioDeJuego(){
         transicionar(pantallaDeInicio,"desaparecer")
         displayPantallaDeCarga(false)
         iniciarGameplay()
-        rondaActual = 0
+        rondaActual = 1
     }, 2000);
     
 }

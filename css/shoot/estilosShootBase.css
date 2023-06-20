@@ -98,14 +98,35 @@
     /* Estilos adicionales */
   
 }
+@keyframes FinalRoundflash {
+    from {}
+    to {filter: invert();}
+}
 #finalRonda{
+    animation: FinalRoundflash 1s infinite;
+    display: block;
     border: 3px double;
-    font-size: xx-large;
+    background-color: white;
     z-index: 20;
+    width: 1200px;
+    justify-content: center;
+    align-items: center;
 }
 #finalRondaB{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     padding-top: 4%;
+}
+#finalRondaB button{
+    font-size: x-large;
+}
+#textoFinalRonda{
+    width: 100%;;
+}
+#textoFinalRonda div{
+    padding-top: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

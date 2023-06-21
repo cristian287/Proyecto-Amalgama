@@ -1,6 +1,6 @@
 let existeNombre = localStorage.getItem("nombre")
 if (existeNombre){
-    document.getElementById("input1").textContent = existeNombre
+    document.getElementById("input1").value = localStorage.getItem("nombre")
 }
 function enviarFormulario(){
     var nombre = document.getElementById("input1").value;

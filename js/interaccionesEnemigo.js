@@ -1,11 +1,15 @@
 function damage(event, index, enemigoActual) { //El enemigo te hittea
+    if (jugadorPierde){
+        enemigoActual.remove()
+        enemigoActual = false
+    }
     if (enemigoActual) {
         enemigoActual.style.animation = "none";
         enemigoActual.offsetHeight;
         enemigoActual.style.animation = null;
         player.salud = player.salud - 10;
         actualizarValoresPantalla()
-    }    
+    }
 }
 function enemigoRecibeDaño(event, index, enemy) {
     if ((player.armas[player.equipada].balas>0) && (!recargando)){
@@ -25,7 +29,6 @@ function enemigoRecibeDaño(event, index, enemy) {
                     setTimeout(() => {
                         cambioDeFase()
                     }, 2500);
-                    //botonCambioDeFase.textContent = "¿Listo para la siguiente fase?"
                 }
             }
         }

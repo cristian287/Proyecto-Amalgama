@@ -124,7 +124,7 @@
 #textoFinalRonda{
     width: 100%;;
 }
-#textoFinalRonda div{
+#textoFinalRonda{
     padding-top: 1%;
     display: flex;
     justify-content: center;

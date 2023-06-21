@@ -7,15 +7,25 @@
     align-items: center;
     background-color: black;
     color: white;
+    cursor: url(./../../assets/cursores/cursor.cur),auto ;
+    animation: dead 3s 1 ;
+    
 }
-#deadTitle{
+.deadAnimation{
+  animation: dead 3s 1 ;
+}
+@keyframes dead {
+  from {filter: blur(130px);}
+  to {}
+}
+#deadTitle div{
     font-family: 'Great Vibes', cursive;
     font-size: 100px;
     color: red;
 }
 @keyframes deadFlash {
-    from {text-shadow: 1px 1px 1px white, 2px 2px 2px blue, 10px 1px 1000px red;}
-    to {text-shadow: 1px 1px 1px white, 2px 2px 2px blue, 10px 1px 500px red;}
+    from {text-shadow: 1px 1px 1px white, 2px 2px 2px blue, 10px 1px 10px red;}
+    to {text-shadow: 1px 1px 1px white, 2px 2px 2px blue, 50px 1px 50px red;}
 }
 #deadTitle{
     animation-name: deadFlash; 
@@ -23,6 +33,7 @@
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     animation-direction: alternate;
+    
 }
 #ranking{
     display: flex;
@@ -31,7 +42,7 @@
     top: 50%;
 }
 #top {
-    padding-top: 20%;
+    padding-top: 5%;
     display: flex;
     justify-content: center;
   }
@@ -46,19 +57,22 @@
     display: grid;
     gap: 10px;
   }
-  
-  .first {
+  .column span {
+    display: flex;
+    flex-direction: row;
+  }
+  .primero{
     font-size: x-large;
     color: gold;
   }
   
-  .second {
+  .segundo {
     font-size: larger;
     color: silver;
     grid-row: 2;
   }
   
-  .third {
+  .tercero {
     color: darkgoldenrod;
     grid-row: 3;
   }

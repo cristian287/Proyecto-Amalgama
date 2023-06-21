@@ -11,6 +11,7 @@
     justify-content:space-around;
     align-items: center;
     color: aliceblue;
+	cursor: url(./../../assets/cursores/cursor.cur),auto ;
   }
 #pantallaDeCarga img{
     height: 0px;

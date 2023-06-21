@@ -6,5 +6,5 @@ document.getElementById("continuarB").addEventListener("click",function(e){
 })
 function cambioDeFase(){
     transicionar(finDeRonda,"aparecer")
-    textoFinDeRonda.textContent = "Completada la ronda " + rondaActual
+    textoFinDeRonda.textContent = "Completada la ronda " + (rondaActual-1)
 }

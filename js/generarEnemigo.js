@@ -27,7 +27,7 @@ function iniciarGeneracionAutomatica() {
       enemigosGenerados++
       intervalo -= 50;
       console.log(enemigosGenerados)
-      if (enemigosGenerados>rondaActual) {
+      if ((enemigosGenerados>rondaActual) && (!jugadorPierde)) {
         rondaActual++
         console.log("acabada la ronda " + (rondaActual-1))
         terminarFase = true

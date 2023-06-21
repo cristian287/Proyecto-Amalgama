@@ -39,8 +39,6 @@ function irAConfigurarBotones(){
 }
 
 function transicionar(elemento,estado){
-    console.log(elemento)
-    console.log(estado)
     if (estado=="aparecer"){elemento.classList.remove("none");return}
     elemento.classList.add("none")
 }

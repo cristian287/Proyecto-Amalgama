@@ -2,6 +2,7 @@ const setSpawnCoins = document.getElementById("moneySpawn")
 const monedasRestantes = document.getElementById("coinsH")
 var monedasPorRecolectar = []
 function crearMoneda(cantidad){
+    if (cantidad === 0){return}
     const limites = setSpawnCoins.getBoundingClientRect();
     var minX = 0
     var minY = 0

@@ -14,11 +14,14 @@
 
     <link rel="stylesheet" href=":/../css/start/pantallaDeCarga.css">
     <link rel="stylesheet" href="././css/UNIVERSAL/estilosUniversales.css">
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth-compat.js"></script>
     <title>La noche de los furrys</title>
 </head>
 <body>
     <div id="TotalGame"><!--juego completo-->
-        <div id="start" class="nonew"><!--PANTALLA INICIO--> 
+        <div id="start" ><!--PANTALLA INICIO--> 
             <div id="gameTitle" >
                 <div id="logo">Logo</div>
                 <div id="startGame"><button id="startGameB"></button></div>
@@ -26,7 +29,7 @@
                 <div id="configuration"><button id="configurationB"></button></div>
             </div>
         </div>   
-        <div id="shoot" ¿ ><!--PANTALLA DE JUEGO-->
+        <div id="shoot" class="none" ><!--PANTALLA DE JUEGO-->
             <div id="shootGame">
                 <div id="health" class="view">salud-100%</div>
                 <div id="shootArea">
@@ -46,7 +49,7 @@
                     </div>
                     <div id="spawnPoints"></div>
                     <div id="municionRestante"></div>
-                    <div id="finalRonda" >
+                    <div id="finalRonda" class="none" >
                         <div id = "textoFinalRonda"><div>ronda completada continuar?</div></div>
                         <div id="finalRondaB">
                             <button id="tiendaB">Ir a la tienda</button>
@@ -63,35 +66,34 @@
                 </div>
             </div>
         </div>
-        <div id="dead" class="none"><!--PANTALLA DE MUERTE   -->
-            <div id="deadTitle">you are dead</div>
+        <div id="dead" class="none" class="deadAnimation"><!--PANTALLA DE MUERTE   -->
+            <div id="deadTitle"><div>you are dead</div></div>
             <div id="deadLogo">
                 <div id="ranking">
                     <div id="prompt">
-                        <legend id="puntuacion">tu puntuacion : 00000
+                        <legend id="puntuacion">tu puntuacion : 00000</legend>
                         <form id="myForm">
                             <label for="input1">Nombre:</label>
-                            <input type="text" id="input1" name="input1" placeholder="introduce tu nombre"><br><br>
+                            <input type="text" id="input1" name="input1" placeholder="introduce tu nombre" maxlength="8"><br><br>
                             <button type="button" onclick="enviarFormulario()">Enviar</button>
                           </form>
-                        </legend>
                     </div>
                 </div>
                 <div id="top">
                     <div class="top10">
                       <div class="column">
-                        <p class="first">1. Nombre 1</p>
-                        <p class="second">2. Nombre 2</p>
-                        <p class="third">3. Nombre 3</p>
+                        <span class="primero">1.<p id="1">Nombre 1</p></span> 
+                        <span class="segundo">2.<p id="2">Nombre 2</p></span> 
+                        <span class="tercero">3.<p id="3">Nombre 3</p></span> 
                       </div>
                       <div class="column">
-                        <p>4. Nombre 4</p>
-                        <p>5. Nombre 5</p>
-                        <p>6. Nombre 6</p>
-                        <p>7. Nombre 7</p>
-                        <p>8. Nombre 8</p>
-                        <p>9. Nombre 9</p>
-                        <p>10. Nombre 10</p>
+                       <span>4.<p id="4">Nombre 4</p></span> 
+                       <span>5.<p id="5">Nombre 5</p></span> 
+                       <span>6.<p id="6">Nombre 6</p></span> 
+                       <span>7.<p id="7">Nombre 7</p></span> 
+                       <span>8.<p id="8">Nombre 8</p></span> 
+                       <span>9.<p id="9">Nombre 9</p></span> 
+                       <span>10.<p id="10">Nombre 10</p></span>
                       </div>
                     </div>
                   </div>
@@ -135,4 +137,6 @@
 <script src="js/recolectarMonedas.js"></script>
 <script src="js/cambioDeFase.js"></script>
 <script src="js/tienda.js"></script>
+<script src="js/gameOver.js"></script>
+<script src="js/dataBase.js"></script>
 </html>

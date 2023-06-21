@@ -6,6 +6,7 @@ function RNG(maximo){
 
 let player
 let fase
+let jugadorPierde = false
 const armas = [{ //Armas adquiridas
     nombre:"pistola",
     balas:10,
@@ -35,7 +36,8 @@ function iniciarGameplay(){
         armasDisponibles:0, //Cantidad de armas disponibles
         balasDisponibles:10, //Cantidad de balas disponibles para recargar
         botiquinesDisponibles:2, //Cantidad de botiquines disponibles
-        monedas:0
+        monedas:0,
+        monedasGastadas:0
       }
     if (player.armas.length === 0){
         let armaPrincipal = armas.find(a=>a.nombre === "pistola")
@@ -65,4 +67,8 @@ function actualizarValoresPantalla(){
     saludRestantePlayer.textContent = player.salud + "%"
     balasDisponiblesParaRecargar.textContent = "balas disponibles: " + player.balasDisponibles
     monedasRestantes.textContent = "monedas: " + player.monedas
+
+    if (player.salud <= 0){
+      finDelJuego()
+    }
 }

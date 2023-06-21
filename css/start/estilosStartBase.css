@@ -6,6 +6,7 @@
     height: 100vh; 
     gap: 1000px;
     overflow: hidden;
+    cursor: url(./../../assets/cursores/cursor.cur),auto ;
   }
 #gameTitle{
     display: flex;
@@ -30,6 +31,7 @@
 #gameTitle button{
     height: 100px;
     width: 400px;
+    cursor: url(./../../assets/cursores/crossHairBang.cur),auto ;
 }
 #startGameB {
     background: url(:/../../../assets/start/Empezar0.png) no-repeat;

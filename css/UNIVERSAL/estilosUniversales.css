@@ -37,11 +37,20 @@
     }
 }
 .none{
-    animation-name: blanc !important;
-    animation-duration: 1s ;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    background: none;
+        animation-name: blanc !important;
+        animation-duration: 1s !important;
+        animation-iteration-count: infinite !important;
+        animation-direction: alternate !important;
+        background: none !important;
+        background: none!important;
+        display: none!important;
+        opacity: 0%!important;
+        height: 0px!important;
+        width: 0px!important;
+        visibility: hidden!important;
+        transform: scale(0)!important;
+        animation-play-state: paused!important;
+        pointer-events: none!important;
 }
 
 body{

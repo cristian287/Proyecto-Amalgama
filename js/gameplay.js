@@ -12,7 +12,7 @@ const armas = [{ //Armas adquiridas
     balas:10,
     balasMaximas:10,
     recarga:"full",
-    tiempoRecarga:200
+    tiempoRecarga:1000
   },
   {
     nombre:"secundaria",

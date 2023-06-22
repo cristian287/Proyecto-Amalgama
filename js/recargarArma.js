@@ -1,6 +1,7 @@
 const balasDisponiblesParaRecargar = document.getElementById("remainingAmmunitionH")
 
 function recargar(){
+    recargando = true
     let armaEquipada = player.armas[player.equipada]
     let balasRestantes = player.balasDisponibles
     switch(armaEquipada.recarga){
@@ -27,4 +28,12 @@ function recargar(){
         }
     }
     actualizarValoresPantalla()
+    if (balasRestantes>0){
+      setTimeout(() => {
+        recargando = false
+      }, armaEquipada.tiempoRecarga);
+    }
+    else{
+      recargando = false
+    }
 }

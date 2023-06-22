@@ -14,7 +14,7 @@
     width: 300px;
     font-size: xx-large;
     border: 5px dotted;
-    cursor: url(./../../assets/cursores/crossHairBang.cur),auto ;
+    cursor: url(./../../assets/cursores/cursorBang.cur),auto ;
 }
 #configurationH button:hover{
     height: 100px;
@@ -48,6 +48,16 @@
     align-items: center;
     justify-content: space-around;
     transition: 1s;
-    animation: shadow 1s infinite alternate;
+    animation: shadow 1s infinite alternate,shadowClock 4s infinite normal ;
 }
+@keyframes shadowClock{0%{border-top: 15px dotted red;}25%{border-left: 15px dotted yellow;}50%{border-bottom: 15px dotted green;}75%{border-right: 15px dotted blue;}}
 @keyframes shadow{0%{scale: 1.1;}100%{}}
+#textoConfiguration{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 500px;
+    position: absolute;
+    left: 1vh;
+    top: 10;
+}

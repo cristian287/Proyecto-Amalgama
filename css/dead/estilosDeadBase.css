@@ -8,24 +8,35 @@
     background-color: black;
     color: white;
     cursor: url(./../../assets/cursores/cursor.cur),auto ;
-    animation: dead 3s 1 ;
+    animation: dead 5s 1 ;
     
 }
 .deadAnimation{
   animation: dead 3s 1 ;
 }
-@keyframes dead {
-  from {filter: blur(130px);}
-  to {}
-}
+@keyframes dead {from {filter: blur(130px); box-shadow: 100vh 100vh 100vh red inset;}to {}}
+@keyframes deadTitle {from {}to {    transform: translate(0% ,0%);z-index: 10; scale: 1;}}
+@keyframes deadTop {from {opacity: 0%;}to {opacity: 100%;}}
+
 #deadTitle div{
+    transform: translate(0% ,20vh); 
+    z-index: 10;
     font-family: 'Great Vibes', cursive;
     font-size: 100px;
     color: red;
+    animation: deadTitle 3s 1 9s ;
+    animation-fill-mode: forwards;
+    scale: 1.9;
+    text-shadow: 1px 1px 1px white, 2px 2px 2px blue, 1px 1px 100px red;;
+}
+#deadLogo{
+  animation: deadTop 1s 1 11s ;
+  opacity: 0%;
+  animation-fill-mode: forwards;
 }
 @keyframes deadFlash {
-    from {text-shadow: 1px 1px 1px white, 2px 2px 2px blue, 10px 1px 10px red;}
-    to {text-shadow: 1px 1px 1px white, 2px 2px 2px blue, 50px 1px 50px red;}
+    from {text-shadow: 1px 1px 1px white, 2px 2px 2px blue, 10px 1px 100px red;}
+    to {text-shadow: 1px 1px 1px white, 2px 2px 2px blue, 50px 10px 500px red;}
 }
 #deadTitle{
     animation-name: deadFlash; 
@@ -33,7 +44,13 @@
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     animation-direction: alternate;
-    
+    animation-delay: 7s;
+    text-shadow: 1px 1px 1px white, 2px 2px 2px blue, 50px 10px 500px red;;
+}
+.deadAnimation{
+  animation: deadTop 1s 1 11s ;
+  opacity: 0%;
+  animation-fill-mode: forwards;
 }
 #ranking{
     display: flex;
@@ -76,3 +93,14 @@
     color: darkgoldenrod;
     grid-row: 3;
   }
+  #myForm{
+    display: flex;
+    flex-direction: column;
+    
+  }
+
+.enviarFormulario{
+
+  
+  
+}

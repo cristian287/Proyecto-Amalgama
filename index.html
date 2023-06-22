@@ -73,13 +73,17 @@
                     <div id="prompt">
                         <legend id="puntuacion">tu puntuacion : 00000</legend>
                         <form id="myForm">
-                            <label for="input1">Nombre:</label>
-                            <input type="text" id="input1" name="input1" placeholder="introduce tu nombre" maxlength="8"><br><br>
-                            <button type="button" onclick="enviarFormulario()">Enviar</button>
+                            <div id="formNombre">
+                                <label for="input1">Nombre:</label>
+                                <input type="text" id="input1" name="input1" placeholder="introduce tu nombre" maxlength="8"><br><br>
+                            </div>
+                            <div id="enviarFormulario">
+                                <button type="button" onclick="enviarFormulario()" >Enviar</button>
+                            </div>
                           </form>
                     </div>
                 </div>
-                <div id="top">
+                <div id="top"><!-- top mundiales -->
                     <div class="top10">
                       <div class="column">
                         <span class="primero">1.<p id="1">Nombre 1</p></span> 
@@ -98,18 +102,17 @@
                     </div>
                   </div>
             </div>
-            <div id="reverseButtonB">Volver al menu</div>
+            <div id="reverseButtonB" class="deadAnimation">Volver al menu</div>
         </div>
         <div id="HowToPlayH" class="none"><!--PANTALLA DE COMO JUGAR   -->
             <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni dicta delectus unde, dolores ab enim, itaque neque aut officia hic laudantium earum dolore alias vel molestiae deserunt, ratione temporibus quidem iure officiis? Aperiam, veritatis. Ratione mollitia necessitatibus voluptate magni, distinctio veniam pariatur odio asperiores. Excepturi quasi reiciendis id et. Similique voluptates doloremque quam ipsum ex. Similique eum voluptas quisquam ad ut aliquid vitae cum aperiam. Nostrum sequi necessitatibus cum, laborum repudiandae natus tempora. Natus adipisci libero dolor ratione debitis, dolore ipsam aliquid perspiciatis labore quas officiis sit harum dolorem error ipsa mollitia ut. Quasi quibusdam minus doloremque quos commodi magni.</div>
         </div>
         <div id="configurationH" class="none" ><!--PANTALLA DE CONFIGURACON   -->
-            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni dicta delectus unde, dolores ab enim, itaque neque aut officia hic laudantium earum dolore alias vel molestiae deserunt, ratione temporibus quidem iure officiis? Aperiam, veritatis. Ratione mollitia necessitatibus voluptate magni, distinctio veniam pariatur odio asperiores. Excepturi quasi reiciendis id et. Similique voluptates doloremque quam ipsum ex. Similique eum voluptas quisquam ad ut aliquid vitae cum aperiam. Nostrum sequi necessitatibus cum, laborum repudiandae natus tempora. Natus adipisci libero dolor ratione debitis, dolore ipsam aliquid perspiciatis labore quas officiis sit harum dolorem error ipsa mollitia ut. Quasi quibusdam minus doloremque quos commodi magni.</div>
+            <div id="textoConfiguration"><p>Para cambiar la configuracion de botones da click izquierdo sobre el boton a cambiar y toca la tecla que quieres usar en su lugar. <p>no puedes tener teclas repetidas</p> </p></div>
             <button id = "reasignarTeclaRecargar">recargar/R</button>
             <button id = "reasignarTeclaBotiquin">curarte/C</button>
             <button id = "reasignarTeclaBomba">bomba/Y</button>
-            <button>musica/ON</button>
-            <button>1</button>
+            <button>sonido/ON</button>
             <button id = "volverAInicio">Volver</button>
             <div id="replace" class="none"><div id="textoReplace">Pulsa una tecla para remplazar</div></div>
         </div>

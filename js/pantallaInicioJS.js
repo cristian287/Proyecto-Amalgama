@@ -21,6 +21,7 @@ function irAInicioDeJuego(){
         displayPantallaDeCarga(false)
         iniciarGameplay()
         rondaActual = 1
+        puedeDisparar()
     }, 2000);
     
 }

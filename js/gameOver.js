@@ -2,6 +2,7 @@ const pantallaMuerte = document.getElementById("dead")
 const puntuacionTotalDisplay = document.getElementById("puntuacion")
 let puntos
 function finDelJuego(){
+    noPuedeDisparar()
     transicionar(pantallaMuerte,"aparecer")
     transicionar(pantallaDeJuego,"desaparecer")
     detenerGeneracionAutomatica()

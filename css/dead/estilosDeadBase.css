@@ -8,24 +8,35 @@
     background-color: black;
     color: white;
     cursor: url(./../../assets/cursores/cursor.cur),auto ;
-    animation: dead 3s 1 ;
+    animation: dead 5s 1 ;
     
 }
 .deadAnimation{
   animation: dead 3s 1 ;
 }
-@keyframes dead {
-  from {filter: blur(130px);}
-  to {}
-}
+@keyframes dead {from {filter: blur(130px); box-shadow: 100vh 100vh 100vh red inset;}to {}}
+@keyframes deadTitle {from {}to {    transform: translate(0% ,0%);z-index: 10; scale: 1;}}
+@keyframes deadTop {from {opacity: 0%;}to {opacity: 100%;}}
+
 #deadTitle div{
+    transform: translate(0% ,20vh); 
+    z-index: 10;
     font-family: 'Great Vibes', cursive;
     font-size: 100px;
     color: red;
+    animation: deadTitle 3s 1 9s ;
+    animation-fill-mode: forwards;
+    scale: 1.9;
+    text-shadow: 1px 1px 1px white, 2px 2px 2px blue, 1px 1px 100px red;;
+}
+#deadLogo{
+  animation: deadTop 1s 1 11s ;
+  opacity: 0%;
+  animation-fill-mode: forwards;
 }
 @keyframes deadFlash {
-    from {text-shadow: 1px 1px 1px white, 2px 2px 2px blue, 10px 1px 10px red;}
-    to {text-shadow: 1px 1px 1px white, 2px 2px 2px blue, 50px 1px 50px red;}
+    from {text-shadow: 1px 1px 1px white, 2px 2px 2px blue, 10px 1px 100px red;}
+    to {text-shadow: 1px 1px 1px white, 2px 2px 2px blue, 50px 10px 500px red;}
 }
 #deadTitle{
     animation-name: deadFlash; 
@@ -33,7 +44,13 @@
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     animation-direction: alternate;
-    
+    animation-delay: 7s;
+    text-shadow: 1px 1px 1px white, 2px 2px 2px blue, 50px 10px 500px red;;
+}
+.deadAnimation{
+  animation: deadTop 1s 1 11s ;
+  opacity: 0%;
+  animation-fill-mode: forwards;
 }
 #ranking{
     display: flex;
@@ -50,12 +67,12 @@
   .top10 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+    gap: 100px;
   }
   
   .column {
     display: grid;
-    gap: 10px;
+    gap: 20px;
   }
   .column span {
     display: flex;
@@ -64,8 +81,8 @@
   .primero{
     font-size: x-large;
     color: gold;
+
   }
-  
   .segundo {
     font-size: larger;
     color: silver;
@@ -76,3 +93,40 @@
     color: darkgoldenrod;
     grid-row: 3;
   }
+  #myForm{
+    display: flex;
+    flex-direction: column;
+    
+  }
+  #enviarFormulario button{
+    display: flex;
+    font-family: 'Great Vibes', cursive;
+    background-color: rgb(19, 19, 19);
+    color: red;
+    top: 123%;
+    margin-left: 150px;
+    scale: 2;
+    cursor: url(./../../assets/cursores/cursorBang.cur),auto ;
+  }
+
+#input1{
+  background-color: rgb(19, 19, 19);
+  color: red;
+  cursor: url(./../../assets/cursores/cursorWrite.cur),auto ;
+}
+.primero::after{
+  content: ""; 
+  display: flex;
+  flex-direction: row;
+  width: 100px; 
+  background-image: url(./../../assets/dead/trophy.png);
+  background-size: cover; 
+  margin-right: 3%;
+}
+.primero{
+  animation: dead 5s 1 11s,ElPrimero 1s infinite alternate 0s ;
+}
+@keyframes ElPrimero {
+  from{text-shadow: 0px 0px 10px gold;}
+  to{text-shadow: 0px 0px 30px orangered;}
+}

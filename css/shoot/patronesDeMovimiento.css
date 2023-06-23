@@ -21,7 +21,10 @@
   from {transform: translateX(10vh);}
   to {transform: translateX(-10vh);}
 }
-
+@keyframes enemyEnter{
+  from {transform: rotateY(360deg) ;opacity: 0%;}
+  to {transform: rotateY(0deg); opacity: 100%;}
+}
 
 .moveOne {
   animation: enemyMoved 3.7s 1 linear 1.5s, enemyMovePat .9s infinite alternate linear 0s, enemyMoveOne 2s infinite alternate linear 0s;
@@ -32,7 +35,7 @@
   to {transform: translateY(-10vh);}
 }
 .moveTwo {
-  animation: enemyMoved 3.7s 1 linear 1.5s, enemyMovePat .9s infinite alternate linear 0s, enemyMoveTwo 2s infinite alternate linear 0s;
+  animation: enemyMoved 3.7s 1 linear 1.5s, enemyMovePat .9s infinite alternate linear 0s, enemyMoveTwo 2s infinite alternate linear 0s,;
     }
 @keyframes enemyMoveThree {
   from {transform: translateX(10vh);}

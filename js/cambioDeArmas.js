@@ -7,7 +7,7 @@ document.addEventListener("wheel", function(e) { //Cambiar arma
     var deltaY = e.deltaY;
     if (deltaY > 0) {
       player.equipada++;
-      if (player.equipada > player.armasDisponibles) {
+      if (player.equipada > player.armas.length - 1) {
         player.equipada = 0;
       }
     } else if (deltaY < 0) {

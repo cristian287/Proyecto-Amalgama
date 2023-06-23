@@ -12,14 +12,17 @@ const armas = [{ //Armas adquiridas
     balas:10,
     balasMaximas:10,
     recarga:"full",
-    tiempoRecarga:1000
+    tiempoRecarga:1000,
+    especial:false
   },
   {
-    nombre:"secundaria",
+    nombre:"metralleta",
     balas:15,
     balasMaximas:15,
-    recarga:"individual",
-    tiempoRecarga:10
+    recarga:"full",
+    tiempoRecarga:10,
+    especial:"rafaga",
+    balasPorTiro:4
   },
   {
     nombre:"terciaria",
@@ -33,7 +36,6 @@ function iniciarGameplay(){
         armas: [],
         salud:100,
         equipada:0, //Index del arma equipada
-        armasDisponibles:0, //Cantidad de armas disponibles
         balasDisponibles:10, //Cantidad de balas disponibles para recargar
         botiquinesDisponibles:2, //Cantidad de botiquines disponibles
         monedas:0,
@@ -42,6 +44,8 @@ function iniciarGameplay(){
     if (player.armas.length === 0){
         let armaPrincipal = armas.find(a=>a.nombre === "pistola")
         player.armas.push(armaPrincipal)
+        let metralleta = armas.find(a=>a.nombre === "metralleta") //testing
+        player.armas.push(metralleta) //testing
     }
     actualizarValoresPantalla()
     iniciarGeneracionAutomatica()

@@ -12,14 +12,27 @@ function damage(event, index, enemigoActual) { //El enemigo te hittea
     }
 }
 function enemigoRecibeDaño(event, index, enemy) {
-    if ((player.armas[player.equipada].balas>0) && (!recargando)){
-        enemigosVivos[index].vida--;
-        if (enemigosVivos[index].vida === 0) {
+    if (!recargando){
+        let armaEquipada = player.armas[player.equipada]
+        switch(armaEquipada.especial){
+            case false:
+                if (armaEquipada.balas>0){
+                    enemigosVivos[index].vida--
+                }
+                break
+            case "rafaga":
+                if (armaEquipada.balas>armaEquipada.balasPorTiro){
+                    enemigosVivos[index].vida = enemigosVivos[index].vida - armaEquipada.balasPorTiro
+                }
+                else if (armaEquipada.balas>0){
+                    enemigosVivos[index].vida = enemigosVivos[index].vida - armaEquipada.balas
+                }
+        }
+        if (enemigosVivos[index].vida <= 0) {
             let enemyActual = enemigosVivos[index]
             crearMoneda(enemyActual.monedas)
             enemy.remove();
             let existenEnemigosVivos = enemigosVivos.filter(e=>e.vida>0)
-            console.log(existenEnemigosVivos.length)
             dropItems()
             if (existenEnemigosVivos.length === 0){
                 enemigosVivos = []

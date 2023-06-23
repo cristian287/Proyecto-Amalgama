@@ -87,11 +87,13 @@
     font-size: larger;
     color: silver;
     grid-row: 2;
+    animation: dead 5s 1 10s
   }
   
   .tercero {
     color: darkgoldenrod;
     grid-row: 3;
+    animation: dead 5s 1 9.5s
   }
   #myForm{
     display: flex;
